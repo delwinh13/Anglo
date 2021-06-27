@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="23.846453">
+    <testcase classname="Login" name="As a user I want to login with valid credentials" time="23.846453">
+        <system-out>
+            <![CDATA[Given I have launched the browser...........................................passed
+When I enter txtUsername with ID Isometrixsystem............................passed
+When I enter txtPassword with ID 1..........................................passed
+When I click the btnLoginSubmit Button with ID..............................passed
+And I wait for the element to be visible....................................passed
+And I wait for the element to be visible....................................passed
+And I wait for the element to be visible....................................passed
+And I send the Report.......................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
