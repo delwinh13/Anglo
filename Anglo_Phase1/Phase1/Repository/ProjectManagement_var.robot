@@ -31,10 +31,10 @@ ${ProjectmanagementValidateReview}      xpath:(//div[@id='divProcess_D1FDADB7-36
 ${ProjectManagementProjApprovTab}       xpath://*[@id="tab_07BE855B-7F21-4612-9340-5D29DED9162F"]/div[1]
 ${ProjectManagementBUApprovDrp}         xpath://*[@id="control_2FF574BD-30CF-4FF5-91FF-BA377D274257"]/div[1]/a/span[1]/ul/li
 ${ProjectManagementBUApprovSearch}      xpath:/html/body/div[1]/div[3]/div/div[2]/div[21]/div[1]/input
-${ProjectManagementBUApprovSelect}      xpath:/html/body/div[1]/div[3]/div/div[2]/div[21]/ul[1]/ul/li[2]/a
+${ProjectManagementBUApprovSelect}      xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${ProjectManagementGroupVerifyDrp}      xpath://*[@id="control_65874E3C-E890-439D-9391-CB2C5C097F2D"]/div[1]/a/span[1]/ul/li
 ${ProjectManagementGroupVerifySearch}   xpath:/html/body/div[1]/div[3]/div/div[2]/div[22]/div[1]/input
-${ProjectManagementGroupVerifySelect}   xpath:/html/body/div[1]/div[3]/div/div[2]/div[22]/ul[1]/ul/li[2]/a
+${ProjectManagementGroupVerifySelect}   xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${ProjectManagementBUApproval}          xpath://*[@id="control_3EF346F7-9D0F-45AB-A19F-3E674291E795"]/div[1]/div
 ${ProjectManagementDateTimeApprov}      xpath://*[@id="control_4D7C92FA-B1C7-4A4F-AD4D-88D095D9F57D"]/div[1]/span/span/input
 ${ProjectManagementGroupApprov}         xpath://*[@id="control_1A10F073-629F-402F-ABA6-5EDB4613C198"]/div[1]/div
@@ -87,11 +87,11 @@ ${ForecastSave}                         xpath:/html/body/div[1]/div[3]/div/div[2
 ${ProjectmanagementProjectActualDrp}    xpath://*[@id="control_52843E09-B158-4FF9-B22B-D59DCC97A72E"]/div[9]/div[1]/i
 ${ProjectActualAdd}                     xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[5]/div[9]/div[2]/div/div[1]/div[1]/div[2]/div[1]/div
 ${ProjectActualYearDrp}                 xpath://*[@id="control_8B94E076-D52E-415B-BC9F-AE2A6E65EA76"]/div[1]/a/span[2]/b[1]
-${ProjectActualYearSelect}              xpath://*[@class="jstree-anchor"][@id="cf7e8ba0-4e56-4715-b99d-af406fdfd989_anchor"]
+${ProjectActualYearSelect}              xpath:(//div[contains(@class, 'transition visible')]//a[text()='2018'])[1]
 ${ProjectActualMonthDrp}                xpath://*[@id="control_D7960673-32FB-45E2-AE62-A23E9DD56AB5"]/div[1]/a/span[2]/b[1]
-${ProjectActualMonthSelect}             xpath://*[@class="jstree-anchor"][@id="3434a90d-5720-4c70-9a5b-23b6a864b33d_anchor"]
+${ProjectActualMonthSelect}             xpath:(//div[contains(@class, 'transition visible')]//a[text()='August'])[1]
 ${ProjectActualQuarterDrp}              xpath://*[@id="control_09A9662E-8EDC-4BEA-87C3-0C62227BCFF5"]/div[1]/a/span[2]/b[1]
-${ProjectActualQuarterSelect}           xpath:/html/body/div[57]/ul[1]/ul/li[1]/a
+${ProjectActualQuarterSelect}           xpath:(//div[contains(@class, 'transition visible')]//a[text()='Quarter 1'])[1]
 ${ProjectActualBudgetInput}             xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[5]/div[9]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[7]/div/div[1]/div/input
 ${ProjectActualExpendInput}             xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[5]/div[9]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[8]/div/div[1]/div/input
 ${ProjectActualComment}                 xpath://*[@id="control_6AA1FBC9-1B91-48A3-8BD3-6C7897CDB165"]/div[1]/div/textarea
@@ -101,11 +101,11 @@ ${ProjectActualSave}                    xpath:/html/body/div[1]/div[3]/div/div[2
 ${ProjectECOMANTab}                     xpath://*[@id="tab_0BBC8D87-A4E3-4E3D-BBDB-B1B5342F098C"]/div[1]
 ${ProjectEcoAdd}                        xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[4]/div/div[5]/div[1]/div[1]/div[2]/div[1]/div
 ${ProjectEcoYearDrp}                    xpath://*[@id="control_45F50355-91F4-453E-8BA5-27960EA63317"]/div[1]/a/span[2]/b[1]
-${ProjectEcoYearSelect}                 xpath://*[@class="jstree-anchor"][@id="cf7e8ba0-4e56-4715-b99d-af406fdfd989_anchor"]
+${ProjectEcoYearSelect}                 xpath:(//div[contains(@class, 'transition visible')]//a[text()='2018'])[1]
 ${ProjectEcoMonthDrp}                   xpath://*[@id="control_40F5E1DE-02A0-4792-91BB-CCD5B87E86FC"]/div[1]/a/span[2]/b[1]
-${ProjectEcoMonthSelect}                xpath://*[@class="jstree-anchor"][@id="3434a90d-5720-4c70-9a5b-23b6a864b33d_anchor"]
+${ProjectEcoMonthSelect}                xpath:(//div[contains(@class, 'transition visible')]//a[text()='August'])[1]
 ${ProjectEcoQuarterDrp}                 xpath://*[@id="control_B9379CD8-9321-422E-A41F-234FC59BB47F"]/div[1]/a/span[2]/b[1]
-${ProjectEcoQuarterSelect}              xpath://*[@id="7717bb44-a5ed-4c75-af44-9fe06fb9e5b6_anchor"]
+${ProjectEcoQuarterSelect}              xpath:(//div[contains(@class, 'transition visible')]//a[text()='Quarter 1'])[1]
 ${ProjectEcoSave}                       xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[4]/div/div[5]/div[1]/div[1]/div[2]/div[2]/div
 ${ProjectEcoInLineEdit}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[4]/div/div[5]/div[1]/div[2]/div[2]/div[1]/div[4]/div/div[2]/div[1]/div/div
 ${ProjectEcoRecordSelect}               xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[4]/div/div[5]/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[4]
@@ -137,14 +137,20 @@ ${ProjectActionSave}                    id:btnSave_form_F54AE783-1378-4974-A7E8-
 ${ProjectActionsEntityXpath}            xpath:(//a[text()='Anglo American Group']/../i)[1]
 ${ProjectActionsEntityXpath2}           xpath:/html/body/div[1]/div[3]/div/div[2]/div[50]/ul[1]/ul/li/ul/li[3]/i
 ${ProjectActionsEntityXpath3}           xpath:/html/body/div[1]/div[3]/div/div[2]/div[50]/ul[1]/ul/li/ul/li[3]/ul/li[6]/i
-${ProjectActionsEntitySelect}           xpath://*[@id="25742496-c98d-431e-96c8-18619861422e_anchor"]
+${ProjectActionsEntitySelect}           xpath:(//div[contains(@class, 'transition visible')]//a[text()='Sishen Mine'])[1]
 ${ProjectActionsRespSearch}             xpath:(//input[@placeholder='Type and enter to search'])[9]
 ${ProjectActionsRespSelect}             xpath:/html/body/div[1]/div[3]/div/div[2]/div[51]/ul[1]/ul/li[5]/a
 ${ProjectActionRecuringSelect}          xpath:/html/body/div[1]/div[3]/div/div[2]/div[55]/ul[1]/ul/li[2]/a
 
 #************************************************* FR11-View Linked Engagements     ************************************
 ${ProjectActionClose}                   xpath://*[@id="form_F54AE783-1378-4974-A7E8-4B5D1C4A79F3"]/div[1]/i[2]
-
+${ProjectActionCloseYes}                id:btnConfirmYes
+${ProjectLinkEngTab}                    xpath://*[@id="tab_BE392F5B-6860-4EFB-B4F7-B05B69EF9DBF"]/div[1]
+${ProjectLinkSearchBtn}                 xpath://div[text()='Linked Engagements']/..//*[@id="btnFilter"]/div
+${ProjectLinkSearch}                    xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[6]/div/div/div[1]/div[2]/div[1]/div[3]/table/tbody/tr[5]/td[5]/input
+${ProjectLinkSearchBtn2}                xpath://*[@id="btnActApplyFilter_C5D7993E-A223-4AE0-A15D-119FE22E21DC_smc13"]/div
+${ProjectLinkSelectRec}                 xpath://*[@id="grid"]/div[3]/table/tbody/tr/td[4]
+${ProjectEngagementProcess}             xpath://*[@id="btnProcessFlow_form_C5D7993E-A223-4AE0-A15D-119FE22E21DC"]/span
 
 
 

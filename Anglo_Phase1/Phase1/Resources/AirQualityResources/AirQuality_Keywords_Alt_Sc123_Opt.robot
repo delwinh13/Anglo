@@ -64,12 +64,13 @@ FR1 - Capture Air Quality Monitoring Altenate Scenario 1
     Sleep    1 seconds
     #kumba
     Click Element                       ${AirQualityBUXpath3}
-    Wait Until Element Is Visible       ${AirQualityBUXpath4}    40 seconds
+    Wait Until Element Is Visible       ${AirQualityBUKolomelaXpath}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${AirQualityBUXpath4}
-    Wait Until Element Is Visible       ${AirQualityBUSelect}    40 seconds
+    Click Element                       ${AirQualityBUKolomelaXpath}
+    Wait Until Element Is Visible       ${AirQualityBUSelectMining}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${AirQualityBUSelect}
+    Click Element                       ${AirQualityBUSelectMining}
+
 
     Log To Console    Starting FR3 - Capture Dust Measurement
     #Capture Dust in Air quality Type
@@ -280,38 +281,6 @@ FR5-Edit Air Quality Monitoring
     Wait Until Element Is Visible       ${AirQualitySelect}    40 seconds
     Click Element                       ${AirQualitySelect}
     Sleep    2 seconds
-
-    # Check on Process Flow
-    Sleep    4 seconds
-    Wait Until Element Is Visible       ${AirQualityFindindProcessID}    40 seconds
-    Click Element                       ${AirQualityFindindProcessID}
-
-    # Edit Finding Classification
-    Wait Until Element Is Visible       ${AirQualityFindingClassDrp}    40 seconds
-    Click Element                       ${AirQualityFindingClassDrp}
-    Wait Until Element Is Visible       ${AirQualityFindingClass2}    40 seconds
-    Click Element                       ${AirQualityFindingClass2}
-
-     # Save
-    Wait Until Element Is Visible       ${AirQualityFindingSave}    40 seconds
-    Click Element                       ${AirQualityFindingSave}
-    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
-
-    #Close
-    Sleep    5 seconds
-    Wait Until Element Is Visible       ${AirQualityFindingClose}    40 seconds
-    Click Element                       ${AirQualityFindingClose}
-
-    # change to pop-up frame
-    Sleep    4 seconds
-    Unselect frame
-    Wait Until Element Is Visible       ${AirQualityConfirmExit}    40 seconds
-    Click Element                       ${AirQualityConfirmExit}
-
-    # Change to main frame
-    Wait Until Element Is Visible        ${iFrame}    40 seconds
-    Select Frame                         ${iFrame}
-    Sleep     3 seconds
 
 
 

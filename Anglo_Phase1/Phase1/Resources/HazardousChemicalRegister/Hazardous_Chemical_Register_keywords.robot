@@ -63,43 +63,170 @@ FR1 - Capture Hazardous Chemical
     Sleep    5 seconds
     Screenshot      Meeting Template add form opens in the Add phase
 
-    #Capture Meeting Template text box
-    Wait Until Element Is Visible       ${MeetingTemplateXpath}    20 seconds
-    Input Text                          ${MeetingTemplateXpath}        testing
-
     #Capture Business Unit
     Wait Until Element Is Visible       ${BusinessUnitDropdownXpath}    20 seconds
     Click Element                       ${BusinessUnitDropdownXpath}
     Wait Until Element Is Visible       ${BUAAGOptionXpath}    20 seconds
     Sleep    1 seconds
     Click Element                       ${BUAAGOptionXpath}
-    Wait Until Element Is Visible       ${BUAApOptionXpath}    20 seconds
+    Wait Until Element Is Visible       ${BUBCOOptionXpath}    20 seconds
     Sleep    1 seconds
-    Click Element                       ${BUAApOptionXpath}
-    Wait Until Element Is Visible       ${BUAApOptionXpath1}    20 seconds
+    Click Element                       ${BUBCOOptionXpath}
+    Wait Until Element Is Visible       ${BUKOptionXpath}    20 seconds
     Sleep    1 seconds
-    Click Element                       ${BUAApOptionXpath1}
-    Wait Until Element Is Visible       ${BUAApOptionXpath2}    20 seconds
+    Click Element                       ${BUKOptionXpath}
     Sleep    1 seconds
-    Click Element                       ${BUAApOptionXpath2}
+    Wait Until Element Is Visible       ${BUSMOptionXpath}    20 seconds
     Sleep    1 seconds
+    Click Element                       ${BUSMOptionXpath}
+    Wait Until Element Is Visible       ${BusinessUnitDropdownXpath}    20 seconds
     Click Element                       ${BusinessUnitDropdownXpath}
+    #Capture ProductName
+    Wait Until Element Is Visible       ${ProductNameXpath}    20 seconds
+    Input Text                          ${ProductNameXpath}        chemical
 
-    #Capture Risk Descipline
-    Wait Until Element Is Visible       ${RiskDeciplineXpath}    20 seconds
-    Click Element                       ${RiskDeciplineXpath}
-    Wait Until Element Is Visible       ${RishDeciplineSelectionXpath}    20 seconds
+    #Capture ProductType
+    Wait Until Element Is Visible       ${ProductTypeDropdownXpath}    20 seconds
     Sleep    1 seconds
-    Click Element                       ${RishDeciplineSelectionXpath}
-    Wait Until Element Is Visible       ${RiskDeciplineXpath}    20 seconds
-    Click Element                       ${RiskDeciplineXpath}
+    Click Element                       ${ProductTypeDropdownXpath}
+    Wait Until Element Is Visible       ${ProductTypeDropdownSelectionXpath}    20 seconds
     Sleep    1 seconds
+    Click Element                       ${ProductTypeDropdownSelectionXpath}
 
-    #Capture Meeting Template text box
-    Wait Until Element Is Visible       ${MeetingDescriptionXpath}    20 seconds
-    Input Text                          ${MeetingDescriptionXpath}        testing1
+    #Capture CASNumber
+    Wait Until Element Is Visible       ${CASNumberXpath}    20 seconds
+    Input Text                          ${CASNumberXpath}        52
 
-    #Optional Scenario :
+    #Capture CASNumber
+    Wait Until Element Is Visible       ${UNNumberXpath}    20 seconds
+    Input Text                          ${UNNumberXpath}        56
+
+    #Capture Classification
+    Wait Until Element Is Visible       ${ClassificationDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${ClassificationDropDownXpath}
+    Wait Until Element Is Visible       ${ClassificationDropDownSelectionXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${ClassificationDropDownSelectionXpath}
+
+     #Capture HazmatClass
+    Wait Until Element Is Visible       ${HazmatClassDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${HazmatClassDropDownXpath}
+    Wait Until Element Is Visible       ${HazmatClassDropDownSelectionXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${HazmatClassDropDownSelectionXpath}
+
+    #Capture MethodOfUse
+    Wait Until Element Is Visible       ${MethodOfUseDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${MethodOfUseDropDownXpath}
+    Wait Until Element Is Visible       ${MethodOfUseDropDownCheckboxXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${MethodOfUseDropDownCheckboxXpath}
+    Wait Until Element Is Visible       ${MethodOfUseDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${MethodOfUseDropDownXpath}
+
+      #Capture DirectLinkTextBox
+    Wait Until Element Is Visible       ${DirectLinkTextBoxXpath}    20 seconds
+    Input Text                          ${DirectLinkTextBoxXpath}        www.isometrix.com
+
+    #Capture CompositionTextBox
+    Wait Until Element Is Visible       ${CompositionTextBoxXpath}    20 seconds
+    Input Text                          ${CompositionTextBoxXpath}        tester
+
+    #Capture PhysicalProTextBox
+    Wait Until Element Is Visible       ${PhysicalProTextBoxXpath}    20 seconds
+    Input Text                          ${PhysicalProTextBoxXpath}        rema
+
+     #Capture ApplicableAreas
+    Wait Until Element Is Visible       ${ApplicableAreasDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${ApplicableAreasDropDownXpath}
+    Wait Until Element Is Visible       ${ApplicableAreasDropDownSelectionXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${ApplicableAreasDropDownSelectionXpath}
+
+    #Capture LocationsWIU
+    Wait Until Element Is Visible       ${LocationsWIUDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${LocationsWIUDropDownXpath}
+    Wait Until Element Is Visible       ${LocationsWIUDropDownSelectionXpath}    60 seconds
+    Sleep    10 seconds
+    Click Element                       ${LocationsWIUDropDownSelectionXpath}
+    Wait Until Element Is Visible       ${LocationsWIUDropDownSelectionXpath1}    60 seconds
+    Sleep    1 seconds
+    Click Element                       ${LocationsWIUDropDownSelectionXpath1}
+    Wait Until Element Is Visible       ${LocationsWIUDropDownXpath}    20 seconds
+    Sleep    1 seconds
+    Click Element                       ${LocationsWIUDropDownXpath}
+
+    #Capture MaxStock
+    Wait Until Element Is Visible       ${MaxStockXpath}    20 seconds
+    Input Text                          ${MaxStockXpath}        42
+
+    #Capture MSDS Date
+    ${CurrentDate}          Get Current Date        result_format=%d-%m-%Y
+    Set Global Variable             ${CurrentDate}
+    Input Text                      ${MSDSDateSelectionXpath}        ${CurrentDate}
+
+    #Capture EmergencyControlFire
+    Wait Until Element Is Visible       ${EmergencyControlFireXpath}    20 seconds
+    Input Text                          ${EmergencyControlFireXpath}        test
+
+    #Capture EmergencyControlUR
+    Wait Until Element Is Visible       ${EmergencyControlURXpath}    20 seconds
+    Input Text                          ${EmergencyControlURXpath}        test
+
+    #Capture EmergencyControlS
+    Wait Until Element Is Visible       ${EmergencyControlSXpath}    20 seconds
+    Input Text                          ${EmergencyControlSXpath}        test
+
+    #Capture EmergencyActionsEC
+    Wait Until Element Is Visible       ${EmergencyActionsECXpath}    20 seconds
+    Input Text                          ${EmergencyActionsECXpath}        test
+
+    #Capture EmergencyActionsSC
+    Wait Until Element Is Visible       ${EmergencyActionsSCXpath}    20 seconds
+    Input Text                          ${EmergencyActionsSCXpath}        test
+
+    #Capture EmergencyActionsInhalation
+    Wait Until Element Is Visible       ${EmergencyActionsInhalationXpath}    20 seconds
+    Input Text                          ${EmergencyActionsInhalationXpath}        test
+
+    #Capture EmergencyActionsIngestion
+    Wait Until Element Is Visible       ${EmergencyActionsIngestionXpath}    20 seconds
+    Input Text                          ${EmergencyActionsIngestionXpath}        test
+
+    #Capture ApprovedDisposalMethods
+    Wait Until Element Is Visible       ${ApprovedDisposalMethodsXpath}    20 seconds
+    Input Text                          ${ApprovedDisposalMethodsXpath}        test
+
+    # Capture LinkUploadDocs
+    Wait Until Element Is Visible       ${LinkUploadDocs}    40 seconds
+    Click Element                       ${LinkUploadDocs}
+    # change to pop-up frame
+    Unselect frame
+    # validate pop up  name
+    Sleep    2 seconds
+    Element Should Be Visible           ${SupportingDocPopName}
+    #Enter URL
+    Click Element                       ${SupportingDocAddLink}
+    Clear Element Text                  ${SupportingDocAddLink}
+    Input Text                          ${SupportingDocAddLink}    https://www.isometrix.com/
+    Sleep    2 seconds
+    # Enter Title
+    Click Element                        ${SupportingDocAddTitle}
+    Input Text                           ${SupportingDocAddTitle}    AutoTest
+    # Add Link to Document Button
+    Wait Until Element Is Visible        ${SupportingDocAddBtn}    10 seconds
+    Click Element                        ${SupportingDocAddBtn}
+    # Change to main frame
+    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Select Frame                         ${iFrame}
+    Sleep     3 seconds
+
     # Click Supporting Documents Tab
     Wait Until Element Is Visible       ${SupportingDocXpath}    40 seconds
     Click Element                       ${SupportingDocXpath}
@@ -126,19 +253,23 @@ FR1 - Capture Hazardous Chemical
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
     Sleep     3 seconds
+    # Navigate to HazardousChemicalDetailTab
+    Wait Until Element Is Visible        ${HazardousChemicalDetailTab}    10 seconds
+    Click Element                        ${HazardousChemicalDetailTab}
+
     #Clck on Save button
-    Wait Until Element Is Visible       ${MTSavebuttonXpath}    20 seconds
-    Click Element                       ${MTSavebuttonXpath}
+    Wait Until Element Is Visible       ${SaveButtonXpath}    20 seconds
+    Click Element                       ${SaveButtonXpath}
     Sleep    5 seconds
 
-    #validate process is on AddPhase
-    Wait Until Element Is Visible       ${ProcessflowEditPhaseXpath}    20 seconds
-    Element Should Be Visible           ${ProcessflowEditPhaseXpath}
+    #validate process is on EditPhase
+    Wait Until Element Is Visible       ${ProcessflowEditPhaseXpath1}    20 seconds
+    Element Should Be Visible           ${ProcessflowEditPhaseXpath1}
     Sleep    5 seconds
-    Screenshot    Record is saved Attendees and Agenda tabs are also displayed
+    Screenshot    Record is saved and automatically moves to the Edit Phase
 
-FR2 - Capture Meeting Attendee Template
-    Log To Console    Starting FR2 - Capture Meeting Attendee Template
+FR2 - Add Chemical Register Actions
+    Log To Console    Starting FR2 - Add Chemical Register Actions
 
     # Click on Attendees Tab
     Wait Until Element Is Visible       ${AttendeesTabXpath}    40 seconds

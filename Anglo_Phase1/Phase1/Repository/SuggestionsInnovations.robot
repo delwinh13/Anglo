@@ -28,6 +28,49 @@ ${SuggestionTypeInputXpath}                                        xpath://div[@
 ${SuggestionTypeValueXpath}                                        xpath://a[@id='3ec55a30-ac92-4130-875f-0f2ba9d6ec5b_anchor']
 ${SaveButtonXpath}                                                  xpath:(//div[@i18n='save'])[2]
 ${SuggestionsAndInnvationReview}                                     xpath:(//div[contains(text(),'Suggestion and innovation under review')])[2]
+#************************************************* Supporting Documents ************************************************
+${SupportingDocXpath}                   xpath://div[contains(text(),"Supporting Documents")]
+${SupportingDocLinkDoc}                 xpath://*[@original-title="Link to a document"]
+${SupportingDocPopName}                 xpath://*[@id="divConfirm"]/div/div/div[1]
+${SupportingDocAddLink}                 xpath://*[@id="urlValue"]
+${SupportingDocAddTitle}                xpath://*[@id="urlTitle"]
+${SupportingDocAddBtn}                  xpath://*[@id="btnConfirmYes"]
+${SupportingDocValidate}                xpath://*[@id="doc_url"]
+${SupportingDocSave}                    xpath://div[contains(text(),'Save supporting documents')]
+#************************************************* Email Notifications ****************************************
+${Officeurl}                                https://www.office.com
+${outlookusername}                          Sushmitha.Ravella@isometrix.com
+${outlookpassword}                          Metrix@2021@
+${SignInBtn}                                xpath://a[contains(text(),'Sign in')]
+${EmailField}                               xpath://input[@type='email']
+${EmailNext}                                xpath://input[@value='Next']
+${EmailPasswordField}                       xpath://input[@type='password']
+${EmailSignInBtn}                           xpath://input[@value='Sign in']
+${Outlook}                                  xpath://a[@id='ShellMail_link']
+${EmailLinkBacktoRecord}                    xpath://a[@data-auth='NotApplicable']
+${SuggestionAndInnovationsAddedSubject}     xpath:(//span[contains(text(),'IsoMetrix Suggestions and Innovations #')][contains(text(),'has been added')])[1]
+${SuggestionAndInnovationsChangedSubject}     xpath:(//span[contains(text(),'IsoMetrix Suggestions and Innovations #')][contains(text(),'has changed')])[1]
+${IsoMetrixSignInXpath}                     xpath://div[@id='divMixedMode']/div/div[2]/div[text()='ISOMETRIX SIGN IN']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

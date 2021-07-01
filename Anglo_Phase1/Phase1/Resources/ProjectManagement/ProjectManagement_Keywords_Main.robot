@@ -246,6 +246,7 @@ FR4- Capture Forecasted Budget
     Sleep    1 seconds
     # Capture Business Unit Approval
     Wait Until Element Is Visible       ${ProjectManagementBUApproval}    40 seconds
+    sleep    2 seconds
     Click Element                       ${ProjectManagementBUApproval}
 
 
@@ -263,6 +264,7 @@ FR4- Capture Forecasted Budget
 
     Sleep    1 seconds
     Wait Until Element Is Visible       ${ProjectManagementGroupApprov}    40 seconds
+    sleep    1 seconds
     Click Element                       ${ProjectManagementGroupApprov}
 
     # Save
@@ -569,6 +571,8 @@ FR-7 Approve Record as an ECO2Man indicator
     Wait Until Element Is Visible       ${ProjectEcoRecordSave}    40 seconds
     Click Element                       ${ProjectEcoRecordSave}
     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+
 
 
 

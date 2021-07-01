@@ -11,14 +11,14 @@ Resource    ../../Repository/Stakeholder_Engagement_vars.robot
 #Resource    Stakeholder_keywords.robot
 
 *** Keywords ***
-Launch IsoMetrix Application
-    Open Browser  ${URL}  ${BROWSER}
+Launch IsoMetrix Application 2
+    Open Browser  ${URL}  ${BROWSER}  alias=ProjectManagement
     set selenium implicit wait    10 seconds
     Maximize Browser Window
     Title Should Be  IsoMetrix
 
 
-Login with Valid Credentials
+Login with Valid Credentials 2
     set selenium implicit wait    10 seconds
     Input Text                ${Usernameid}  ${Username Value}
     Input Text                ${Passwordid}  ${Password Value}
@@ -61,14 +61,16 @@ FR1- Capture Project Management Altenate Scenario
     Click Element                       ${ProjectManagementEntityCloseDrp}
 
     #capture Project title
+    ${CurrentDate}=  Get Current Date  result_format=%d-%m-%Y
     Wait Until Element Is Visible       ${ProjectManagementEntityProjectIn}    40 seconds
     Click Element                       ${ProjectManagementEntityProjectIn}
-    Input Text                          ${ProjectManagementEntityProjectIn}    auto test
+    Input Text                          ${ProjectManagementEntityProjectIn}    auto test ${CurrentDate}
 
     # Capture Project Description
+
     Wait Until Element Is Visible       ${ProjectManagementEntityProjetDesc}    40 seconds
     Click Element                       ${ProjectManagementEntityProjetDesc}
-    Input Text                          ${ProjectManagementEntityProjetDesc}    auto test
+    Input Text                          ${ProjectManagementEntityProjetDesc}    auto test ${CurrentDate}
 
     # capture Theme
     Wait Until element is Visible       ${ProjectManagementThemeDrp}    40 seconds
@@ -358,12 +360,67 @@ FR8-Capture Project Actions
     #Screenshot    Action Save
 
 #************************************************* FR11-View Linked Engagements     ************************************
-FR8-Capture Project Actions
-    Log To Console    Starting FR8-Capture Project Actions
+FR11-View Linked Engagements
+    Log To Console    Starting FR11-View Linked Engagements
     Sleep    2 seconds
 
     Wait Until Element Is Visible       ${ProjectActionClose}    40 seconds
     Click Element                       ${ProjectActionClose}
+
+    Unselect frame
+    Wait Until Element Is Visible       ${ProjectActionCloseYes}    40 seconds
+    Click Element                       ${ProjectActionCloseYes}
+
+    # Change to main frame
+    Sleep    2 seconds
+    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Select Frame                         ${iFrame}
+    Sleep     3 seconds
+    #capture Process Flow
+
+    Wait Until Element Is Visible       ${ProjectManagememntProcessID}    40 seconds
+    Click Element                       ${ProjectManagememntProcessID}
+    sleep    2 seconds
+
+    Wait Until Element Is Visible       ${ProjectLinkEngTab}    40 seconds
+    Click Element                       ${ProjectLinkEngTab}
+
+FR11-View Linked Engagements 2
+    #search record
+    Wait Until Element Is Visible       ${ProjectLinkSearchBtn}    40 seconds
+    Click Element                       ${ProjectLinkSearchBtn}
+
+    Wait Until Element Is Visible       ${ProjectLinkSearch}
+    Click Element                       ${ProjectLinkSearch}
+    Input Text                          ${ProjectLinkSearch}    auto test ${CurrentDate}
+    Sleep    3 seconds
+    Wait Until Element Is Visible       ${ProjectLinkSearchBtn2}
+    Click Element                       ${ProjectLinkSearchBtn2}
+
+    Sleep    4 seconds
+    Wait Until Element is Visible       ${ProjectLinkSelectRec}    40 seconds
+    Click Element                       ${ProjectLinkSelectRec}
+
+    Sleep     3 seconds
+    #capture Process Flow
+
+    Wait Until Element Is Visible       ${ProjectEngagementProcess}    40 seconds
+    Click Element                       ${ProjectEngagementProcess}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

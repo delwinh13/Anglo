@@ -22,12 +22,14 @@ Login with Valid Credentials
     Input Text                ${Passwordid}  ${Password Value}
     Click Element             ${SubmitButtonid}
 
+    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Select Frame                         ${iFrame}
+    Sleep     3 seconds
+
 FR1 - Capture Engagements
     Log To Console    Starting FR1 - Capture Engagements
 
-    Wait Until Element Is Visible        ${iFrame}    40 seconds
-    Select Frame                         ${iFrame}    
-    Sleep     3 seconds
+
 
     # Click Social Sustainability
     Sleep    2 seconds
@@ -56,15 +58,15 @@ FR1 - Capture Engagements
     Element Should Be Visible           ${EngagementManagementProcessAddPhase}
 
 
+    #Get the current date for the Non-Compliance date
+    ${CurrentDate}    Get Current Date    result_format=%d-%m-%Y
+    Set Global Variable    ${CurrentDate}
 
     # Capture Title
     Wait Until Element Is Visible       ${EngagementManagementTitleXpath}    40 seconds
     Click Element                       ${EngagementManagementTitleXpath}
-    Input Text                          ${EngagementManagementTitleXpath}    Auto Test
+    Input Text                          ${EngagementManagementTitleXpath}    Auto Test ${CurrentDate}
 
-    #Get the current date for the Non-Compliance date
-    ${CurrentDate}    Get Current Date    result_format=%d-%m-%Y
-    Set Global Variable    ${CurrentDate}
 
     # Capture Engagement Date
     Wait Until Element Is Visible       ${EngagementManagementDateXpath}    40 seconds
@@ -107,7 +109,7 @@ FR1 - Capture Engagements
     Click Element                       ${EngagementManagmentProjectDDID}
     Wait Until Element Is Visible       ${EngagementManagmentProjSrchXpath}    40 seconds
     Sleep    1 seconds
-    Input Text                          ${EngagementManagmentProjSrchXpath}    a
+    Input Text                          ${EngagementManagmentProjSrchXpath}    auto test
     Press Keys                          ${EngagementManagmentProjSrchXpath}    ENTER
     Wait Until Element Is Visible       ${EngagementManagmentProjOptXpath}    40 seconds
     Sleep    1 seconds

@@ -21,7 +21,8 @@ ${EngagementManagmentFLDDID}            id:control_B3768415-FC73-4B14-BA94-3D4E0
 ${EngagementManagmentFLOptionID}        id:c90467d6-40cb-45e8-97ba-367fb080e969_anchor
 ${EngagementManagmentProjectDDID}       id:control_963F5190-1317-42C1-AD7A-B277FCBA7101
 ${EngagementManagmentProjSrchXpath}     xpath:/html/body/div[1]/div[3]/div/div[2]/div[12]/div[1]/input
-${EngagementManagmentProjOptXpath}      xpath://*[@id='18c0a832-c968-41ac-9ae7-66907fc45aa1_anchor']/i[1]
+${EngagementManagementProjSelectAll}    xpath://*[@id="control_963F5190-1317-42C1-AD7A-B277FCBA7101"]/div[1]/a/span[2]/b[2]
+${EngagementManagmentProjOptXpath}      xpath://*[@id="8192900b-65f7-47b9-9351-05302c281249_anchor"]/i[1]
 ${EngagementManagementDetailsID}        id:tab_134C2E6D-2571-4418-97AA-791E0BDB874A
 
 ${EngagementManagmentFuncDDID}          id:control_0FF334FE-CE57-49BF-BA69-9BE5DA3447CB
@@ -259,7 +260,18 @@ ${EngagementManagementReportID}        id=btnReports_form_C5D7993E-A223-4AE0-A15
 ${EngagementManagementReportList}      xpath:/html/body/div[1]/div[3]/div/div[2]/div[3]/div[2]/div/div/div[2]/div[2]/span[2]
 ${EngagementManagementConfirmreport}   xpath:/html/body/div/div[4]/div/div/div[3]/div/div/div[2]/div[2]/div
 
+#************************************************* FR9 - View Reports **************************************************
+${EngagementManagementSearchInput}    xpath://*[@id="searchOptions"]/div[3]/table/tbody/tr[5]/td[5]/input
+${EngagementManagementSearchBtn}      xpath://*[@id="btnActApplyFilter"]/div
 
+${SIReportsBtn}                             xpath://div[@id='btnReports']
+${SIViewReportsBtn}                         xpath://*[@id="report_0d4c0b4f-c7df-4ab9-84c1-c27f6f02a15c"]/span[3][@title="View report "]
+${SIReportsPopUpConfirm}                    xpath://div[@id='btnConfirmYes']
+${SIFullReportsBtn}                         xpath://span[@title='Full report ']
+${SIViewReportRightArrow}                   xpath://span[@id='viewer_ctl09_ctl00_Next_ctl00_ctl00']
+${SIViewReportExportArrow}                  xpath://span[@id='viewer_ctl09_ctl04_ctl00_ButtonImgDown']
+${SIViewReportsLoading}                     xpath://*[@id="viewer_AsyncWait_Wait"]/table/tbody/tr/td[2]
+${SIViewReportsWord}                        xpath://div[@id="viewer_ctl09_ctl04_ctl00_Menu"]/div[3]/a
 
 
 
