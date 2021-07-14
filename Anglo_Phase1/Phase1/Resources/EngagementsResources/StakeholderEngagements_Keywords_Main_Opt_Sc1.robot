@@ -4,6 +4,7 @@ Library    XML
 Library    String
 Library    Process
 Library    DateTime
+Library    Time
 Resource    ../../Resources/vars.robot
 Resource    ../../Repository/Common.robot
 Resource    ../../Repository/Stakeholder_Engagement_vars.robot
@@ -28,7 +29,13 @@ Login with Valid Credentials
     Input Text                ${Passwordid}  ${Password Value}
     Click Element             ${SubmitButtonid}
 
-    Screenshot    Home page
+    ${CurrentTime}    Get Current Date
+    ${CurrentTime}    convert date   ${CurrentTime}   result_format=%d-%m-%Y %H-%M-%S
+    Set Global Variable    ${CurrentTime}
+
+
+    #${Time}            Get Time
+    Screenshot         Home page
 
 FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     Log To Console    Starting FR1 - Capture Engagements
@@ -62,7 +69,7 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     #validate process is on AddPhase
     Wait Until Element Is Visible       ${EngagementManagementProcessAddPhase}    40 seconds
     Element Should Be Visible           ${EngagementManagementProcessAddPhase}
-    Screenshot    Details and Supporting Documents
+    Screenshot    ${CurrentTime} Details and Supporting Documents
 
 
 
@@ -103,7 +110,7 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     # Select Link to Project Check Box
     Wait Until Element Is Visible       ${EngagementManagmentLinkProjXpath}    40 seconds
     Click Element                       ${EngagementManagmentLinkProjXpath}
-    Screenshot    Project Field
+    Screenshot    ${CurrentTime} BProject Field
 
     # Capture Functional Location
     Wait Until Element Is Visible       ${EngagementManagmentFLDDID}    40 seconds
@@ -218,7 +225,7 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
 
     Wait Until Element Is Visible       ${SupportingDocValidate}    40 seconds
     Element Should Be Visible           ${SupportingDocValidate}
-    Screenshot    Supporting Documents
+    Screenshot    ${CurrentTime} ASupporting Documents
 
     # Go Back to details tab
     Wait Until Element Is Visible        ${EngagementManagementDetailsID}    40 seconds
@@ -238,7 +245,7 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     # validate Engagement Status
     Wait Until Element Is Visible       ${EngagementManagementEngStatValidate}    40 seconds
     Element Should Be Visible           ${EngagementManagementEngStatValidate}
-    Screenshot    Engagement Status Attendee Tab And Action Tab
+    Screenshot    ${CurrentDate} Engagement Status Attendee Tab And Action Tab
 
     # Validate Attende tab
     Element Should Be Visible           ${EngagementManagementAttendeesTab}

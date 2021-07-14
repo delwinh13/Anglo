@@ -17,7 +17,7 @@ Audit Management
     FR2 - Approve the audit schedule other than auditee
     FR3 - Propose new dates for the audit
     FR3 - Propose new dates as the auditee
-    # FR4 - Capture Audit Team
+    FR4 - Capture Audit Team
     FR5 - View Related Events
     FR6 - Start Audit
     FR7 - Conduct an internal or supplier Audit
@@ -29,3 +29,4 @@ Audit Management
     FR10 - Request Audit Verification
     FR11 - Verification Approval
     FR11 - Verification Rejected
+    Close Browser

@@ -8,8 +8,8 @@ ${HygieneMaintenanceButton}                 xpath://*[@id="section_a36df9b8-4561
 #************************************************* Hygiene Maintenance Page ****************************************
 ${EquipmentandToolButton}                   xpath://*[@id="section_b293f86c-7af2-447c-90a9-cdff38576dc5"]/label
 ${ETCAddButton}                             xpath://*[@id="btnActAddNew"]/div
-${ProcessFlowButton}                        xpath://*[@id="btnProcessFlow_form_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93"]/span
-${ProcessflowAddPhase}                      xpath:(//div[@id='divProcess_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
+${ETProcessFlowButton}                      xpath://*[@id="btnProcessFlow_form_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93"]/span
+${ETProcessflowAddPhase}                    xpath:(//div[@id='divProcess_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
 ${BusinessUnitDropdown}                     xpath://*[@id="control_9813CB09-564E-484B-BEDA-CB145068922B"]/div[1]/a/span[2]/b[1]
 ${BUAAGOption}                              xpath://*[@id="4cee9a75-7667-44e9-a0c1-77ad5092e86c"]/i
 ${BUBCOOption}                              xpath://*[@id="fb93eb86-7cff-4f7e-95ae-48817f24f052"]/i
@@ -29,7 +29,7 @@ ${NoiseMonitoringSelection}                 xpath://*[@id="931b0d9a-901d-4ecb-9f
 ${EquipmentTypeDropdown}                    xpath://*[@id="control_6C5BF48E-4FBD-43EA-9F7E-80319C8BC688"]/div[1]/a/span[2]/b[1]
 ${DosimeterSelection}                       xpath://*[@id="721ae586-5162-456f-89ed-11e4f892d425_anchor"]
 ${SaveButtonXpath}                          xpath://*[@id="control_42624A32-59AF-47CB-B31E-535EF2EA9C25"]/div[1]/div
-${ProcessflowEditPhase}                     xpath:(//div[@id='divProcess_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${ETProcessflowEditPhase}                   xpath:(//div[@id='divProcess_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
 
 #************************************************* View Equipment Page ***********************************************
 ${CloseButton}                              xpath://*[@id="form_C8B51579-B5CC-45AC-86BE-2FC9AD3E2E93"]/div[1]/i[2]
@@ -39,8 +39,8 @@ ${ProcessFlowButton}                        xpath://*[@id="btnProcessFlow_form_C
 
 #************************************************* Asset Details add Page ***********************************************
 ${AssetAddButton}                           xpath://*[@id="btnAddNew"]/div
-${ProcessFlowButton}                        xpath://*[@id="btnProcessFlow_form_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0"]/span
-${ProcessflowAddPhase}                      xpath:(//div[@id='divProcess_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
+${AssetDetailsProcessFlowButton}            xpath://*[@id="btnProcessFlow_form_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0"]/span
+${AssetDetailsProcessflowAddPhase}          xpath:(//div[@id='divProcess_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
 ${EquipmentClassification}                  xpath://*[@id="control_C6598D7D-93DC-4158-8761-42F4E1C26485"]/div[1]/a/span[2]/b[1]
 ${ECHiredSelection}                         xpath:(//div[contains(@class, 'transition visible')]//a[text()='Hired'])[1]
 ${ContractorOwnedSelection}                 xpath:(//div[contains(@class, 'transition visible')]//a[text()='Contractor owned'])[1]
@@ -56,6 +56,7 @@ ${SupportingDocAddBtn}                      xpath://*[@id="btnConfirmYes"]
 ${SupportingDocValidate}                    xpath://*[@id="doc_url"]
 ${ECHiredSelection}                         xpath://*[@id="cff5b609-d8e6-4c2c-89d5-3632f3648fcd_anchor"]
 ${ServiceProviderContractorDropdown}        xpath://*[@id="control_E836F8C9-6000-4489-8F0F-7EB2B9759578"]/div[1]/a/span[2]/b[1]
+${ServiceProviderSearchbox}                 xpath:(//input[@placeholder='Type and enter to search'])[1]
 ${AeroCareSelection}                        xpath://*[@id="edd47f32-7b50-4251-a231-4e526cf6b99c_anchor"]
 ${IsaServiceRequiredDropdown}               xpath://*[@id="control_A5D4F368-94DB-40B9-9138-CE6F7589882F"]/div[1]/a/span[2]/b[1]
 ${YesSelection}                             xpath:(//div[contains(@class, 'transition visible')]//a[text()='Yes'])[1]
@@ -79,7 +80,7 @@ ${DatecheckSheetCompleteDate}               xpath://*[@id="control_C652C1A0-13A3
 ${MaintenancePlantDropdown}                 xpath://*[@id="control_412D42BD-54F1-4F68-B9A9-4C8053E09C81"]/div[1]/a/span[2]/b[1]
 ${EJooSelection}                            xpath:(//div[contains(@class, 'transition visible')]//a[text()='EJ00'])[1]
 ${WorkCeneterCodeDropdown}                  xpath://*[@id="control_4C114D9C-3B9B-4AD5-91A2-4DD29EAA07F8"]/div[1]/a/span[2]/b[1]
-${RMScrubSelection}                         xpath://*[@id="de871c2f-c831-4c10-bdd0-4120d34729b3_anchor"]
+${RMFilterationSelection}                   xpath://*[@id="48845987-7d5b-4fb5-8357-540d7fdc8155_anchor"]
 ${SortfiledTextbox}                         xpath://*[@id="control_B3CA1F01-0613-4C31-8BE2-45B7DA0686E1"]/div[1]/div/input
 ${PlanningPlantDropdown}                    xpath://*[@id="control_58DF1B48-D156-4079-B87D-FC85D3D40754"]/div[1]/a/span[2]/b[1]
 ${EdooSelection}                            xpath:(//div[contains(@class, 'transition visible')]//a[text()='ED00'])[1]
@@ -88,7 +89,8 @@ ${AssetNumberTextbox}                       xpath://*[@id="control_E3B0C574-0A42
 ${ServiceFrequencyDropdown}                 xpath://*[@id="control_BEF66AD1-94E7-454A-8AEF-DA05CE4F8D25"]/div[1]/a/span[2]/b[1]
 ${AnnuallySelection}                        xpath://*[@id="81540df6-7d22-4c90-9d54-298675b06548_anchor"]
 ${OwnerDropdown}                            xpath://*[@id="control_3962E631-1F81-475F-A6AD-02502500363A"]/div[1]/a/span[2]/b[1]
-${AaronAdamSelection}                       xpath://*[@id="4e9fad73-56a1-4fe1-92de-6232267ddbed_anchor"]
+${OwnerSearchbox}                           xpath:(//input[@placeholder='Type and enter to search'])[2]
+${StakeGroupSelection}                       xpath://*[@id="b8c1c389-0f13-49cd-8755-52b5c357c869_anchor"]
 ${MakeTextbox}                              xpath://*[@id="control_9463035D-BB16-4E11-875A-E229F4E9D1A8"]/div[1]/div/input
 ${ModelTextbox}                             xpath://*[@id="control_4AEB9EB2-B321-4581-A6AD-E4ECD319DC8E"]/div[1]/div/input
 ${TypeTextbox}                              xpath://*[@id="control_0802DF4C-3620-449E-A811-0CDB979F5251"]/div[1]/div/input
@@ -98,5 +100,48 @@ ${DateOffsiteSelection}                     xpath://*[@id="control_916C8B16-7010
 ${LastRoutineMaintenanceDate}               xpath://*[@id="control_6A625A7F-26A6-4490-AB4A-1828DE252D5A"]/div[1]/span/span/input
 ${NextRoutineMaintenanceDate}               xpath://*[@id="control_D0AC409D-7100-4B56-9D83-6F78CF0136BF"]/div[1]/span/span/span/span
 ${NextRoutineMaintenanceDateSelection}      xpath://*[@id="control_D0AC409D-7100-4B56-9D83-6F78CF0136BF"]/div[1]/span/span/input
-${SaveButtonXpath}                          xpath://*[@id="btnSave_form_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0"]/div[3]
-${ProcessflowEditPhase}                     xpath:(//div[@id='divProcess_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${SaveButtonXpath1}                         xpath://*[@id="btnSave_form_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0"]/div[3]
+${AssetProcessflowEditPhase}                xpath:(//div[@id='divProcess_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${AssetDetailsClose}                        xpath://*[@id="form_AB4CF802-14F5-467B-8B87-9D8F7C4A11D0"]/div[1]/i[2]
+
+#************************************************* Calibration Details Tab ************************************************
+${CalibrationDetailsTab}                    xpath://*[@id="tab_10748AB4-A1AB-4F34-A62E-5DB56DE0506D"]/div[1]
+${AssetRecord}                              xpath://*[@id="grid"]/div[3]/table/tbody/tr/td[4]/span
+${CollibrationAddButton}                    xpath:(//*[@id="btnAddNew"]/div)[2]
+${CollibrationProcessFlowButton}            xpath://*[@id="btnProcessFlow_form_569DFDD0-F2F3-406F-91D8-765B09F1C12A"]/span
+${ColibrationAddPhase}                      xpath:(//div[@id='divProcess_569DFDD0-F2F3-406F-91D8-765B09F1C12A'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
+${ColibrationCertificate}                   xpath://*[@id="control_D7CCECEB-A0C9-4DD3-82E6-6970A2A81BF8"]/div[1]/div/input
+${CalibrationExpiryDateIcon}                xpath://*[@id="control_97592175-5A25-495B-BC58-B6A83CD39078"]/div[1]/span/span/span/span
+${CalibrationExpiryDateSelection}           xpath://*[@id="control_97592175-5A25-495B-BC58-B6A83CD39078"]/div[1]/span/span/input
+${CalibrationNotificationDateIcon}          xpath://*[@id="control_11BA30A2-5922-4071-A138-25646C94F416"]/div[1]/span/span/span/span
+${CalibrationNotificationDateSelection}     xpath://*[@id="control_11BA30A2-5922-4071-A138-25646C94F416"]/div[1]/span/span/input
+${ResponsiblePersonDropdown}                xpath://*[@id="control_629E5668-32CB-4BD1-82EF-442313505270"]/div[1]/a/span[2]/b[1]
+${ResponsiblePersonSearchbox}               xpath:(//input[@placeholder='Type and enter to search'])[5]
+${ArianSelection}                           xpath://*[@id="d9a8aca0-8e9a-4b7e-8514-20a36c271e65_anchor"]
+${ColibrationCertificateHyperlink}          xpath://*[@id="control_F00950C0-9877-4C4F-9180-2E3F494C642F"]/div[1]/div[1]/div[2]/b[2]
+${CalibratioSaveButton}                     xpath://*[@id="control_6DCECCDF-5C4B-4378-AE98-DB5AE365A0BE"]/div[1]/div
+${ClaibrationProcessflowEditPhase}          xpath:(//div[@id='divProcess_569DFDD0-F2F3-406F-91D8-765B09F1C12A'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${ClaibrationcloseButton}                   xpath://*[@id="form_569DFDD0-F2F3-406F-91D8-765B09F1C12A"]/div[1]/i[2]
+
+#************************************************* Asset Schedule Tab ************************************************
+${AssetScheduleTab}                         xpath://*[@id="tab_78C3ACCF-A58E-41C8-AD73-DD7896BEA55C"]/div[1]
+${AssetScheduleAddButton}                   xpath:(//*[@id="btnAddNew"]/div)[2]
+${AssetProcessFlowButton}                   xpath://*[@id="btnProcessFlow_form_C122505E-159A-4688-B3E5-B4F45CD9DFDB"]/span
+${AssetAddPhase}                            xpath:(//div[@id='divProcess_C122505E-159A-4688-B3E5-B4F45CD9DFDB'])[2]/div/div[2]/div[1]/div[1]//div[text()='Add phase']
+${ScheduleReference}                        xpath://*[@id="control_CE3864E1-7D76-49C1-A925-B20002B392CC"]/div[1]/div/input
+${StartDate}                                xpath://*[@id="control_E4B8A13C-AACB-4457-81B7-56FF33D8CB54"]/div[1]/span/span/input
+${EndDate}                                  xpath://*[@id="control_D9DD1946-105A-4994-8B40-5A65A871CF31"]/div[1]/span/span/span/span
+${EndDateSelection}                         xpath://*[@id="control_D9DD1946-105A-4994-8B40-5A65A871CF31"]/div[1]/span/span/input
+${AssetScheduleSaveButton}                  xpath://*[@id="control_B61B6774-7689-45C2-AFFC-E2F9714BDBB6"]/div[1]/div
+${AssetScheduleProcessflowEditPhase}        xpath:(//div[@id='divProcess_C122505E-159A-4688-B3E5-B4F45CD9DFDB'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${AssetScheduleCloseButton}                 xpath://*[@id="form_C122505E-159A-4688-B3E5-B4F45CD9DFDB"]/div[1]/i[2]
+
+#************************************************* Supporting Documents Tab ************************************************
+${SupportingDocTab}                       xpath://*[@id="tab_692BA217-7E1C-4739-A10D-5F300922B8B7"]/div[1]
+${SupportingDocLinkDoc}                   xpath://*[@id="control_874C1B55-FCE7-46B4-9219-22DF22930EB9"]/div[1]/div[1]/div[2]/b[2]
+${SupportingDocPopName}                   xpath://*[@id="divConfirm"]/div/div/div[1]
+${SupportingDocAddLink}                   xpath://*[@id="urlValue"]
+${SupportingDocAddTitle}                  xpath://*[@id="urlTitle"]
+${SupportingDocAddBtn}                    xpath://*[@id="btnConfirmYes"]
+${SupportingDocValidate}                  xpath://*[@id="doc_url"]
+${SaveSupportingDocuments}                xpath://*[@id="control_6C5D593E-6A2F-4FD2-899F-C874E8949DB6"]/div[1]/div

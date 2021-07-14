@@ -1,6 +1,7 @@
 *** Variables ***
 #************************************************* Common Variables ****************************************************
 ${BROWSER}             Chrome
+#${URL}                 https://isom-dev.angloamerican.com/login.aspx?mixedmode=1
 ${URL}                 https://isom-testprod.ssd.angloamerican.com/login.aspx?mixedmode=1
 ${Error Message Text}  Validation: Please enter value
 ${Password Value}      Admin123

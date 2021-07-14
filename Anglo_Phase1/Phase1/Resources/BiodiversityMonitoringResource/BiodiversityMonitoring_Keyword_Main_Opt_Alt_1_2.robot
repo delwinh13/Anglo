@@ -180,6 +180,17 @@ FR1- Capture Biodiversity Monitoring
     Click Element                       ${BioMonSave}
     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
 
+#************************************************* FR5-Edit Biodiversity Monitoring ************************************
+FR5-Edit Biodiversity Monitoring
+    Wait Until Element Is Visible       ${BioMonYearDrp}    40 seconds
+    Click Element                       ${BioMonYearDrp}
+    Wait Until Element Is Visible       ${BioMonYearSelect2}    40 seconds
+    Click Element                       ${BioMonYearSelect2}
+    # Click Save
+    Wait Until Element Is Visible       ${BioMonSave}    40 seconds
+    Click Element                       ${BioMonSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
 #************************************************* FR2-Capture Biodiversity Measurement - Flora ************************
 
 FR2-Capture Biodiversity Measurement - Flora

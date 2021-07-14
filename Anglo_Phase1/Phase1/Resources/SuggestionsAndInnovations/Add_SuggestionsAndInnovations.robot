@@ -35,7 +35,7 @@ Login with Valid Credentials
 FR1- Capture Suggestion or Innovation
     Log To Console    Starting FR1 - Capture Suggestion or Innovation
     # Click AngloMaintenanceButton
-        Mouse over                          ${AngloMainMenuXpath}
+    Mouse over                          ${AngloMainMenuXpath}
     Wait Until Page Contains Element       ${AngloTrainingAndSuggestionsInterfaceXpath}    20 seconds
     Click Element                          ${AngloTrainingAndSuggestionsInterfaceXpath}
 
@@ -49,11 +49,11 @@ FR1- Capture Suggestion or Innovation
     Sleep     3 seconds
     # Check on Process Flow
     Wait Until Element Is Visible        ${ProcessFlowXpath}   40 seconds
-     click element                        ${ProcessFlowXpath}
-     Sleep     3 seconds
+    click element                        ${ProcessFlowXpath}
+    Sleep     3 seconds
      #validate process is on AddPhase
-  Wait Until Element Is Visible         ${AddSuggestionsAndInnovaionXpath}    40 seconds
-   Element Should Be Visible             ${AddSuggestionsAndInnovaionXpath}
+    Wait Until Element Is Visible         ${AddSuggestionsAndInnovaionXpath}    40 seconds
+    Element Should Be Visible             ${AddSuggestionsAndInnovaionXpath}
     Screenshot   	Suggestions and Innovations add page opens in the Add suggestion and innovation Phase
     click element                        ${BusinessUnitDrpDwnXpath}
     Sleep     20 seconds
@@ -106,42 +106,42 @@ FR1- Capture Suggestion or Innovation
     click element                    ${SaveButtonXpath}
     Sleep    30 seconds
     #validate process is Suggestion and innovation under review Phase
-  Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
-   Element Should Be Visible             ${SuggestionsAndInnvationReview}
-   Sleep    10 seconds
+    Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
+    Element Should Be Visible             ${SuggestionsAndInnvationReview}
+    Sleep    10 seconds
     Screenshot   	Suggestions Under Review
     Sleep    10 seconds
- # Click Supporting Documents Tab
-  WAIT UNTIL ELEMENT IS VISIBLE                      ${SupportingDocXpath}                      40 seconds
-  Click Element                                      ${SupportingDocXpath}
-#Click Supporting Document Link
-  Wait Until element Is visible                               ${SupportingDocLinkDoc}      40 seconds
-   Click Element                                               ${SupportingDocLinkDoc}
+    # Click Supporting Documents Tab
+    WAIT UNTIL ELEMENT IS VISIBLE                      ${SupportingDocXpath}                      40 seconds
+    Click Element                                      ${SupportingDocXpath}
+    #Click Supporting Document Link
+    Wait Until element Is visible                               ${SupportingDocLinkDoc}      40 seconds
+    Click Element                                               ${SupportingDocLinkDoc}
     Sleep    10 seconds
-# change to pop-up frame
-  Unselect frame
+    # change to pop-up frame
+    Unselect frame
 
-# validate pop up  name
-  Sleep     10 seconds
-  Element Should Be Visible            ${SupportingDocPopName}                                 40 seconds
+   # validate pop up  name
+   Sleep     10 seconds
+   Element Should Be Visible            ${SupportingDocPopName}                                 40 seconds
 
-#Enter URL
-  Click Element                       ${SupportingDocAddLink}
-  Clear Element Text                  ${SupportingDocAddLink}
-  Input Text                          ${SupportingDocAddLink}        https://www.isometrix.com/
-  Sleep     10 seconds
+   #Enter URL
+   Click Element                       ${SupportingDocAddLink}
+   Clear Element Text                  ${SupportingDocAddLink}
+   Input Text                          ${SupportingDocAddLink}        https://www.isometrix.com/
+   Sleep     10 seconds
 
-# Enter Title
-  Click Element                        ${SupportingDocAddTitle}
-  Input Text                          ${SupportingDocAddTitle}             AutoTest
+   # Enter Title
+   Click Element                        ${SupportingDocAddTitle}
+   Input Text                          ${SupportingDocAddTitle}             AutoTest
 
-# Add Link to Document Button
-  Wait Until Element Is Visible       ${SupportingDocAddBtn}                10 seconds
-  Click Element                        ${SupportingDocAddBtn}
-  Sleep     3 seconds
-  Select Frame                            ${iFrame}
-  Wait Until Element Is Visible       ${SaveButtonXpath}                40 seconds
-  Click Element                       ${SaveButtonXpath}
+   # Add Link to Document Button
+   Wait Until Element Is Visible       ${SupportingDocAddBtn}                10 seconds
+   Click Element                        ${SupportingDocAddBtn}
+   Sleep     3 seconds
+   Select Frame                            ${iFrame}
+   Wait Until Element Is Visible       ${SaveButtonXpath}                40 seconds
+   Click Element                       ${SaveButtonXpath}
 
 FR1- Suggestion and Innovation Email
     Log To Console    Suggestion and Innovation Email
@@ -186,13 +186,13 @@ FR1- Suggestion and Innovation Email
     Click Element                           ${SubmitButtonid}
     # Check on Process Flow
     Sleep     30 seconds
-        Select Frame                            ${iFrame}
+    Select Frame                            ${iFrame}
     Wait Until Element Is Visible        ${ProcessFlowXpath}   40 seconds
-     click element                        ${ProcessFlowXpath}
-     Sleep     3 seconds
-     Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
-   Element Should Be Visible                 ${SuggestionsAndInnvationReview}
-   Screenshot       Suggestions Under Review
+    click element                        ${ProcessFlowXpath}
+    Sleep     3 seconds
+    Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
+    Element Should Be Visible                 ${SuggestionsAndInnvationReview}
+    Screenshot       Suggestions Under Review
 
 
 

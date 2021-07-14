@@ -187,7 +187,7 @@ FR1 - Capture Engagements Optional Scenario 6
     Select Frame        ${iFrame}
 
     # Check on Process Flow
-    Sleep    4 seconds
+    Sleep    10 seconds
     Wait Until Element Is Visible       ${EngagementCommitProcessID}    40 seconds
     Click Element                       ${EngagementCommitProcessID}
 
@@ -227,7 +227,7 @@ FR1 - Capture Engagements Optional Scenario 6
     # Capture Commitment Register Title
     Wait Until Element Is Visible       ${EngagementCommitRegisterTitle}    40 seconds
     Click Element                       ${EngagementCommitRegisterTitle}
-    Input Text                          ${EngagementCommitRegisterTitle}    Auto Test
+    Input Text                          ${EngagementCommitRegisterTitle}    Auto Test ${CurrentDate}
 
 
     # Capture Validator
@@ -267,12 +267,13 @@ FR1 - Capture Engagements Optional Scenario 6
     Click Element                       ${EngagementManagementComitDrp}
     Wait Until Element Is Visible       ${EngagementManagementComitInput}    40 seconds
     Sleep    2 seconds
-    Input Text                          ${EngagementManagementComitInput}    auto
+    Input Text                          ${EngagementManagementComitInput}    Auto Test ${CurrentDate}
     Press Keys                          ${EngagementManagementComitInput}    ENTER
-    Wait Until Element Is Visible       ${EngagementCommitAdd}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${EngagementCommitAdd}
-    Click Element                       ${EngagementManagementComitDrp}
+    Wait Until Element Is Visible       ${EngagementCommitAddAll}    40 seconds
+    Sleep    2 seconds
+    Click Element                       ${EngagementCommitAddAll}
+    #Click Element                       ${EngagementManagementComitDrp}
     Sleep    2 seconds
 
      # Click Save

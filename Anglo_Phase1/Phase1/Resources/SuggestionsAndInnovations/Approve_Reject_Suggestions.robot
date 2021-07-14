@@ -29,9 +29,9 @@ Login with Valid Credentials
     Click Element             ${SubmitButtonid}
     Screenshot    Login
     sleep      7 seconds
-        Log To Console    Starting  - Capture Suggestion or Innovation
+    Log To Console    Starting  - Capture Suggestion or Innovation
     # Click AngloMaintenanceButton
-        Mouse over                          ${AngloMainMenuXpath}
+    Mouse over                          ${AngloMainMenuXpath}
     Wait Until Page Contains Element       ${AngloTrainingAndSuggestionsInterfaceXpath}    20 seconds
     Click Element                          ${AngloTrainingAndSuggestionsInterfaceXpath}
 
@@ -45,11 +45,11 @@ Login with Valid Credentials
     Sleep     3 seconds
     # Check on Process Flow
     Wait Until Element Is Visible        ${ProcessFlowXpath}   40 seconds
-     click element                        ${ProcessFlowXpath}
-     Sleep     3 seconds
-     #validate process is on AddPhase
-  Wait Until Element Is Visible         ${AddSuggestionsAndInnovaionXpath}    40 seconds
-   Element Should Be Visible             ${AddSuggestionsAndInnovaionXpath}
+    click element                        ${ProcessFlowXpath}
+    Sleep     3 seconds
+    #validate process is on AddPhase
+    Wait Until Element Is Visible         ${AddSuggestionsAndInnovaionXpath}    40 seconds
+    Element Should Be Visible             ${AddSuggestionsAndInnovaionXpath}
     Screenshot   	Suggestions and Innovations add page opens in the Add suggestion and innovation Phase
     click element                        ${BusinessUnitDrpDwnXpath}
     Sleep     20 seconds
@@ -102,14 +102,14 @@ Login with Valid Credentials
     click element                    ${SaveButtonXpath}
     Sleep    30 seconds
     #validate process is Suggestion and innovation under review Phase
-  Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
+   Wait Until Element Is Visible         ${SuggestionsAndInnvationReview}    40 seconds
    Element Should Be Visible             ${SuggestionsAndInnvationReview}
    Sleep    10 seconds
-    Screenshot   	Suggestions Under Review
-    Sleep    10 seconds
+   Screenshot   	Suggestions Under Review
+   Sleep    10 seconds
 FR2- Approve Suggestion or Innovation
     Log To Console    Starting FR2 - Approve Suggestion or Innovation
-        screenshot      Navigate to Suggestions and Innovations record opens in Suggestion and Innovation under review Phase
+    screenshot      Navigate to Suggestions and Innovations record opens in Suggestion and Innovation under review Phase
 
     #Navigate TO Action TAB
     click element                ${ApprovalTabXpath}
@@ -121,14 +121,14 @@ FR2- Approve Suggestion or Innovation
     click element               ${SaveButtonXpath}
     Sleep     60 seconds
     screenshot   Approved by and Date approved fields are displayed
-     Sleep     3 seconds
-     Wait Until Element Is Visible         ${ProcessFlowApprovedXpath}    40 seconds
-   Element Should Be Visible                 ${ProcessFlowApprovedXpath}
-   Screenshot       Suggestions and Innovations is in Approved phase
+    Sleep     3 seconds
+    Wait Until Element Is Visible         ${ProcessFlowApprovedXpath}    40 seconds
+    Element Should Be Visible                 ${ProcessFlowApprovedXpath}
+    Screenshot       Suggestions and Innovations is in Approved phase
 
 
 FR2- Suggestion and Innovation Approve Email
-   Log To Console    Suggestion and Innovation Email
+    Log To Console    Suggestion and Innovation Email
 
     Open Browser                            ${Officeurl}  ${BROWSER}
     Maximize Browser Window
@@ -170,13 +170,13 @@ FR2- Suggestion and Innovation Approve Email
     Click Element                           ${SubmitButtonid}
     # Check on Process Flow
     Sleep     30 seconds
-        Select Frame                            ${iFrame}
+    Select Frame                            ${iFrame}
     Wait Until Element Is Visible        ${ProcessFlowXpath}   40 seconds
-     click element                        ${ProcessFlowXpath}
-     Sleep     3 seconds
-     Wait Until Element Is Visible         ${ProcessFlowApprovedXpath}    40 seconds
-   Element Should Be Visible                 ${ProcessFlowApprovedXpath}
-   Screenshot       Suggestions Under Review
+    click element                        ${ProcessFlowXpath}
+    Sleep     3 seconds
+    Wait Until Element Is Visible         ${ProcessFlowApprovedXpath}    40 seconds
+    Element Should Be Visible                 ${ProcessFlowApprovedXpath}
+    Screenshot       Suggestions Under Review
 
 
 

@@ -11,3 +11,4 @@ Biodiversity Monitoring
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR3-Capture Biodiversity Measurement - Fauna
+    FR4-Capture Findings

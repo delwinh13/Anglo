@@ -15,7 +15,7 @@ Stakeholder Group_Enagagement_Plan_Commitments
     Login with Valid Credentials
     FR1 - Capture Stakeholder Group_MS
     FR1 - Capture Stakeholder Group_OS1
-    FR15 - Add_View Engagements_MS_AS
+    FR15 - Add_View Engements_MS_AS
     FR16 - Add_View Engagement Plan_MS_AS
     FR17 - Capture Commitments_MS1
     Close Browser

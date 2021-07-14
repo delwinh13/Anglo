@@ -177,6 +177,9 @@ Schedule_a_meeting_FR1
     Click Element                             ${MSupportSaveDOCBttn}
     Sleep    2 seconds
 
+    Wait Until page does not contain       ${Loadingvariablepermis}       30 seconds
+
+
     Wait Until Element Is Visible           ${MeetingManagerEditphase}    40 seconds
     Element Should Be Visible               ${MeetingManagerEditphase}
     Sleep    2 seconds

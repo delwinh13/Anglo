@@ -45,9 +45,18 @@ FR1-TrainingCourses
     Wait Until Element Is Visible        ${TCAddButtonXpath}    20 seconds
     Click Element                        ${TCAddButtonXpath}
     Sleep    2 seconds
-    Click Element                        ${TCProcessFlowXpath}
+
+    #Click on TCProcessFlow
+    Wait Until Element Is Visible       ${TCProcessFlow}    10 seconds
+    Click Element                       ${TCProcessFlow}
+    Sleep    5 seconds
+
+    #validate TCAddphase
+    Wait Until Element Is Visible       ${TCAddphase}    10 seconds
+    Element Should Be Visible           ${TCAddphase}
+    Sleep    5 seconds
     Screenshot  Training Courses add form opens in the Add phase
-    Sleep     3 seconds
+
     Wait Until Element Is Visible        ${BusinessUnitDropdownXpath}
     Click Element                        ${BusinessUnitDropdownXpath}
     Sleep    1 seconds
@@ -74,7 +83,6 @@ FR1-TrainingCourses
     Click Element                        ${TCSaveandContinueXpath}
     Sleep    3 seconds
     Screenshot  Record is saved Courses sub-module is displayed
-    Click Element                        ${TCProcessFlowXpath}
 
     Click Element                        ${CoursesAddXpath}
     Sleep    1 seconds
@@ -91,6 +99,12 @@ FR1-TrainingCourses
     #Click Element                        ${SDSaveButtonXpath}
     #Sleep    1 seconds
 
+    #Click on CoursesProcessFlow
+    Sleep    5 seconds
+    Wait Until Element Is Visible       ${CoursesProcessFlow}    10 seconds
+    Click Element                       ${CoursesProcessFlow}
+    Sleep    5 seconds
+
     Input Text                           ${TitleXpath}    Mr
     Sleep    1 seconds
     Input Text                           ${CourseDescriptionXpath}    Tester
@@ -103,6 +117,9 @@ FR1-TrainingCourses
     Sleep    3 seconds
     Click Element                        ${SaveRecordXpath}
     Sleep    3 seconds
-    Click Element                        ${TCProcessFlowXpath}
-    Sleep    3 seconds
+
+    #validate TCAddphase
+    Wait Until Element Is Visible       ${CoursesEditPhase}    10 seconds
+    Element Should Be Visible           ${CoursesEditPhase}
+    Sleep    5 seconds
     Screenshot  Record is saved and automatically moves to the Edit Phase

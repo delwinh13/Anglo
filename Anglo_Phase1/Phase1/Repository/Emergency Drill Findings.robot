@@ -2,7 +2,7 @@
 #************************************************* Emergency Drill Findinings ****************************************
 ${FindingsXpath}                                xpath://ul[@class='tabpanel_mover']//li[3]
 ${FindingsAddButton}                            xpath:(//div[@i18n='add_new'])[3]
-${FindingDescriptionXpath}                       xpath:(//textarea[@class='txt translatable'])[1]
+${FindingDescriptionXpath}                       xpath://(textarea[@class='txt translatable'])[1]
 ${FindingOwnerXpath}                             xpath://div[@name='ddl4']
 ${FindingOwnerDrpDwnXpath}                        xpath:(//input[@i18np='type_to_search'])[22]
 ${FindinOwnerDrpDwnValue}                          xpath:(//a[@id='cbe087ad-bd0e-4e8b-8997-60a9b5b0ef37_anchor'])[3]

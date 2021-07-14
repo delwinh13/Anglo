@@ -106,7 +106,7 @@ FR2-Capture Inspection Scheduler Recurrence
 
      #Input Name of Inspection
      Wait Until Element Is Visible      ${InspectionSchedulerNameofInspection}     20 seconds
-     Input Text                         ${InspectionSchedulerNameofInspection}     Automation
+     Input Text                         ${InspectionSchedulerNameofInspection}     Automationtest
      Sleep    2 seconds
 
      #Input Purpose
@@ -183,17 +183,17 @@ FR2-Capture Inspection Scheduler Recurrence
      Sleep    2  seconds
 
      #Recurrence Frequency Daily _AS
-     Wait Until Element Is Visible        ${ISRecurrenceFrequenceyDPD}    20    seconds
-     Click Element                        ${ISRecurrenceFrequenceyDPD}
-     Sleep    2  seconds
-     Wait Until Element Is Visible       ${ISRecurrenceFrequencySelectDaily}    20 seconds
-     Click Element                       ${ISRecurrenceFrequencySelectDaily}
-     Sleep   2 Seconds
-     Screenshot    Schedule every 1 days
+    # Wait Until Element Is Visible        ${ISRecurrenceFrequenceyDPD}    20    seconds
+    # Click Element                        ${ISRecurrenceFrequenceyDPD}
+     #Sleep    2  seconds
+    # Wait Until Element Is Visible       ${ISRecurrenceFrequencySelectDaily}    20 seconds
+    # Click Element                       ${ISRecurrenceFrequencySelectDaily}
+    # Sleep   2 Seconds
+    # Screenshot    Schedule every 1 days
      #Recurrence Frequencey Checkbox
-     Wait Until Element Is Visible       ${ISRecurrenceFrequencySelectDailyCheckBoxTick}    20 seconds
-     Click Element                       ${ISRecurrenceFrequencySelectDailyCheckBoxTick}
-     Sleep   2 Seconds
+    # Wait Until Element Is Visible       ${ISRecurrenceFrequencySelectDailyCheckBoxTick}    20 seconds
+     #Click Element                       ${ISRecurrenceFrequencySelectDailyCheckBoxTick}
+     #Sleep   2 Seconds
 
      #Recurrence Frequency_MS
      Wait Until Element Is Visible        ${ISRecurrenceFrequenceyDPD}    20    seconds
@@ -202,10 +202,10 @@ FR2-Capture Inspection Scheduler Recurrence
      Wait Until Element Is Visible        ${ISRecurrenceFrequencySelectOnceOff}    20    seconds
      Click Element                        ${ISRecurrenceFrequencySelectOnceOff}
      Sleep    2  Seconds
-     Wait Until Element Is Visible        ${ISRecurrenceSchedulerSaveBttn}    20    seconds
-     Click Element                        ${ISRecurrenceSchedulerSaveBttn}
-     Sleep    5    seconds
-     screenshot    recordsaved
+     #Wait Until Element Is Visible        ${ISRecurrenceSchedulerSaveBttn}    20    seconds
+     #Click Element                        ${ISRecurrenceSchedulerSaveBttn}
+     #Sleep    5    seconds
+     #screenshot    recordsaved
 
     #LinKDocument_Optional Scenario
      Wait Until Element Is Visible       ${ISRecurrenceSchedulerlinkdoc}    10 seconds

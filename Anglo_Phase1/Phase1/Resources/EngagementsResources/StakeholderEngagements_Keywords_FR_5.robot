@@ -231,9 +231,9 @@ FR5 - Capture Actions
     Sleep    1 seconds
     Click Element                       ${EngagementActionEntityXpath4}
     #Click Element                       ${EngagementActionEntityXpath3}
-    Wait Until Element Is Visible       ${EngagementActionEntitySelect}     40 seconds
-    Sleep    1 seconds
-    Click Element                       ${EngagementActionEntitySelect}
+#    Wait Until Element Is Visible       ${EngagementActionEntitySelect}     40 seconds
+#    Sleep    1 seconds
+#    Click Element                       ${EngagementActionEntitySelect}
 
     #Capture Responsible person
     Wait Until Element Is Visible       ${EngagementActionRespDrp}    	40 seconds

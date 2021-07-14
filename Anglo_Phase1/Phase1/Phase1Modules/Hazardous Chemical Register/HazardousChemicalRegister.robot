@@ -7,7 +7,8 @@ Force Tags      behavior-driven
 # Suite Teardown  Close Browser
 
 *** Test Cases ***
-Meeting Template
+Hazardous Chemical Register
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR1 - Capture Hazardous Chemical
+    FR2 - Add Chemical Register Actions

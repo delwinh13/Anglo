@@ -194,7 +194,7 @@ FR2-Capture Training Attendees
     Click Element                         ${TRTraineeNameDPD}
     Sleep    2 seconds
     Wait Until Element IS Visible         ${TRTraineeNameInputSearch}    20 seconds
-    Input Text                            ${TRTraineeNameInputSearch}     A
+    Input Text                            ${TRTraineeNameInputSearch}     ABONGILE
     Press Keys                            ${TRTraineeNameInputSearch}     ENTER
     Sleep    5 seconds
     Wait Until Element Is Visible        ${TRTraineeNameSelect}     60 seconds
@@ -205,9 +205,13 @@ FR2-Capture Training Attendees
     Sleep    6 seconds
     Screenshot    RecordSaved
 
+    Wait Until page does not contain      ${Loadingvariablepermis}       30 seconds
+
+
     Wait Until Element Is Visible        ${TRTraineescore}     60 seconds
     Input Text                           ${TRTraineescore}        100
     Sleep  2 seconds
+
     Wait Until Element Is Visible        ${TRTrainingResultDPD}    20 seconds
     Click Element                        ${TRTrainingResultDPD}
     Sleep    2 seconds
@@ -306,10 +310,10 @@ FR2-Capture Training Attendees
     Screenshot      Stakeholder Individual Full Name Autopopulated
 
     # Title
-    #Wait Until Element Is Visible           ${StakeHolderTittleDPD}     20 Seconds
-    #Click Element                           ${StakeHolderTittleDPD}
-    #Wait Until Element Is Visible           ${StakeholderTittleSelect}     40 seconds
-    #Click Element                           ${StakeholderTittleSelect}
+    Wait Until Element Is Visible           ${StakeHolderTittleDPD}     20 Seconds
+    Click Element                           ${StakeHolderTittleDPD}
+    Wait Until Element Is Visible           ${StakeholderTittleSelect}     40 seconds
+    Click Element                           ${StakeholderTittleSelect}
 
     # Status
     Page Should Contain Element            ${StakeholderActiveXpath}
@@ -343,28 +347,30 @@ FR2-Capture Training Attendees
     Click Element                           ${StakeholderRespOwnersDPD}
     Wait Until Element Is Visible           ${StakeholdersResownersInputSearch}            40 seconds
     Sleep    1
-    Input Text                              ${StakeholdersResownersInputSearch}            a
+    Input Text                              ${StakeholdersResownersInputSearch}            anglo
     Press Keys                              ${StakeholdersResownersInputSearch}            ENTER
     Wait Until Element Is Visible           ${StakeholderResOwnersSelect}             40 seconds
     Sleep    1
     Click Element                           ${StakeholderResOwnersSelect}
+    Sleep    2 seconds
     Click Element                           ${StakeholderRespOwnersDPD}
 
     # Accountable owner
     Click Element                           ${StakeholderAccOwnerDPD}
     Wait Until Element Is Visible           ${StakeholderAccOwnerInputsearch}            40 seconds
     Sleep    1
-    Input Text                              ${StakeholderAccOwnerInputsearch}             a
+    Input Text                              ${StakeholderAccOwnerInputsearch}             administrator
     Press Keys                              ${StakeholderAccOwnerInputsearch}            ENTER
     Wait Until Element Is Visible           ${StakeHolderAccOwnerSelect}                 40 seconds
-    Sleep    1
     Click Element                           ${StakeHolderAccOwnerSelect}
-    Click Element                           ${StakeholderAccOwnerDPD}
+    Sleep    2 seconds
 
     # Save to continue
     Wait Until Element Is Visible           ${StakeholdersSaveBttn}
     Click Element                           ${StakeholdersSaveBttn}
     Screenshot      Stakeholder Individual Record Saved
+
+    Sleep    5 seconds
 
     #Close Browser Tab
     Close Window
@@ -387,7 +393,7 @@ FR2-Capture Training Attendees
     Unselect frame
     # validate pop up  name
     Sleep    2 seconds
-    Element Should Be Visible             ${SupportingDocPopName}
+    Element Should Be Visible             ${SupportingDocPopUpName}
     #Enter URL
     Wait Until Element Is Visible         ${CertificateURLLINK}    30 seconds
     Click Element                         ${CertificateURLLINK}

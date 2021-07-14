@@ -11,3 +11,4 @@ Functional Groups
     Login with Valid Credentials
     FR1- Add Functional Group
     FR2- Add One or More Users
+    [Teardown]  CLOSE BROWSER

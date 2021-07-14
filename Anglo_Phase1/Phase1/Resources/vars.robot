@@ -2,19 +2,31 @@
 #************************************************* Common Variables ****************************************************
 ${BROWSER}             Chrome
 # ${URL}                 https://project-anglo.isometrix.net/login.aspx?signin=1
+# QA2
 ${URL}                 https://isom-testprod.ssd.angloamerican.com/login.aspx?mixedmode=1
+
+#${URL}                 https://isom-qa-sa.angloamerican.com/login.aspx?mixedmode=1
+#${URL}                 https://isom-dev.angloamerican.com/login.aspx?mixedmode=1
+#${Error Message Text}  Validation: Please enter value
+
 # ${URL}                 https://isom-qa-sa.angloamerican.com/login.aspx?mixedmode=1
+# Pre-Prod
+#${URL}                  https://isom-dev.angloamerican.com/login.aspx?mixedmode=1
 ${Error Message Text}  Validation: Please enter value
+
 ${Password Value}      Admin123
 ${Username Value}      AutoTest
 ${TYPE OF FILE}        png
 ${Path}
 
 #************************************************* Common Elements ****************************************************
-${LoadingBarXpath}                      xpath://div[@class='k-loading-color']
+${LoadingBarXpath}                      xpath://div[@class='-loading-color']
 ${WaitDivXpath}                         xpath://div[@id='divWait']
 ${WaitLoaderID}                         id:txtWait
 ${IsoMetrixHomeXpath}                   xpath://div[@id='divSiteName']
+${LoadingDataXpath}                     xpath:(//div[@id='divWait']/div[text()='Loading data...'])[2]
+${LoadingChecklist}                     xpath:(//div[text()='Loading checklist...'])[1]
+${LoadingPermissions}                   xpath:(//div[text()='Loading permissions'])[1]
 
 #************************************************* Login Page Elements *************************************************
 ${Usernameid}                           id:txtUsername
@@ -22,6 +34,7 @@ ${Passwordid}                           id:txtPassword
 ${SubmitButtonid}                       id:btnLoginSubmit
 ${Error Message}                        xpath://*[@id="txtUsername_tt_active"]/div[2]
 ${Sidebarlink}                          xpath://*[@id='default-page']/body/div/div[1]/a/i
+${SSOIsoSignInBtn}                      xpath://div[@id='btnIsometrixSignin']
 
 #************************************************* Unit Of Measure Module **********************************************
 ${EnvSustainabilityXpath}               xpath://*[@id="section_53a09f09-ff3f-4a37-8482-d9f284add907"]/label
@@ -662,47 +675,61 @@ ${CondCommSupportingDocTileFieldID}     id:urlTitle
 ${CondCommSupportingDocAddBtnID}        id:btnConfirmYes
 
 #************************************************* Audit Management Module ******************************************
-${AuditManagementXpath}                 xpath://label[.='Audit Management']
+${AuditManagement1Xpath}                xpath:(//label[.='Audit Management'])[1]
+${AuditManagement2Xpath}                xpath:(//label[.='Audit Management'])[2]
 ${AuditManagementAddButtonID}           id:btnActAddNew
+${SearchID}                             id:btnActApplyFilter
+${ViewFilterBtn}                        xpath://div[@id='btnActFilter']
 ${AuditManagementBussinesUnitDdID}      id:control_B1ED7656-E00D-4A2E-B3FF-93E068F7D531
 ${AuditManagementAuditTabXpath}         xpath://div[.='Audit Details']
 ${AuditManagementSuppDocsTabXpath}      xpath://div[.='Supporting Documents']
 # ${AuditManagementBussUnitSrchXpath}     xpath:/html/body/div/div[3]/div/div[2]/div[15]/div/input
-${AuditManagementBussUnitSrchXpath}     xpath:/html/body/div/div[3]/div/div[2]/div[19]/div/input
-${AuditMngBussUnitDdExpandXpath}        xpath://li[@id='4cee9a75-7667-44e9-a0c1-77ad5092e86c']/i
-${AuditMngBussUnitDdExpand2Xpath}       xpath://li[@id='293b3cba-d99b-4ce7-bfaf-7a91b31297ed']/i    
-${AuditMngBussUnitDdExpand3Xpath}       xpath://li[@id='8be51516-20a1-43c5-a28e-aef05604dd07']/i
-${AuditMngBussUnitDdSelectID}           id:f58bd3b8-14fe-4b94-9ec6-95e9e0cb1cb7_anchor
-${AuditMngLinkProjectCheckID}           id:control_4A79FD7F-CD2B-4E66-AF12-B25FDC205CB1
-${AuditMngProjectDdID}                  id:control_6380EE87-B589-48A4-BE47-2B255AA00E5C
-${AuditMngProjectOptionID}              id:0b01664f-f094-4ca5-9f38-ef1055da1972_anchor
+${AuditManagementPF}                    xpath://div[@id='btnProcessFlow_form_1B0044DE-2C55-488C-9850-75C417EED9C8']
+${AuditManagementPFLogging}             xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Logging Audit']
+${AuditManagementPFPlanned}             xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Planned']
+${AuditManagementPFScheduled}           xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Scheduled']
+${AuditManagementPFInProgres}           xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='In Progress or Overdue']
+${AuditManagementPFAwaitVerify}         xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Awaiting Verification']
+${AuditManagementPFCompleted}           xpath:(//div[@id='divProcess_1B0044DE-2C55-488C-9850-75C417EED9C8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Completed']
+${AuditManagementRiskDiscDD}            xpath://div[@id='control_369D8C8A-6A21-4978-B231-58CFD6728491']//span[2]/b[1]
+${AuditManagementRiskDiscSelectAll}     xpath://div[@id='control_369D8C8A-6A21-4978-B231-58CFD6728491']//span[2]/b[2]
+${AuditManagementBussUnitSrchXpath}     xpath:(//div[@class='select3-search']//input[@placeholder='Type to search'])[2]
+${AuditMngBussUnitDdExpandXpath}        xpath://a[text()='Anglo American Group']/../i
+${AuditMngBussUnitDdExpand2Xpath}       xpath://a[text()='Bulk Commodities & Other Minerals']/../i
+${AuditMngBussUnitDdExpand3Xpath}       xpath://a[text()='Kumba']/../i
+${AuditMngBussUnitDdSelectID}           xpath://a[text()='Sishen Mine']
+${AuditMngLinkProjectCheckID}           xpath://div[@id='control_4A79FD7F-CD2B-4E66-AF12-B25FDC205CB1']//div[@class='c-chk']/div
+${AuditMngProjectDdID}                  xpath://div[@id='control_6380EE87-B589-48A4-BE47-2B255AA00E5C']//span[2]/b[1]
+${AuditMngProjectOptionID}              xpath://a[text()='Baseline 18/03/2021 - do not use']
 ${AuditMngFuncLocationDdID}             id:control_40E9FB65-C2EA-45A7-8497-24D8EA2CC6AE
-${AuditMngFuncLocResultDdID}            id:37bb3a5e-09ea-41af-8331-26dea29c792d_anchor
+${AuditMngFuncLocResultDdID}            xpath://a[text()='MIS | Sishen']
 ${AuditManagementTitleXpath}            xpath://div[@id='control_FEB3D889-9079-4781-943C-D2CA02A5A5F4']//input
+${AuditScope}                           xpath://div[@id='control_9C956F79-A9C9-470F-975D-4923F2DB6E7A']//textarea
 ${AuditManagementAuditTypeID}           id:control_2C70ED4C-D256-4B45-B76F-7E916644A513
-${AuditMngAuditTypeSupplierXpath}       xpath:/html/body/div/div[3]/div/div[2]/div[18]/ul/ul/li/a[.='Supplier']/i
-${AuditMngAuditTypeInternalXpath}       xpath:/html/body/div/div[3]/div/div[2]/div[18]/ul/ul/li/a[.='Internal']/i
-${AuditMngAuditTypeExternalXpath}       xpath:/html/body/div/div[3]/div/div[2]/div[18]/ul/ul/li/a[.='External']/i
-${AuditMngProcessActivityID}            id:control_6B5F3505-F436-4ED1-B8B1-38D8DB086FC2
-${AuditMngProcessSearchXpath}           xpath:/html/body/div/div[3]/div/div[2]/div[21]/div/Input
-${AuditMngProcessResultXpath}           id:6a45d330-7813-487f-bd50-89f590900fa6_anchor
-${AuditMngProcessDdExpandXpath}         xpath://li[@id='6a45d330-7813-487f-bd50-89f590900fa6']/i
-${AuditMngProcessDdSelectXpath}         xpath://li[@id='1ea2e1a0-590b-4d79-8edf-204b68b1e923']/a/i
+${AuditMngAuditTypeSupplierXpath}       xpath:(//div[contains(@class, 'transition visible')]//a[text()='Supplier']/i[1])
+${AuditMngAuditTypeInternalXpath}       xpath:(//div[contains(@class, 'transition visible')]//a[text()='Internal']/i[1])
+${AuditMngAuditTypeExternalXpath}       xpath:(//div[contains(@class, 'transition visible')]//a[text()='External']/i[1])
+${AuditMngProcessActivityID}            xpath://div[@id='control_6B5F3505-F436-4ED1-B8B1-38D8DB086FC2']//span[2]/b[1]
+${AuditMngProcessSearchXpath}           xpath:(//input[@placeholder='Type and enter to search'])[2]
+${AuditMngProcessResultXpath}           xpath:(//div[contains(@class, 'transition visible')]//a[text()='Exploration'][1])
+${AuditMngProcessDdExpandXpath}         xpath:(//div[contains(@class, 'transition visible')]//a[text()='Exploration']/../i[1])
+${AuditMngProcessDdSelectXpath}         xpath:(//div[contains(@class, 'transition visible')]//a[text()='Exploration']/i[1])[2]
 ${AuitMngStakeholderDdID}               id:control_5E74E964-4873-4B1D-8162-4EE4532A3FE8
-${AuditMngPStakeholderSearchXpath}      xpath:/html/body/div/div[3]/div/div[2]/div[19]/div/Input
-${AuditMngStakeholderResultID}          id:06727c60-6124-4bb5-b665-3edbee5f1bcc_anchor
+${AuditMngPStakeholderSearchXpath}      xpath:(//input[@placeholder='Type and enter to search'])[1]
+${AuditMngStakeholderResultID}          xpath:(//div[contains(@class, 'transition visible')]//a[text()='Resonant Automation'])[1]
 ${AuitMngTemplateDdID}                  id:control_2C3B9625-8F0F-44C8-8CB9-8C6600FB57E0
-${AuitMngTemplateOptionID}              id:989a0f53-8c6f-475b-bf67-fe82e316412e_anchor
-${AuitMngTemplateOptionExpandXpath}     xpath://li[@id='989a0f53-8c6f-475b-bf67-fe82e316412e']/i
-${AuitMngTemplateOptionResultID}        id:825d680d-9ae9-4bb6-8511-71b04829c3df_anchor
-${AuditMngManagerDdID}                  id:control_8F83D7C1-3D82-47CE-8A8A-BCB3A0A5248E
-${AuditMngManagerSearchXpath}           xpath:/html/body/div/div[3]/div/div[2]/div[22]/div/Input
-${AuditMngManagerSearchResultXpath}     xpath://li[@id='b8ad5f90-d582-46c4-b186-d99649824acd']/a[.='1 Administrator']
-${AuditMngAuditeeDdID}                  id:control_CCD4D19C-9ADA-49A2-9824-9BFD60753453
-${AuditMngAuditeeSearchXpath}           xpath:/html/body/div/div[3]/div/div[2]/div[23]/div/Input
-${AuditMngAuditeeSearchResultXpath}     xpath://li[@id='cbe087ad-bd0e-4e8b-8997-60a9b5b0ef37']/a[.='AutoTest User']
+${AuitMngTemplateOptionExpandXpath}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='Kumba Iron Ore']/../i)[1]
+${AuitMngTemplateOptionResultID}        xpath:(//div[contains(@class, 'transition visible')]//a[text()='Contractor Management Standard Self-Assessment Checklist'])[1]
+${AuditMngManagerDdID}                  xpath://div[@id='control_8F83D7C1-3D82-47CE-8A8A-BCB3A0A5248E']//span[2]/b[1]
+${AuditMngManagerSearchXpath}           xpath:(//input[@placeholder='Type and enter to search'])[3]
+${AuditMngManagerSearchResultXpath}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
+${AuditMngAuditeeDdID}                  xpath://div[@id='control_CCD4D19C-9ADA-49A2-9824-9BFD60753453']//span[2]/b[1]
+${AuditMngAuditeeSearchXpath}           xpath:(//input[@placeholder='Type and enter to search'])[4]
+${AuditMngAuditeeSearchResultXpath}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuditMngAuditStartDateXpath}          xpath://div[@id='control_C58B4570-0BCC-4016-955F-BC39F5A7CBD9']/div/span/span/input
 ${AuditMngAuditEndDateXpath}            xpath://div[@id='control_155B5250-AFF6-4EE7-A2B2-200427F133C8']/div/span/span/input
+${AuditIntroduction}                    xpath://div[@id='control_9AAF2CD3-5F45-4560-962B-1E4A39280565']//textarea
+${AuditObjective}                       xpath://div[@id='control_EE073962-0DB4-4FD6-B88F-95B13A10D358']//textarea
 ${AuditMngSaveContButtonXpath}          xpath://div[.='Save to continue']
 ${AuditMngTeamTabXpath}                 xpath://li/div[.='Audit Team']
 ${AuditMngEventsTabXpath}               xpath://li/div[.='Events']
@@ -731,81 +758,98 @@ ${AuditSuggestedStartDateXpath}         xpath://div[@id='control_4AA4E37C-AAA9-4
 ${AuditSuggestedEndDateXpath}           xpath://div[@id='control_5CB8F6B6-2F53-4102-9340-CE64C72E37CD']/div/span/span/input
 ${AuditProposedDatesCommentsXpath}      xpath://div[@id='control_BC062ECD-9E04-40C3-8EF4-0B4007B9DEB0']/div/div/textarea
 ${AuditTeamAddRecordBtnXpath}           xpath://div[@id='control_8634EC1E-2840-40A4-9426-7555DC876807']//div[@id='btnAddNew']
-${AuditTeamFullNameDdID}                id:control_E0535A21-FBC8-4F90-B767-B9C02D121842
-${AuditTeamSrchXpath}                   xpath:/html/body/div[201]/div/input
-${AuditTeamSearchResultXpath}           xpath:/html/body/div[201]/ul/ul/li[@id='cbe087ad-bd0e-4e8b-8997-60a9b5b0ef37']/a[.='AutoTest User']
-${AuditTeamExperienceDdID}              id:control_A1BF9E59-A685-4589-A3B6-9519333C11D1
-${AuditTeamExperienceOptionXpath}       xpath:/html/body/div[202]/ul/ul/li/a[.='Audit team leader / Lead auditor']
+${AuditTeamFullNameDdID}                xpath://div[@id='control_E0535A21-FBC8-4F90-B767-B9C02D121842']//span[2]/b[1]
+${AuditTeamSrchXpath}                   xpath:(//input[@placeholder='Type and enter to search'])[7]
+${AuditTeamSearchResultXpath}           xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
+${AuditTeamExperienceDdID}              xpath://div[@id='control_A1BF9E59-A685-4589-A3B6-9519333C11D1']//span[2]/b[1]
+${AuditTeamExperienceOptionXpath}       xpath:(//div[contains(@class, 'transition visible')]//a[text()='Audit team leader / Lead auditor'])[1]
 ${AuditTeamSaveBtnXpath}                xpath://div[@id='control_8634EC1E-2840-40A4-9426-7555DC876807']//div[@id='btnSaveAll']
 ${AuditManagementEventsTabXpath}        xpath://div[.='Events']
 ${AuditMngEventsContentGridXpath}       xpath://div[@id='control_E2DA37B7-70A9-4AE4-959F-14FC8AF0F364']/div/div[2]/div[2]/div/div[3]/table/tbody/tr
 ${AuditMngStartAuditBtnID}              id:control_A024BB31-1AA2-4637-9E45-4AF551634E02
 ${AuditMngConductorDdID}                id:control_DC3EE96D-3BB3-4B26-8D65-33EA527EFA79
-${AuditMngConductorSearchXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[27]/div/Input
-${AuditMngConductorSrchResultXpath}     xpath:/html/body/div/div[3]/div/div[2]/div[27]/ul/ul/li/a
+${AuditMngConductorSearchXpath}         xpath:(//input[@placeholder='Type and enter to search'])[6]
+${AuditMngConductorSrchResultXpath}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuditMngReqVerificationBtnXpath}      id:control_AFB7FD68-58DE-4E99-9CB8-80475DD346FA
-${AuditManagementFindingsTabXpath}      xpath://div[.='Findings']
+${AuditManagementFindingsTabXpath}      xpath://li[@id='tab_28113C52-C055-4AAC-82D6-E05232AA7086']//div[.='Findings']
 ${AuditManagementStartBtnID}            id:btnChecklist_form_1B0044DE-2C55-488C-9850-75C417EED9C8
-${AuditManagementFindingsTabXpath}      xpath://div[.='Surface Traffic Management Self Assessment']
-${AuitMngQ1DdID}                        id:control_2AA1514E-1083-4932-A58F-BA708E6CC7C3
-${AuditMngQ1OptionXpath}                xpath:/html/body/div/div[3]/div/div[2]/div[32]/ul/ul/li/a
-${AuditMngChecklistSaveXpath}           xpath://div[.='Save current section']
+#${AuditManagementFindingsTabXpath}      xpath://div[.='Surface Traffic Management Self Assessment']
+${AuitMngQ1DdID}                        id:control_67368191-90DC-4203-A6EE-CCFA87F1A0D5
+${AuditMngQ1OptionXpath}                xpath:(//div[contains(@class, 'transition visible')]//a[text()='Compliant'])[1]
+${AuditMngChecklistSaveXpath}           xpath:(//div[@class='actionBar']//div[.='Save current section'])[1]
 ${AuditMngChecklistCloseBtnXpath}       xpath://div[@id='form_checklist_1B0044DE-2C55-488C-9850-75C417EED9C8']/div/i[@class='close icon cross']
-${AuditManagmentContinueBtnID}          id:btnChecklist_form_1B0044DE-2C55-488C-9850-75C417EED9C8
-${AuitMngQ2DdID}                        id:control_71ADDE76-5F7A-4C4A-A44D-5572301AF500
-${AuditMngQ2OptionXpath}                xpath:/html/body/div/div[3]/div/div[2]/div[270]/ul/ul/li[2]/a
-${AuditMngQ2CrossHairID}                id:control_minimized_submodule_71ADDE76-5F7A-4C4A-A44D-5572301AF500
-${AuditMngFindingFormID}                id:form_sub_d8e14273-7562-4d94-b077-0f17e678a305
+${AuditManagmentContinueBtnID}          xpath://div[@id='btnChecklist_form_1B0044DE-2C55-488C-9850-75C417EED9C8']
+${AuditManagmentFinishBtnID}            xpath://*[@id="btnSave_checklist_1B0044DE-2C55-488C-9850-75C417EED9C8"]/div[text()='Finish']
+${AuitMngQ2DdID}                        id:control_5CF5E55E-DE26-4437-8637-42644F9945B8
+${AuditMngQ2OptionXpath}                xpath:(//div[contains(@class, 'transition visible')]//a[text()='Compliant'])[1]
+${AuditMngQ2CrossHairID}                id:control_minimized_submodule_5CF5E55E-DE26-4437-8637-42644F9945B8
+${AuditMngFindingFormID}                id:form_sub_d369b141-1e74-4146-b85e-bf33fa861b7e
 ${AuditMngFindingAddBtnXpath}           xpath://div[@id='control_38C64463-952D-4E0F-BBDD-9B9B87DE03F5']/div/div/div/div[@id='btnAddNew']
 ${AuitMngFindingDescXpath}              xpath://div[@id='control_40ECC722-B08B-48F3-9906-3CFCE527C5CD']//textarea
 ${AuitMngFindingOwnerDdID}              id:control_434D9128-5EBC-4E25-9836-72A2C4451733
-${AuditMngFindingOwnerSearchXpath}      xpath:/html/body/div/div[3]/div/div[2]/div[396]/div/Input
-${AuditMngFindingOwnerSrchRsltXpath}    xpath:/html/body/div/div[3]/div/div[2]/div[396]/ul/ul/li/a
+${AuditMngFindingOwnerSearchXpath}      xpath:(//input[@placeholder='Type and enter to search'])[7]
+${AuditMngFindingOwnerSrchRsltXpath}    xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuitMngFindingClassDdID}              id:control_7689E71C-DC7E-41C1-9124-C6312596E956
-${AuditMngFindingClassOptionXpath}      xpath:/html/body/div/div[3]/div/div[2]/div[397]/ul/ul/li/a
-${AuditMngFindingSaveContBtnID}         id:control_E0B5417B-8F24-4E1D-A4DB-8C68192F6F7B  
+${AuditMngFindingClassOptionXpath}      xpath:(//div[contains(@class, 'transition visible')]//a[text()='Observation'])[1]
+${AuditMngFindingSaveContBtnID}         id:control_E0B5417B-8F24-4E1D-A4DB-8C68192F6F7B
+${AuditMngFindingWhyAnalysis}           xpath://div[@id='control_4FC2B3AE-0A41-4D90-8C36-88DCD7802812']//span[text()='Why Analysis']
+${AuditMngFindingIndFactorsDD}          xpath://div[@id='control_CDCCCDFB-B2ED-4F45-8B21-54358FAC0FB3']//span[2]/b[1]
+${AuditMngFindingIndFactorsSelect}      xpath:(//div[contains(@class, 'transition visible')]//a[text()='Supervision or Inspections – Inadequate or non-existent'])//i[1]
+${AuditMngFindingIndFactorsDesc}        xpath://div[@id='control_B0C4CB46-6EF6-43B0-B739-6AD8110C1A1A']//textarea[@language='A50A7F35-56F8-451E-82D9-946BD9ADEDB4']
+${AuditMngFindingWorkFactorsDD}         xpath://div[@id='control_7CACA862-8EE8-424E-9BFB-FCD58D175434']//span[2]/b[1]
+${AuditMngFindingWorkFactorsLbl}        xpath://div[@id='control_3A4A4306-FD7E-4B41-AD40-848516065AEE']
+${AuditMngFindingWorkFactorsSelect}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='Tools, Materials, or Equipment – Inadequate, not available, not maintained'])//i[1]
+${AuditMngFindingWorkFactorsDesc}       xpath://div[@id='control_7CADBA7E-8CC1-408D-ADD8-3B224565131C']//textarea[@language='A50A7F35-56F8-451E-82D9-946BD9ADEDB4']
+${AuditMngFindingOrgFactorsDD}          xpath://div[@id='control_CD4EA32A-8E60-4164-AF57-6A2DB5335F70']//span[2]/b[1]
+${AuditMngFindingOrgFactorsSelect}      xpath:(//div[contains(@class, 'transition visible')]//a[text()='Management of Change: Inadequate or non-existent'])//i[1]
+${AuditMngFindingOrgFactorsDesc}        xpath://div[@id='control_C279E65E-2CA4-49CA-8455-F162FDD1D630']//textarea[@language='A50A7F35-56F8-451E-82D9-946BD9ADEDB4']
+${AuditMngFindingInlineEdit}            xpath://div[@id='control_C313CB91-30D1-4C52-A657-8A23FCE29C35']//div[@id='grid']/div[4]/div/div[2]/div[1]/div/div
 ${AuditMngFindingActionsAddBtnXpath}    xpath://div[@id='control_C313CB91-30D1-4C52-A657-8A23FCE29C35']/div/div/div[2]/div
 ${AuditMngFindingActionTypeDdID}        id:control_F1D9D484-9182-4B8C-95F9-AFFB440EB3CE
-${AuditMngFindingActionTypeID}          id:2006cc14-2025-4073-97e4-fca83aa8a2c4_anchor
+${AuditMngFindingActionTypeID}          xpath:(//div[contains(@class, 'transition visible')]//a[text()='Corrective'])[1]
 ${AuitMngFindingActionDescXpath}        xpath://div[@id='control_1255F613-A69C-476A-8B05-4B87E5CA009F']//textarea
 ${AuitMngFindingActionEnityXpath}       id:control_34D02E21-7837-484C-844E-BCC8CC077837
 ${AuditFindingActEntityOptionXpath}     xpath:/html/body/div/div[3]/div/div[2]/div[417]/ul/ul/li/ul/li/a
-${AuditActionEntityExpandXpath}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[417]/ul[1]/ul/li/i
-${AuditActionEntityExpand2Xpath}        xpath:/html/body/div/div[3]/div/div[2]/div[417]/ul/ul/li/ul/li[2]/i    
-${AuditActionEntityExpand3Xpath}        xpath:/html/body/div/div[3]/div/div[2]/div[417]/ul/ul/li/ul/li[2]/ul/li/i
-${AuditActionEntitySelectXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[417]/ul/ul/li/ul/li[2]/ul/li/ul/li/a
+${AuditActionEntityExpandXpath}         xpath:(//a[text()='Anglo American Group']/../i)[2]
+${AuditActionEntityExpand2Xpath}        xpath:(//a[text()='Bulk Commodities & Other Minerals']/../i)[3]
+${AuditActionEntityExpand3Xpath}        xpath:(//a[text()='Kumba']/../i)[2]
+${AuditActionEntitySelectXpath}         xpath:(//a[text()='Sishen Mine'])[2]
 ${AuditActionRespDdID}                  id:control_7854D003-23E6-4A2E-AF2E-357C965FA684
-${AuditActionRespSearchXpath}           xpath:/html/body/div/div[3]/div/div[2]/div[418]/div/input
-${AuditActionRespSearchResultXpath}     xpath:/html/body/div/div[3]/div/div/div[418]/ul/ul/li/a
+${AuditActionRespSearchXpath}           xpath:(//input[@placeholder='Type and enter to search'])[11]
+${AuditActionRespSearchResultXpath}     xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuditActionDueDateXpath}              xpath://div[@id='control_A1A7A250-4916-472D-A6A5-CDA980F5DA52']//input
+${AuditActionRecurDD}                   xpath://div[@id='control_2EA9211B-54AC-4846-8A26-58606645D84A']//span[2]/b[1]
+${AuditActionRecurNo}                   xpath:(//div[contains(@class, 'transition visible')]//a[text()='No'])[1]
 ${AuditActionSaveButtonID}              id:btnSave_form_C3D85A7C-5A22-4F19-ACB2-9F155247E6DF
 ${AuditActionVerificationID}            id:control_9837FA24-F3EE-4463-8BD4-8F1D6038885F
-${AuditActionVerificationXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[428]/div/input
-${AuditActionVerifyResultXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[428]/ul/ul/li/a
-${AuditActionCloseButtonXpath}          xpath:/html/body/div/div[3]/div/div[2]/div[413]/div/i[2]
+${AuditActionVerificationXpath}         xpath:(//input[@placeholder='Type and enter to search'])[14]
+${AuditActionVerifyResultXpath}         xpath:(//div[contains(@class, 'transition visible')]//a[text()='Automated User'])[1]
+${AuditActionCloseButtonXpath}          xpath://*[@id="form_C3D85A7C-5A22-4F19-ACB2-9F155247E6DF"]/div[1]/i[2]
 ${AuditMngNavLinkID}                    id:nav_1B0044DE-2C55-488C-9850-75C417EED9C8
-${AuditMngFindingRecordXpath}           xpath:/html/body/div/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[4]/div/div/div/div[2]/div[2]/div/div[3]/table/tbody/tr
+${AuditMngFindingRecordXpath}           xpath://div[@id='control_38C64463-952D-4E0F-BBDD-9B9B87DE03F5']//div[@id='grid']/div[3]/table/tbody/tr/td[4]
 ${AuditFindingDescXpath}                xpath://div[@id='control_40ECC722-B08B-48F3-9906-3CFCE527C5CD']//textarea
 ${AuditFindingOwnerDdID}                id:control_434D9128-5EBC-4E25-9836-72A2C4451733
-${AuditFindingOwnerSearchXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[40]/div/input
-${AuditFindingOwnerResultXpath}         xpath:/html/body/div/div[3]/div/div[2]/div[40]/ul/ul/li/a
+${AuditFindingOwnerSearchXpath}         xpath:(//input[@placeholder='Type and enter to search'])[7]
+${AuditFindingOwnerResultXpath}         xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuditFindingClassificationDdID}       id:control_7689E71C-DC7E-41C1-9124-C6312596E956
-${AuditFindingClassOptionXpath}         xpath://a[@id="37e3a345-8b6a-41b8-ad8e-6a9561148b31_anchor"]
+${AuditFindingClassOptionXpath}         xpath:(//div[contains(@class, 'transition visible')]//a[text()='Major Non-conformance'])[1]
 ${AuditFindingSaveButtonID}             id:btnSave_form_D0DC2467-E0D2-4AB2-BC47-B8987BA93E91
 ${AuditMngVerificationTabXpath}         xpath://div[.='Verification']
 ${AuditMngVerificationAddBtnXpath}      xpath://div[@id='control_EDE28D9B-722E-4786-8CCB-FFA228880432']//div[@id='btnAddNew']
 ${AuditVerifyAuditorTypeDdID}           id:control_F8F35C1B-6B3C-4885-9834-C64C5DDA4555
-${AuditVerifyAuditorTypeOptionID}       id:f009e114-13d7-4dea-a4ad-7ffdd19a39a7_anchor
+${AuditVerifyAuditorTypeOptionID}       xpath:(//a[text()='Audit manager'][1])[2]
 ${AuditVerifyAuditorDdID}               id:control_DEA38CFE-258E-4507-BE92-180D8536EF89
-${AuditVerifyAuditorSearchXpath}        xpath:/html/body/div/div[3]/div/div[2]/div[59]/div/input
-${AuditVerifyAuditorResultXpath}        xpath:/html/body/div[1]/div[3]/div/div[2]/div[59]/ul[1]/ul/li/a
+${AuditVerifyAuditorSearchXpath}        xpath:(//input[@placeholder='Type and enter to search'])[11]
+${AuditVerifyAuditorResultXpath}        xpath:(//div[contains(@class, 'transition visible')]//a[text()='AutoTest User'])[1]
 ${AuditVerifyDdID}                      id:control_AC075E37-7F8F-4DEC-8DF0-02DC8D70BDFB
-${AuditVerifyYesOptionID}               id:14f2fba0-4b57-42aa-9cba-f1d9c372d3e6_anchor
+${AuditVerifyYesOptionID}               xpath:(//div[contains(@class, 'transition visible')]//a[text()='Yes'])[1]
 ${AuditVerifyCommentsXpath}             xpath://div[@id='control_5FC74CF8-0BE4-459D-9599-A35927F43D28']//textarea
 ${AuditVerifySaveChevronXpath}          xpath://div[@id='btnSave_form_2A91B334-A8CC-4FD6-8D7D-01BC35649F02']/div/div
 ${AuditVerifySaveAndCloseXpath}         xpath://div[@id='btnSave_form_2A91B334-A8CC-4FD6-8D7D-01BC35649F02']//div[@id='btnSaveClose_form_2A91B334-A8CC-4FD6-8D7D-01BC35649F02']
-${AuditVerifyNoOptionID}                id:e4db7081-5761-4ae9-b28e-2f709771e997_anchor
+${AuditVerifyNoOptionID}                xpath:(//div[contains(@class, 'transition visible')]//a[text()='No'])[1]
 ${AuditMngSearchIconpXpath}             xpath://div[@id="form_1B0044DE-2C55-488C-9850-75C417EED9C8"]/div/i
+${RecordSaved}                          xpath://*[@id="txtHeader"]
+${RecordSaved2}                         xpath:(//*[@id="txtHeader"])[2]
 
 #************************************************* Audit Universe Module ******************************************
 ${MaintenanceModuleSectionID}           id:section_81c24ddb-1c3a-4a10-8801-5269e0c83fdf

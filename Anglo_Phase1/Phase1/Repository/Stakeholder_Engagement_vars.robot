@@ -22,7 +22,7 @@ ${EngagementManagmentFLOptionID}        id:c90467d6-40cb-45e8-97ba-367fb080e969_
 ${EngagementManagmentProjectDDID}       id:control_963F5190-1317-42C1-AD7A-B277FCBA7101
 ${EngagementManagmentProjSrchXpath}     xpath:/html/body/div[1]/div[3]/div/div[2]/div[12]/div[1]/input
 ${EngagementManagementProjSelectAll}    xpath://*[@id="control_963F5190-1317-42C1-AD7A-B277FCBA7101"]/div[1]/a/span[2]/b[2]
-${EngagementManagmentProjOptXpath}      xpath://*[@id="8192900b-65f7-47b9-9351-05302c281249_anchor"]/i[1]
+${EngagementManagmentProjOptXpath}      xpath://a[text()='Baseline 18/03/2021 - do not use']/i[1]
 ${EngagementManagementDetailsID}        id:tab_134C2E6D-2571-4418-97AA-791E0BDB874A
 
 ${EngagementManagmentFuncDDID}          id:control_0FF334FE-CE57-49BF-BA69-9BE5DA3447CB
@@ -68,13 +68,13 @@ ${EngagementManagementGrievanceVal}     xpath://*[@id="1115a40f-e822-48e7-886b-d
 #************************************************* Link Commitments Scenario 3******************************************
 ${EngagementManagementComitDrp}         xpath://*[@id="control_1E01C557-92EF-43AB-956D-3F00669EB13F"]/div[1]/a/span[2]/b[1]
 ${EngagementManagementComitInput}       xpath:/html/body/div[1]/div[3]/div/div[2]/div[20]/div[1]/input
-${EngagementManagementComitCheck}       xpath://*[@id="30912eb4-2016-4daf-b0b4-9112768e529c_anchor"]/i[1]
+${EngagementManagementComitCheck}       xpath://*[@id="eac4d8c5-e721-42f3-9bda-da571f40c453_anchor"]/i[1]
 ${EngagementManagementComitvalidate}    xpath://*[@id="30912eb4-2016-4daf-b0b4-9112768e529c"]
 
 #************************************************* Link Related Permits Scenario 4**************************************
 ${EngagementManagementPermitDrp}        xpath://*[@id="control_F5863D2C-E246-40FA-8715-A0BFC670CEC6"]/div[1]/a/span[2]/b[1]
 ${EngagementManagementPermitInput}      xpath:/html/body/div[1]/div[3]/div/div[2]/div[21]/div[1]/input
-${EngagementManagementPermitCheck}      xpath://*[@id="db0f430a-f4ef-4db5-b4dc-a28e31a07e2a_anchor"]/i[1]
+${EngagementManagementPermitCheck}      xpath://*[@id="ed31529a-fbe1-43c6-acd8-94d47d5bb761_anchor"]/i[1]
 ${EngagementManagementPermitValidate}   xpath://*[@id="99e13089-b7eb-40e6-8f91-c42ad5360140"]
 
 #************************************************* Optional Scenario 5 6 7 *********************************************
@@ -92,22 +92,30 @@ ${EngagementGrievanceTitleInput}        xpath://*[@id="control_E9C32F4B-AB3C-4AB
 ${EngagementGrievanceEventDesc}         xpath://*[@id="control_E887FEB2-18C9-444E-A023-B05D5F08BC28"]/div[1]/div/textarea
 ${EngagementGrievanceBUSelectXpath}     xpath://*[@id="control_8FC01D3C-93D7-4570-BAEA-765533CDCB75"]/div[1]/a/span[1]/ul/li
 ${EnaggementGrievanceFLXpath}           xpath://*[@id="control_C492928D-54AF-49E5-B173-A427BC1A2BE5"]/div[1]/a/span[1]/ul/li
+${EngagementGrievanceFLSishen}          xpath://*[@id="c90467d6-40cb-45e8-97ba-367fb080e969"]/i
+${EngagementGrievanceFLMining}          xpath://*[@id="b875ec8b-7650-4fc3-8d88-e16f6fa4ad0f"]/i
+${EngagementGrievanceFLCommon}          xpath://*[@id="85881719-6be3-4464-8253-e165352940de"]/i
+${EngagementGrievanceFLDrilling}        xpath://*[@id="82da8f6a-591a-4682-9c2a-e2728294de6b"]/i
+${EngagementGrievanceFLRotary}          xpath://*[@id="89ed9eb6-0360-4d27-8704-39a473c8b821"]/i
+${EngagementGrievanceFLAtlas}           xpath://*[@id="1905df00-b702-4048-a71c-d72eaba199f9"]/i
+${EngagementGrievanceFLAtlasSel}        xpath://*[@id="86764057-35af-488b-bbb9-788ae17a2dfc_anchor"]
+
 ${EngagementGrievanceFLOptXpath}        xpath://*[@id="select3_8c5f2bfd"]/div[1]/input
-${EngagementGrievenceFLSelectXpath}     xpath://*[@id="481d6c2d-ad8c-414b-9f73-21602bbc6326_anchor"]
+${EngagementGrievenceFLSelectXpath}     xpath://*[@id="c90467d6-40cb-45e8-97ba-367fb080e969_anchor"]
 ${EngagementGrievanceDateXpath}         xpath://*[@id="control_A68454D1-B0FB-4EB7-B861-2AF37ACAC8DF"]/div[1]/span/span/input
 ${EngagementGrievanceTimeEventXpath}    xpath://*[@id="control_2CE711B1-4A48-4381-916B-17F5FD255123"]/div[1]/input
 ${EngagementGrievanceActionInput}       xpath://*[@id="control_58E573F1-1421-4B47-B9F9-68668A0AA36A"]/div[1]/div/textarea
 
 ${EngagementGrievanceRespSupXpath}      xpath://*[@id="control_4DC8AFD7-836E-4681-9FB8-99FAF564054C"]/div[1]/a/span[1]/ul/li
 ${EngagementGrievanceRespSupSearch}     xpath:/html/body/div[1]/div[3]/div/div[2]/div[66]/div[1]/input
-${EngagementGrievanceRespSupSelectID}   xpath://*[@id="b8ad5f90-d582-46c4-b186-d99649824acd_anchor"]
+${EngagementGrievanceRespSupSelectID}   xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
 
 ${EngagementGrievanceValidatorXpath}    xpath://*[@id="control_783CFD1D-ACE7-4A2B-B0CE-7B6883272992"]/div[1]/a/span[1]/ul/li
 ${EngagementGrievanceValidatorSearch}   xpath:/html/body/div[1]/div[3]/div/div[2]/div[67]/div[1]/input
-${EngagementGrievanceValidatorSelect}   xpath://*[@id="1bf1b5b4-9437-468a-942e-09769b836557_anchor"]
+${EngagementGrievanceValidatorSelect}   xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
 
 ${EngagementGrievanceSaveBtnID}         id:btnSave_form_B6196CB4-4610-463D-9D54-7B18E614025F
-${EngagementGrievanceAdd}               xpath://*[@id="46a4b2ed-ce9a-4496-8b2e-74b1dab272de_anchor"]/i[1]
+${EngagementGrievanceAddAll}            xpath://*[@id="control_ADF3F830-49E4-47FE-AB04-75C0890DA968"]/div[1]/a/span[2]/b[2]
 
 #************************************************* Add New Commitments *************************************************
 ${EngagementManagementComitBtn}         id:control_36AC4B8C-31DA-4EFA-86FD-E42B890D6EDF
@@ -120,7 +128,7 @@ ${EngagementCommitRegisterOwner}        xpath://*[@id="control_189B6C8F-E360-433
 ${EngagementCommitRegisterSearch}       xpath:/html/body/div[1]/div[3]/div/div[2]/div[7]/div[1]/input
 ${EngagementCommitSelectXpath}          xpath://*[@id="b8ad5f90-d582-46c4-b186-d99649824acd_anchor"]
 ${EngagementCommitSaveBtn}              xpath://*[@id="btnSave_form_DCB70D8A-B79E-4968-9607-29115B4FCDC2"]/div[3]
-${EngagementCommitAdd}                  xpath://*[@id="6e4d968b-b9f2-48ca-bae9-b21ccc5dd4ca_anchor"]/i[1]
+${EngagementCommitAddAll}               xpath://*[@id="control_1E01C557-92EF-43AB-956D-3F00669EB13F"]/div[1]/a/span[2]/b[2]
 
 #************************************************* Add New Permits *****************************************************
 ${EngagementManagementPermitBtn}        id:control_1878368A-95AB-4E0D-8B19-C3737AB8E914
@@ -162,7 +170,7 @@ ${EngagementPermitGrantingSelect}       xpath://*[@id="506816a1-56ee-4783-889b-f
 ${EngagementPermitInsAuthXpath}         xpath://*[@id="control_6B142D02-F252-4AF1-96D9-924B1B7D950B"]/div[1]/a/span[1]/ul/li
 ${EngagementPermitInsAuthSearch}        xpath:/html/body/div[1]/div[3]/div/div[2]/div[39]/div[1]/input
 ${EngagementPermitInsAuthSelect}        xpath:/html/body/div[1]/div[3]/div/div[2]/div[39]/ul[1]/ul/li[8]/a
-
+${EngagementPermitSelectAll}            xpath://*[@id="control_F5863D2C-E246-40FA-8715-A0BFC670CEC6"]/div[1]/a/span[2]/b[2]
 ${EngagementPermitSaveID}               id:btnSave_form_29DAE2B0-C71B-4599-8899-9A431EA65963
 
 
@@ -173,7 +181,7 @@ ${EngagementAddNewTeam}                 xpath:/html/body/div[1]/div[3]/div/div[2
 
 ${EngagementTeamAttendAdd}              id:control_B5CF2925-9A5E-4F93-A5D4-462B76CFEBF9
 ${EngagementTeamAttendDrp}              xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[20]/div[9]/div[2]/div[2]/div/div[12]/div[9]/div[2]/div[1]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[5]/div/div[1]/a/span[1]/ul/li
-${EngagementTeamAttendSearch}           xpath:/html/body/div[30]/div[1]/input
+${EngagementTeamAttendSearch}           xpath:(//input[@placeholder='Type and enter to search'])[8]
 ${EngagementTeamAttendeeAdd}            id:1e2bf0ff-d635-4ef5-b8d1-6c28e3df7e5c_anchor
 ${EngagementAttendeeSave}               id:btnSaveAll
 ${EngagementAttendeeInLineEdit}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[20]/div[9]/div[2]/div[2]/div/div[12]/div[9]/div[2]/div[1]/div/div/div[1]/div[2]/div[2]/div[1]/div[4]/div/div[2]/div[1]/div/div
@@ -186,7 +194,7 @@ ${EngagementTeamAttendClose}            xpath://*[@id="form_97558D28-83B1-4C55-A
 ${EngagementIndividualAttendeeTab}      xpath://*[@id="tab_0AF17767-5363-4C4B-8DA5-79B375B8EE01"]/div[1]
 ${EngagementAddNewIndividual}           xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[20]/div[9]/div[2]/div[2]/div/div[12]/div[9]/div[2]/div[2]/div/div/div[1]/div[1]/div[2]/div[1]/div
 ${EngagementIndividualAttendDrp}        xpath://*[@id="control_DA9B0184-991D-4267-B01B-36EF4792AF67"]/div[1]/a/span[1]/ul/li
-${EngagementIndividualAttendSearch}     xpath:/html/body/div[31]/div[1]/input
+${EngagementIndividualAttendSearch}     xpath:(//input[@placeholder='Type and enter to search'])[8]
 ${EngagementIndividualAttendSearch2}    xpath:/html/body/div[39]/div[1]/input
 ${EngagementIndividualAttendSearch2}    xpath:/html/body/div[40]/div[1]/input
 
@@ -203,7 +211,7 @@ ${EngagementIndividualClose}            xpath://*[@id="form_A89108D5-3731-429B-8
 ${EngagementGroupAttendeeTab}           xpath://*[@id="tab_D63969CF-767C-4E14-AF44-AB1FE51E6F04"]/div[1]
 ${EngagementAddNewGroup}                xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[20]/div[9]/div[2]/div[2]/div/div[12]/div[9]/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div[1]
 ${EngagementGroupAttendDrp}             xpath://*[@id="control_BCCAA4BD-BD02-428C-A1E3-3BFE31AF66BF"]/div[1]/a/span[1]/ul/li
-${EngagementGroupAttendSearch}          xpath:/html/body/div[31]/div[1]/input
+${EngagementGroupAttendSearch}          xpath:(//input[@placeholder='Type and enter to search'])[8]
 
 ${EngagementGroupAttendAdd}             id:506816a1-56ee-4783-889b-f3bd471dffe3_anchor
 ${EngagementGroupAttendSave}            xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[20]/div[9]/div[2]/div[2]/div/div[12]/div[9]/div[2]/div[3]/div/div/div[1]/div[1]/div[2]/div[2]/div
@@ -224,16 +232,16 @@ ${EngagementActionDesc}                 xpath://*[@id="control_1255F613-A69C-476
 
 ${EngagementActionEntityDrp}            xpath://*[@id="control_34D02E21-7837-484C-844E-BCC8CC077837"]/div[1]/a/span[1]/ul/li
 #${EngagementActionEntitySearch}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[34]/div[1]/input
-${EngagementActionEntityXpath2}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[32]/ul[1]/ul/li/ul/li[3]/i
+${EngagementActionEntityXpath2}         xpath:(//a[text()='Bulk Commodities & Other Minerals']/../i)[3]
 #${EngagementActionEntityXpath3}         xpath://*[@id="826e8170-0375-48c4-9aaf-af59e8e8aeba"]/i
-${EngagementActionEntityXpath3}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[32]/ul[1]/ul/li/ul/li[3]/ul/li[6]/i
-${EngagementActionEntityXpath4}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[32]/ul[1]/ul/li/ul/li[3]/ul/li[6]/ul/li[6]/i
-${EngagementActionEntitySelect}         xpath://*[@id="54f00015-2059-48c0-9d06-c9dd52d482e9_anchor"]
+${EngagementActionEntityXpath3}         xpath:(//a[text()='Kumba']/../i)[2]
+${EngagementActionEntityXpath4}         xpath:(//a[text()='Sishen Mine'])[2]
+#${EngagementActionEntitySelect}         xpath:
 
 
 ${EngagementActionRespDrp}             xpath://*[@id="control_7854D003-23E6-4A2E-AF2E-357C965FA684"]/div[1]/a/span[1]/ul/li
 ${EngagementActionRespsearch}          xpath:/html/body/div[1]/div[3]/div/div[2]/div[33]/div[1]/input
-${EngagementActionRespSelect}          xpath://*[@id="f8a92ac6-d024-4bf2-bc31-9db1b4961e99_anchor"]
+${EngagementActionRespSelect}          xpath://*[@id="4b848bf4-c75e-47ae-b88a-379712c2d4a3_anchor"]
 ${EngagementActionDue}                 xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/input
 ${EngagementActionRecuring}            xpath://*[@id="control_2EA9211B-54AC-4846-8A26-58606645D84A"]/div[1]/a/span[1]/ul/li
 ${EngagementActionRecuringSelect}      xpath://*[@id="14f2fba0-4b57-42aa-9cba-f1d9c372d3e6_anchor"]

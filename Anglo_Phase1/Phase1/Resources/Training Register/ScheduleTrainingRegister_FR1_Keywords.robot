@@ -71,15 +71,16 @@ FR1-Schedule Training Register
     Wait Until Element Is Visible      ${TrainingRegisterBusinessUnitDPDSishen}    20 seconds
     Click Element                      ${TrainingRegisterBusinessUnitDPDSishen}
     Sleep     2 seconds
-    Wait Until Element Is Visible      ${TrainingCourseDPD}      20 seconds
+    Wait Until Element Is Visible      ${TrainingCourseDPD}      30 seconds
     Click Element                      ${TrainingCourseDPD}
     Sleep    2 seconds
-    Wait Until Element Is Visible     ${TrainingCourseSelect1}    20 seconds
+    Wait Until Element Is Visible      ${TrainingCourseSelect1}    30 seconds
     Click Element                      ${TrainingCourseSelect1}
     Sleep    2 seconds
     Wait Until Element Is Visible      ${TrainingCourseSelect2}    20 seconds
     Click Element                      ${TrainingCourseSelect2}
     Sleep    2 seconds
+
     Wait Until Element Is Visible       ${TrainingCourseDescription}    20 seconds
     Element Should Be Visible           ${TrainingCourseDescription}
     Sleep    2 seconds
@@ -137,13 +138,14 @@ FR1-Schedule Training Register
     Wait Until Element Is Visible         ${TrainingInternalInstructorDPD}     20 seconds
     Click Element                         ${TrainingInternalInstructorDPD}
     Sleep    2 seconds
-    #Wait Until Element Is Visible         ${TrainingInternalInstructorSelect}     20 seconds
-    #Click Element                         ${TrainingInternalInstructorSelect}
-    #Sleep    2 seconds
-    Wait Until Element Is Visible         ${TrainingInternalInstructorInputSearch}     30    seconds
-    Input Text                            ${TrainingInternalInstructorInputSearch}       A
+
+    Wait Until Element Is Visible         ${TrainingInternalInstructorInputSearch}     30 seconds
+    Click Element                         ${TrainingInternalInstructorInputSearch}
+    Input Text                            ${TrainingInternalInstructorInputSearch}       AARON MARK KING
     Press Keys                            ${TrainingInternalInstructorInputSearch}      ENTER
     Sleep    2 seconds
+
+
     Wait Until Element Is Visible         ${TrainingInternalInstructorSelectDPD}    40 seconds
     Click Element                         ${TrainingInternalInstructorSelectDPD}
     Sleep   2 seconds

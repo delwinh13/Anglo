@@ -144,12 +144,12 @@ FR2- Review Registered Project Altenate Scenario
     Click Element                       ${ProjectManagementBUApprovDrp}
     Wait Until Element Is Visible       ${ProjectManagementBUApprovSearch}    40 seconds
     Click Element                       ${ProjectManagementBUApprovSearch}
-    Input Text                          ${ProjectManagementBUApprovSearch}    auto
+    Input Text                          ${ProjectManagementBUApprovSearch}    autotest
     Press Keys                          ${ProjectManagementBUApprovSearch}    ENTER
     Sleep    2 seconds
     Wait Until Element Is Visible       ${ProjectManagementBUApprovSelect}    40 seconds
     Click Element                       ${ProjectManagementBUApprovSelect}
-    Click Element                       ${ProjectManagementBUApprovDrp}
+   # Click Element                       ${ProjectManagementBUApprovDrp}
 
     # Altenate Scenario Date and time Approve not visible
     Element Should Not Be Visible       ${ProjectManagementDateTimeApprov}
@@ -375,7 +375,7 @@ FR11-View Linked Engagements
     Sleep    2 seconds
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
-    Sleep     3 seconds
+    Sleep     10 seconds
     #capture Process Flow
 
     Wait Until Element Is Visible       ${ProjectManagememntProcessID}    40 seconds
@@ -390,6 +390,8 @@ FR11-View Linked Engagements 2
     Wait Until Element Is Visible       ${ProjectLinkSearchBtn}    40 seconds
     Click Element                       ${ProjectLinkSearchBtn}
 
+    sleep     5 seconds
+    Log To Console    Search
     Wait Until Element Is Visible       ${ProjectLinkSearch}
     Click Element                       ${ProjectLinkSearch}
     Input Text                          ${ProjectLinkSearch}    auto test ${CurrentDate}

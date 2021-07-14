@@ -7,8 +7,10 @@ Force Tags      behavior-driven
 # Suite Teardown  Close Browser
 
 *** Test Cases ***
-Meeting Template
+Equipment Tool Category
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR1 - Capture Equipment and Tool Category
     FR2 - Capture Asset Details
+    FR3 - Capture Calibration Details
+    FR4 - Capture Asset Schedule

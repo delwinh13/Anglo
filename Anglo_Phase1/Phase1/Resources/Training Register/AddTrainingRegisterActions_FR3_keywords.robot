@@ -47,6 +47,8 @@ FR3-Add Training Register Actions
     Click Element                       ${TrainingRegisternewADDbttn}
     Sleep    2 seconds
 
+    Wait Until page does not contain       ${Loadingvariablepermis}       30 seconds
+
     #Processflow
     Wait Until Element Is Visible       ${TrainingRegisterProcessFlow}    20  seconds
     Click Element                       ${TrainingRegisterProcessFlow}
@@ -152,15 +154,21 @@ FR3-Add Training Register Actions
     Sleep    2 seconds
     Screenshot    ActionsTab
 
+    Wait Until page does not contain       ${Loadingvariablepermis}       30 seconds
+
     #Actions Tab
     Wait Until Element Is Visible     ${ActionsTAB}     30    seconds
     Click Element                     ${ActionsTAB}
     Sleep    5 seconds
 
+
+
     #ActionsAdd
     Wait Until Element Is Visible     ${ActionsAddBttn}     40 seconds
     Click Element                     ${ActionsAddBttn}
     Sleep    2 seconds
+
+    Wait Until page does not contain       ${Loadingvariablepermis}       30 seconds
 
     #ActionsTypeSelect
     Wait Until Element Is Visible     ${ActionsTaskTypeDPD}    30 seconds
@@ -202,8 +210,9 @@ FR3-Add Training Register Actions
     Wait Until Element Is Visible      ${ActionsRespPersonDPD}     40 seconds
     Click Element                      ${ActionsRespPersonDPD}
     Sleep    2 seconds
-    Wait Until Element Is Visible      ${ActionsResPersonSearchInput}     30 seconds
-    Click Element                      ${ActionsResPersonSearchInput}
+    Wait Until Element Is Visible      ${ActionsResPersonSearchInput}     40 seconds
+    Input Text                          ${ActionsResPersonSearchInput}     anglo
+    Press Keys                         ${ActionsResPersonSearchInput}      ENTER
     Sleep     2 seconds
     Wait Until Element Is Visible      ${ActionsRespersonSelect}    30 seconds
     Click Element                      ${ActionsRespersonSelect}
@@ -225,16 +234,14 @@ FR3-Add Training Register Actions
     Wait Until Element IS Visible       ${ActionsTaskPrioritySelect}    30 seconds
     Click Element                       ${ActionsTaskPrioritySelect}
     Sleep    2 seconds
-    Wait Until Element Is Visible       ${ActionsTaskpriorityDPD}    30 seconds
-    Click Element                       ${ActionsTaskpriorityDPD}
-    Sleep    2 seconds
 
-   ${ExpiryDate}                        Get Current Date    result_format=%d-%m-%Y         increment=+3 day
+
+    ${ExpiryDate}                        Get Current Date    result_format=%d-%m-%Y         increment=+3 day
     Set Global Variable                  ${ExpiryDate}
     Input Text                           ${ActionsDueDate}     ${ExpiryDate}
     Sleep    2  seconds
 
-    Wait Until Element Is Visble      ${ActionsSAPWorkCheckBox}    20 seconds
+    Wait Until Element Is Visible      ${ActionsSAPWorkCheckBox}    20 seconds
     Click Element                     ${ActionsSAPWorkCheckBox}
     Screenshot    SAPMODULE
     Click Element                     ${ActionsSAPWorkCheckBox}     #Uncheck
@@ -243,17 +250,13 @@ FR3-Add Training Register Actions
     Wait Until Element Is Visible      ${ActionsReplicateActionsCheck}    30 seconds
     Click Element                      ${ActionsReplicateActionsCheck}
     Sleep    3 seconds
-    Wait Until Element Is Visible      ${ActionsMultipleUsersDPD}     30 seconds
-    Click Element                      ${ActionsMultipleUsersDPD}
-    Sleep    2 seconds
-    Wait Until Element Is Visible       ${ActionsMultipleUSersSelect}    30 seconds
-    Click Element                      ${ActionsMultipleUSersSelect}
-    Sleep    2 seconds
+
     Screenshot    Multiple Users
+
+    Wait Until Element Is Visible      ${ActionsReplicateActionsCheck}    30 seconds
+    Click Element                      ${ActionsReplicateActionsCheck}
     Sleep    3 seconds
-    Wait Until Element Is Visible      ${ActionsMultipleUsersDPD}     30 seconds
-    Click Element                      ${ActionsMultipleUsersDPD}
-    Sleep    2 seconds
+
 
     Wait Until Element Is Visible      ${ActionsRecurringDPD}     30 seconds
     Click Element                      ${ActionsRecurringDPD}

@@ -26,7 +26,7 @@ Login with Valid Credentials
 
 #************************************FR3-Edit Inspection Scheduler*******************
 FR3-Edit Inspection Scheduler
-    Log To Console    Starting Capture Inspection Scheduler
+    Log To Console    Edit Inspection Scheduler
 
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
@@ -119,7 +119,7 @@ FR3-Edit Inspection Scheduler
 
      #Input Name of Inspection
      Wait Until Element Is Visible      ${InspectionSchedulerNameofInspection}     20 seconds
-     Input Text                         ${InspectionSchedulerNameofInspection}     Automation
+     Input Text                         ${InspectionSchedulerNameofInspection}     Automationtest
      Sleep    2 seconds
 
      #Input Purpose

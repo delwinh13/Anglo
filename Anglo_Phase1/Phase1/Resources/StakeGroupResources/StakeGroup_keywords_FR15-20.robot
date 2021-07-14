@@ -12,7 +12,7 @@ Resource    ../../Repository/StakeGroup_vars.robot
 
 *** Keywords ***
 #*********************************************** FR15 - Add_View Engagements_MS_AS **************************************************
-FR15 - Add_View Engagements_MS_AS
+FR15 - Add_View Engements_MS_AS
     Log To Console    FR15 - Add_View Engagements_AS
     # Engagements Tab
     Click Element                                   ${StakeholderGroupEngagementsTab}
@@ -293,7 +293,9 @@ FR16 - Add_View Engagement Plan_MS_AS
     Press Keys                                      ${StakeGroupEngagementPlanStartDateXpath}                   ENTER
     # Frequency
     Click Element                                   ${StakeGroupEngagementPlanFrequencyDDXpath}
+    Sleep   1
     Wait Until Element Is Visible                   ${StakeGroupEngagementPlanFrequencyDailyXpath}                  60 seconds
+    Sleep   1
     Click Element                                   ${StakeGroupEngagementPlanFrequencyDailyXpath}
     # Engagement Plan End Date
     ${EndDate}          Get Current Date            result_format=%d-%m-%Y              increment=+3 day
@@ -604,13 +606,13 @@ FR17 - View Commitments_MS2
 
     # Open Commitments Record
     Click Element                           ${StakeGroupCommitmentsVGRecordXpath}
-    Sleep       2
+    Sleep       6
     Select Window       NEW
-    Sleep       8
+    Sleep       6
     Screenshot      Stakeholder Groups Commitments New Tab Opened
     # Select Frame
     Select Frame                                    ${iFrame}
-    Sleep       7
+    Sleep       6
 
     # Process Flow
     Wait Until Element Is Enabled                   ${StakeGroupCommitmentsConditionsPFXpath}    40 seconds
@@ -683,9 +685,27 @@ FR18 - Add Grievances_MS
     # Capture Functional Location
     Wait Until Element Is Visible                   ${EnaggementGrievanceFLXpath}    40 seconds
     Click Element                                   ${EnaggementGrievanceFLXpath}
-    Wait Until Element Is Visible                   ${EngagementGrievenceFLSelectXpath}    40 seconds
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand1Xpath}    40 seconds
     Sleep    1 seconds
-    Click Element                                   ${EngagementGrievenceFLSelectXpath}
+    Click Element                                   ${EngagementGrievenceFLExpand1Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand2Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLExpand2Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand3Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLExpand3Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand4Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLExpand4Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand5Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLExpand5Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLExpand6Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLExpand6Xpath}
+    Wait Until Element Is Visible                   ${EngagementGrievenceFLSelectNew}    40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${EngagementGrievenceFLSelectNew}
 
     # Capture Date of Event
     Wait Until Element Is Visible                   ${EngagementGrievanceDateXpath}   40 seconds
@@ -731,7 +751,8 @@ FR18 - Add Grievances_MS
     Wait Until Element Is Visible                   ${EngagementGrievanceSaveBtnID}     40 seconds
     Click Element                                   ${EngagementGrievanceSaveBtnID}
     Wait Until Element Is Not Visible               ${LoadingBarXpath}                  40 seconds
-    Wait Until Element Is Visible                   ${RecordSaved}                                  60 seconds
+    Sleep   1
+#    Wait Until Element Is Visible                   ${RecordSaved}                                  60 seconds
     Screenshot      Stakeholder Groups Events Record Added
 
     # Reportable to external parties
@@ -756,16 +777,22 @@ FR18 - Add Grievances_MS
     Click Element                                   ${StakeGroupEventsActivityDDXpath}
     Wait Until Element Is Visible                   ${StakeGroupEventsActivityOptXpath}    40 seconds
     Click Element                                   ${StakeGroupEventsActivityOptXpath}
+    Click Element                                   ${StakeGroupEventsActivityLblXpath}
+    Sleep   1
 
     # What happened (agency)
     Click Element                                   ${StakeGroupEventsWhatHappenDDXpath}
+    Sleep   1
     Wait Until Element Is Visible                   ${StakeGroupEventsWhatHappenOptXpath}    40 seconds
     Click Element                                   ${StakeGroupEventsWhatHappenOptXpath}
+    Sleep   1
 
     # How did it happen (mechanism)
     Click Element                                   ${StakeGroupEventsHowHappenDDXpath}
+    Sleep   1
     Wait Until Element Is Visible                   ${StakeGroupEventsHowHappenOptExpandXpath}    40 seconds
     Click Element                                   ${StakeGroupEventsHowHappenOptExpandXpath}
+    Sleep   1
     Wait Until Element Is Visible                   ${StakeGroupEventsHowHappenOptXpath}    40 seconds
     Click Element                                   ${StakeGroupEventsHowHappenOptXpath}
 
@@ -802,6 +829,8 @@ FR18 - Add Grievances_MS
 
     # Search Button
     Sleep       4
+    Wait Until Element Is Not Visible               ${StakeholderGroupModLoadingXpath}            30 seconds
+    Sleep       2
     Wait Until Element Is Enabled                   ${StakeholderGroupSearchID}                 30 seconds
     Input Text                                      ${StakeGroupCommitmentsConditionsSearchAutoTestXpath}           Auto Test
     Click Element                                   ${StakeholderGroupSearchID}
@@ -917,6 +946,7 @@ FR19 - Capture StakeGroup Actions_MS
     Sleep       1
     Select Frame                                    ${iFrame}
     Sleep       1
+    Wait Until Element Is Not Visible               ${StakeGroupRelationsLoadingDataXpath}             60 seconds
     Wait Until Element Is Enabled                   ${StakeholderGroupDetailsTab}                      60 seconds
 
     FOR  ${i}     IN RANGE  1  4

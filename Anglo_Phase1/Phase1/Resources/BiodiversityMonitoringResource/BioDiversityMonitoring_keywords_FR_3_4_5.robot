@@ -28,7 +28,7 @@ Login with Valid Credentials
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
     Sleep     3 seconds
-
+FR3-Capture Biodiversity Measurement - Fauna
     # Click Environmental Sustainability
     Sleep    2 seconds
     Wait Until Page Contains Element    ${EnvironmentalSustainabilityID}    60 seconds
@@ -84,7 +84,7 @@ Login with Valid Credentials
     Click Element                       ${BioMonTypeDrp}
     Wait Until Element Is Visible       ${BioMonTypeFauna}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${BioMonTypeSelect}
+    Click Element                       ${BioMonTypeFauna}
 
     #Wait Until Element Is Visible       ${BioMonTypeDrp2}    40 seconds
     #Click Element                       ${BioMonTypeDrp2}
@@ -115,3 +115,133 @@ Login with Valid Credentials
     #validate process is on Edit Phase
     Wait Until Element Is Visible       ${BioMonProcessEdit}    40 seconds
     Element Should Be Visible           ${BioMonProcessEdit}
+
+    #Capture Biodiversity measurement
+    Wait Until element Is Visible       ${BioFaunaMeasureDrp}    40 seconds
+    Click Element                       ${BioFaunaMeasureDrp}
+
+    Sleep     5
+    #add record
+    Wait Until Element Is Visible       ${BioMonFaunaAdd}    40 seconds
+    Click Element                       ${BioMonFaunaAdd}
+
+    #Add Parameter
+    Wait Until Element Is Visible       ${BioMonFaunaParamDrp}    40 seconds
+    Click Element                       ${BioMonFaunaParamDrp}
+    Wait Until Element Is Visible       ${BioMonFaunaParamSrch}    40 seconds
+    Click Element                       ${BioMonFaunaParamSrch}
+    Input Text                          ${BioMonFaunaParamSrch}    a
+    Press Keys                          ${BioMonFaunaParamSrch}    ENTER
+    Wait Until Element Is Visible       ${BioMOnFaunaParamRum}    40 seconds
+    Click Element                       ${BioMOnFaunaParamRum}
+    Wait Until Element Is Visible       ${BioMonFaunaParamSel}    40 seconds
+    Click Element                       ${BioMonFaunaParamSel}
+
+    Log to Console    FR-3 Altenate Scenario
+    #Capture monitering point
+    Wait Until Element Is Visible       ${BioMonFaunaMonDrp}    40 seconds
+    Click Element                       ${BioMonFaunaMonDrp}
+    Wait Until Element Is Visible       ${BioMonfaunaMonCount}    40 seconds
+    Click Element                       ${BioMonfaunaMonCount}
+
+    Element Should Not Be Visible       ${BioMonFaunaRelocPtDrp}
+
+    Log to Console    FR-3 Main Scenario
+    #Capture monitering point
+    Wait Until Element Is Visible       ${BioMonFaunaMonDrp}    40 seconds
+    Click Element                       ${BioMonFaunaMonDrp}
+    sleep    1 seconds
+    Wait Until Element Is Visible       ${BioMonFaunaMonRescue}    40 seconds
+    Click Element                       ${BioMonFaunaMonRescue}
+
+    #Capture Monitering taken by
+    Wait Until Element Is Visible       ${BioMonFaunaTakenByDrp}    40 seconds
+    Click Element                       ${BioMonFaunaTakenByDrp}
+    Wait Until element Is Visible       ${BioMonFaunaTakenBySrch}    40 seconds
+    Click Element                       ${BioMonFaunaTakenBySrch}
+    Input Text                          ${BioMonFaunaTakenBySrch}    a
+    Press Keys                          ${BioMonFaunaTakenBySrch}    ENTER
+    Sleep    4 seconds
+    Wait Until Element Is Visible       ${BioMonFaunaTakenBySel}    40 seconds
+    Click Element                       ${BioMonFaunaTakenBySel}
+
+    #Comments
+    Wait Until Element Is Visible       ${BioMonFaunaComment}    40 seconds
+    Click Element                       ${BioMonFaunaComment}
+    Input Text                          ${BioMonFaunaComment}    auto test
+
+
+    #Capture Relocation point
+    Wait Until Element Is Visible       ${BioMonFaunaRelocPtDrp}    40 seconds
+    Click Element                       ${BioMonFaunaRelocPtDrp}
+    Sleep    4 seconds
+    Wait Until Element Is Visible       ${BioMonFaunaRelocPtSel}    40 seconds
+    Click Element                       ${BioMonFaunaRelocPtSel}
+
+
+    # Click Save
+    Wait Until Element Is Visible       ${BioMonSave}    40 seconds
+    Click Element                       ${BioMonSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+#************************************************* FR4-Capture Findings ************************************************
+FR4-Capture Findings
+    #Capture dropdown tab
+    Wait Until Element Is Visible       ${BioMonFindingDrp}    40 seconds
+    Click Element                       ${BioMonFindingDrp}
+
+    #Add new record
+    Wait Until Element Is Visible          ${BioMonFindingAdd}    40 seconds
+    Click Element                       ${BioMonFindingAdd}
+
+    sleep    10 seconds
+
+    #Capture process flow
+    Wait Until Element Is Visible       ${BioMonFindingProcess}    40 seconds
+    Click Element                       ${BioMonFindingProcess}
+
+    #Capture finding description
+    Wait Until Element Is Visible       ${BioMonFindingDesc}    40 seconds
+    Click Element                       ${BioMonFindingDesc}
+    Input Text                          ${BioMonFindingDesc}    auto test
+
+	#Capture functional location
+    Log To Console    Capture location
+    Wait Until Element Is Visible       ${BioMonFindingFLDrp}    40 seconds
+    Click Element                       ${BioMonFindingFLDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${BioMonFindingFLSel}    40 seconds
+    Click Element                       ${BioMonFindingFLSel}
+
+    #capture finding owner
+    Log To Console    finding owner
+    Wait Until Element Is Visible       ${BioMonFindingOwnDrp}    40 seconds
+    Click Element                       ${BioMonFindingOwnDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${BioMonFindingOwnSrch}    40 seconds
+    Click Element                       ${BioMonFindingOwnSrch}
+    Input Text                          ${BioMonFindingOwnSrch}    a
+    Press Keys                          ${BioMonFindingOwnSrch}    ENTER
+    Sleep    3 seconds
+    Wait Until Element Is Visible       ${BioMonFindingOwnSel}    40 seconds
+    Click Element                       ${BioMonFindingOwnSel}
+
+    #Capture finding classification
+    Log To Console    Capture Permit critically
+    Wait Until Element Is Visible       ${BioMonFindingClassDrp}    40 seconds
+    Click Element                       ${BioMonFindingClassDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${BioMonFindingClassSel}    40 seconds
+    Click Element                       ${BioMonFindingClassSel}
+
+
+    # Click Save
+    Wait Until Element Is Visible       ${BioMonFindingSave}    40 seconds
+    Click Element                       ${BioMonFindingSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+
+
+
+
+

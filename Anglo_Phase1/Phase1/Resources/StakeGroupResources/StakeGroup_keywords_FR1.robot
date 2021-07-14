@@ -57,6 +57,7 @@ FR1 - Capture Stakeholder Group_MS
     # Add Button
     Click Element                           ${StakeholderGroupAddBtnID}
     Sleep       2
+    Wait Until Element Is Not Visible       ${StakeGroupOrdersRecordLoadingXpath}            60 seconds
     Wait Until Element Is Enabled           ${StakeholderGroupPFID}     60 seconds
 
     # Process Flow
@@ -317,11 +318,12 @@ FR1_StakeGroup_AddedNotification
     Input Text                              ${Passwordid}    ${Password Value}
     Click Element                           ${SubmitButtonid}
     #Wait for StakeGroup Record
-    sleep       20
+    sleep      15
     Select Frame                            ${iFrame}
-    Wait Until Element Is Enabled           ${StakeholderGroupPFID}           60 seconds
-    Click Element                           ${StakeholderGroupPFID}
-    Wait Until Page Contains Element        ${StakeholderGroupPFEdit}
+    sleep   2
+#    Wait Until Element Is Enabled           ${StakeholderGroupPFID}           60 seconds
+#    Click Element                           ${StakeholderGroupPFID}
+#    Wait Until Page Contains Element        ${StakeholderGroupPFEdit}
     Screenshot      Stakeholder Group Record Opened
 
 #************************************************* FR1 - Capture Stakeholder Group_AS1 ****************************************

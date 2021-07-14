@@ -11,5 +11,5 @@ Suggestions and Innovations
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR3- Capture Suggestions and Innovations Actions
-    FR3- Suggestion and Innovation Reject Email
-    [teardown]  close browser
+
+

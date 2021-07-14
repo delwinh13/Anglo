@@ -7,7 +7,7 @@ Force Tags      behavior-driven
 # Suite Teardown  Close Browser
 
 *** Test Cases ***
-Meeting Template
+Activity Area Codes
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR1 - Activity Area Codes

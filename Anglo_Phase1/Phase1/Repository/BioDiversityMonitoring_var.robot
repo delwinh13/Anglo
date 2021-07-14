@@ -17,6 +17,7 @@ ${BioMonMonthDrp}                           xpath://*[@id="control_50C453F4-08EA
 ${BioMonMonthSelect}                        xpath:(//div[contains(@class, 'transition visible')]//a[text()='August'])
 ${BioMonYearDrp}                            xpath://*[@id="control_3D6D5440-22D5-49BD-8487-7DC13D7FD682"]/div[1]/a/span[2]/b[1]
 ${BioMonYearSelect}                         xpath:(//div[contains(@class, 'transition visible')]//a[text()='2018'])
+${BioMonYearSelect2}                        xpath:(//div[contains(@class, 'transition visible')]//a[text()='2019'])
 ${BioMonMonitoringPtDrp}                    xpath://*[@id="control_F94557BC-A37F-43F9-8A40-3A11BE9D90A9"]/div[1]/a/span[1]/ul/li
 ${BioMonMonitoringPtSelect}                 xpath://*[@id="48f5a992-7cd7-4d94-b3bf-072433ab0e47_anchor"]
 ${BioMonSupportingDoc}                      xpath://*[@id="control_0B795949-90F9-415F-86CA-8D36F77A33DA"]/div[1]/div[1]/div[2]/b[2]
@@ -48,5 +49,34 @@ ${BioMonFloraMonSelect2}                    xpath://*[@id="b8ad5f90-d582-46c4-b1
 ${BioMonFloraComment}                       xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[22]/div[9]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[9]/div/div[1]/div/textarea
 ${BioMonFloraMonSave}                       xpath://div[text()='Biodiversity Measurement - Flora']/../..//*[@id="btnSaveAll"]/div
 
+#************************************************* FR3-Capture Biodiversity Measurement - Fauna ************************
 ${BioMonTypeFauna}                          xpath://*[@id="cb4fcaca-baf0-4d1d-81d4-c93bfa675624_anchor"]
 ${BioFaunaMeasureDrp}                       xpath://*[@id="control_B3F84844-A6B6-4BB2-ACA3-3D81D9839FB6"]/div[9]/div[1]
+${BioMonFaunaAdd}                           xpath://div[text()='Biodiversity Measurement - Fauna']/../..//*[@id="btnAddNew"]/div
+${BioMonFaunaParamDrp}                      xpath://*[@id="control_6DAF2B80-5DB9-45CA-86B2-9A25058F0F56"]/div[1]/a/span[1]/ul/li
+${BioMonFaunaParamSrch}                     xpath:(//input[@placeholder='Type and enter to search'])[1]
+${BioMOnFaunaParamRum}                      xpath://*[@id="f5f54faa-0352-4b7d-b302-653b86740e79"]/i
+${BioMonFaunaParamSel}                      xpath://*[@id="59c892d6-af82-4d5f-93a4-c3e9d4ff5190_anchor"]
+${BioMonFaunaMonDrp}                        xpath://*[@id="control_C6D5514D-338D-4D8C-BD01-10C1253885A5"]/div[1]/a/span[1]/ul/li
+${BioMonFaunaMonRescue}                     xpath://*[@id="d19ff543-1ced-4699-b279-7d1bbbf8fdb7_anchor"]
+${BioMonfaunaMonCount}                      xpath://*[@id="397e71af-850d-45e6-8eee-6ce4f616d2a4_anchor"]
+${BioMonFaunaTakenByDrp}                    xpath://*[@id="control_E4EB297F-7917-4077-BA32-C3E00CEAAC35"]/div[1]/a/span[1]/ul/li
+${BioMonFaunaTakenBySrch}                   xpath:(//input[@placeholder='Type and enter to search'])[2]
+${BioMonFaunaTakenBySel}                    xpath://*[@id="5c87af89-e442-4173-8013-e92e20443598_anchor"]
+${BioMonFaunaComment}                       xpath://*[@id="control_3E01B7D5-1805-4FDA-BFCC-FA4FA77F8F03"]/div[1]/div/textarea
+${BioMonFaunaRelocPtDrp}                    xpath://*[@id="control_2947BE29-3B0A-4F30-8C8D-6EE0EBCB9651"]/div[1]/a/span[1]/ul/li
+${BioMonFaunaRelocPtSel}                    xpath:(//*[@id="7744be9b-d5f8-4b80-ab68-ce8f527d8317_anchor"])[2]
+
+#************************************************* FR4-Capture Findings ************************************************
+${BioMonFindingDrp}                         xpath://*[@id="control_1871D179-7CFD-4DD1-8158-D48140711AFC"]/div[9]/div[1]
+${BioMonFindingAdd}                         xpath://div[text()='Biodiversity Findings']/../..//*[@id="btnAddNew"]/div
+${BioMonFindingProcess}                     xpath://*[@id="btnProcessFlow_form_0E7CADBB-8D75-42EA-BB3A-2BD553AB2749"]/span
+${BioMonFindingDesc}                        xpath://*[@id="control_40ECC722-B08B-48F3-9906-3CFCE527C5CD"]/div[1]/div/textarea
+${BioMonFindingFLDrp}                       xpath://*[@id="control_DE18F9A3-BBB4-4600-B420-0167AE11B426"]/div[1]/a/span[1]/ul/li
+${BioMonFindingFLSel}                       xpath://*[@id="4bdfd0de-da74-4cd1-811e-9bfbe1354d0a_anchor"]
+${BioMonFindingOwnDrp}                      xpath://*[@id="control_434D9128-5EBC-4E25-9836-72A2C4451733"]/div[1]/a/span[1]/ul/li
+${BioMonFindingOwnSrch}                     xpath:(//input[@placeholder='Type and enter to search'])[1]
+${BioMonFindingOwnSel}                      xpath:(//*[@id="b8ad5f90-d582-46c4-b186-d99649824acd_anchor"])
+${BioMonFindingClassDrp}                    xpath://*[@id="control_7689E71C-DC7E-41C1-9124-C6312596E956"]/div[1]/a/span[1]/ul/li
+${BioMonFindingClassSel}                    xpath://*[@id="ca7db1c7-d795-4195-8166-70c9d13173c2_anchor"]
+${BioMonFindingSave}                        xpath://*[@id="btnSave_form_0E7CADBB-8D75-42EA-BB3A-2BD553AB2749"]/div[3]

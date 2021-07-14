@@ -53,7 +53,7 @@ ${ProjectManagementProcessComplete}     xpath:(//div[@id='divProcess_D1FDADB7-36
 ${ProjectManagementFinancialTab}        xpath://*[@id="tab_2F470536-789E-463C-8E35-9A9759A0CC47"]/div[1]
 ${ProjectManagementTotalBudget}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[3]/div[9]/div[2]/div[2]/div[1]/div/input
 ${ProjectManagementBudgetExtChk}        xpath://*[@id="control_1D35A9A4-3615-4BE5-B4F9-1238EC675264"]/div[1]/div
-${ProjectManagementBudgetExtInput}      xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[3]/div[9]/div[2]/div[8]/div[1]/div/input
+${ProjectManagementBudgetExtInput}      xpath:(//*[@id="numberInput"])[2]
 
 #Total Cost
 ${PayBackPeriod}                        xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[4]/div[9]/div[2]/div[2]/div[1]/div/input
@@ -147,7 +147,7 @@ ${ProjectActionClose}                   xpath://*[@id="form_F54AE783-1378-4974-A
 ${ProjectActionCloseYes}                id:btnConfirmYes
 ${ProjectLinkEngTab}                    xpath://*[@id="tab_BE392F5B-6860-4EFB-B4F7-B05B69EF9DBF"]/div[1]
 ${ProjectLinkSearchBtn}                 xpath://div[text()='Linked Engagements']/..//*[@id="btnFilter"]/div
-${ProjectLinkSearch}                    xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[6]/div/div/div[1]/div[2]/div[1]/div[3]/table/tbody/tr[5]/td[5]/input
+${ProjectLinkSearch}                    xpath:(//input[@class='txt border'])[6]
 ${ProjectLinkSearchBtn2}                xpath://*[@id="btnActApplyFilter_C5D7993E-A223-4AE0-A15D-119FE22E21DC_smc13"]/div
 ${ProjectLinkSelectRec}                 xpath://*[@id="grid"]/div[3]/table/tbody/tr/td[4]
 ${ProjectEngagementProcess}             xpath://*[@id="btnProcessFlow_form_C5D7993E-A223-4AE0-A15D-119FE22E21DC"]/span

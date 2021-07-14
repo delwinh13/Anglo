@@ -34,14 +34,14 @@ Login with Valid Credentials
 FR1- Add Functional Group
     Log To Console    Starting FR1 - Add Functional Group
     # Click AngloMaintenanceButton
-        Mouse over                          ${AngloMaintenanceButtonXpath}
-    Wait Until Page Contains Element       ${AngloMaintanceInterfaceXpath}    20 seconds
+    Mouse over                             ${AngloMaintenanceButtonXpath}
+    Wait Until Page Contains Element       ${AngloMaintanceInterfaceXpath}    40 seconds
     Click Element                          ${AngloMaintanceInterfaceXpath}
 
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
     Sleep     3 seconds
- # Click Functional Groups Button
+    # Click Functional Groups Button
     Click Element                        ${FunctionalGroupModuleXpath}
     Sleep    3 seconds
     Screenshot  Navigate to Functional Groups Module
@@ -49,12 +49,13 @@ FR1- Add Functional Group
     Click Element                        ${FunctionalAddButtonXpath}
     Sleep    3 seconds
     # Check on Process Flow
-     Sleep    4 seconds
-  Wait Until Element Is Visible       ${ProcessFlowXpath}    40 seconds
-  Click Element                       ${ProcessFlowXpath}
-#validate process is on AddPhase
-  Wait Until Element Is Visible         ${AddPhaseXpath}    40 seconds
-   Element Should Be Visible             ${AddPhaseXpath}
+    Sleep    4 seconds
+    Wait Until Element Is Visible       ${ProcessFlowXpath}    40 seconds
+    Click Element                       ${ProcessFlowXpath}
+    #validate process is on AddPhase
+    Wait Until Element Is Visible         ${AddPhaseXpath}    40 seconds
+    Element Should Be Visible             ${AddPhaseXpath}
+    Sleep    4 seconds
     Screenshot   Functional Groups opens in the Add phase
     Wait Until Element Is Visible        ${FunctionalBUDrpXpath}    40 seconds
     Click Element                        ${FunctionalBUDrpXpath}
@@ -79,8 +80,8 @@ FR1- Add Functional Group
     Click Element                       ${ButtonSaveXpath}
     Sleep    3 seconds
     #validate process is on EditPhase
-  Wait Until Element Is Visible         ${EditPhaseXpath}    40 seconds
-   Element Should Be Visible             ${EditPhaseXpath}
+    Wait Until Element Is Visible         ${EditPhaseXpath}    40 seconds
+    Element Should Be Visible             ${EditPhaseXpath}
     Screenshot                        Functional Groups editable grid is displayed
     Click Element                       ${FunctioanlPermitRectrictionGroupXpath}
     Sleep    3 seconds
@@ -108,8 +109,8 @@ FR1- Add Functional Group
 
 FR2- Add One or More Users
     Sleep       20 seconds
-    Wait Until Element Is Visible    ${AddGroupMembersXpath}
-    Click Element                    ${AddGroupMembersXpath}
+    Wait Until Element Is Visible     ${AddGroupMembersXpath}
+    Click Element                     ${AddGroupMembersXpath}
     MOUSE OVER                        ${GroupMembersDropwnXpath}
     Click Element                     ${GroupMembersDropwnXpath}
     Sleep    3 seconds
@@ -120,19 +121,19 @@ FR2- Add One or More Users
     Click Element                    ${GroupMembersDropwnValueSelectedXpath}
     Click Element                    ${SaveButtonXpath}
     Sleep    20 seconds
-    Click Element                    ${InlineEditorXpath}
+    Click Element                     ${InlineEditorXpath}
     Sleep    3 seconds
     Click Element                    ${AddGroupMembersXpath}
     Sleep    3 seconds
      # Check on Process Flow
      Sleep    4 seconds
-  Wait Until Element Is Visible       ${GroupMembersProcessFlowXpath}    40 seconds
-  Click Element                       ${GroupMembersProcessFlowXpath}
+    Wait Until Element Is Visible       ${GroupMembersProcessFlowXpath}    40 seconds
+    Click Element                       ${GroupMembersProcessFlowXpath}
 #validate process is on AddPhase
-  Wait Until Element Is Visible       ${GroupMembersAddFlowXpath}    40 seconds
-   Element Should Be Visible           ${GroupMembersAddFlowXpath}
+    Wait Until Element Is Visible       ${GroupMembersAddFlowXpath}    40 seconds
+    Element Should Be Visible           ${GroupMembersAddFlowXpath}
     Screenshot    Group Members opens in the Add phase
-      MOUSE OVER                        ${GroupMembersDropwnXpath}
+    MOUSE OVER                        ${GroupMembersDropwnXpath}
     Click Element                     ${GroupMembersDropwnXpath}
     Sleep    3 seconds
     Input Text                       ${GroupMembersDropwnValueXpath}   AutoTest

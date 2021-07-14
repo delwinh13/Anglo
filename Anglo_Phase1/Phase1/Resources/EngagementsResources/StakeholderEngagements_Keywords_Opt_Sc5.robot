@@ -187,7 +187,7 @@ FR1 - Capture Engagements Optional Scenario 5
     Select Frame        ${iFrame}
 
     # Check on Process Flow
-    Sleep    4 seconds
+    Sleep    10 seconds
     Wait Until Element Is Visible       ${EngagementGrievanceProcessID}    40 seconds
     Click Element                       ${EngagementGrievanceProcessID}
 
@@ -201,7 +201,7 @@ FR1 - Capture Engagements Optional Scenario 5
     # Capture Event Title
     Wait Until Element Is Visible       ${EngagementGrievanceTitleInput}    40 seconds
     Click Element                       ${EngagementGrievanceTitleInput}
-    Input Text                          ${EngagementGrievanceTitleInput}    Auto Test2
+    Input Text                          ${EngagementGrievanceTitleInput}    Auto Test ${CurrentDate}
 
     # Capture Event Description
     Wait Until Element Is Visible       ${EngagementGrievanceEventDesc}    40 seconds
@@ -232,9 +232,27 @@ FR1 - Capture Engagements Optional Scenario 5
     # Capture Functional Location
     Wait Until Element Is Visible       ${EnaggementGrievanceFLXpath}    40 seconds
     Click Element                       ${EnaggementGrievanceFLXpath}
-    Wait Until Element Is Visible       ${EngagementGrievenceFLSelectXpath}    40 seconds
+    Wait Until Element Is Visible       ${EngagementGrievanceFLSishen}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${EngagementGrievenceFLSelectXpath}
+    Click Element                       ${EngagementGrievanceFLSishen}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLMining}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLMining}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLCommon}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLCommon}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLDrilling}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLDrilling}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLRotary}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLRotary}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLAtlas}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLAtlas}
+    Wait Until Element Is Visible       ${EngagementGrievanceFLAtlasSel}    40 seconds
+    Sleep    1 seconds
+    Click Element                       ${EngagementGrievanceFLAtlasSel}
 
     # Capture Date of Event
     Wait Until Element Is Visible       ${EngagementGrievanceDateXpath}   40 seconds
@@ -303,16 +321,17 @@ FR1 - Capture Engagements Optional Scenario 5
     Switch Window       MAIN
     Select Frame        ${iFrame}
 
+    Sleep               10
     # Capture Grievance
     Wait Until Element Is Visible       ${EngagementManagementGrievanceDrp}    40 seconds
     Click Element                       ${EngagementManagementGrievanceDrp}
     Wait Until Element Is Visible       ${EngagementManagementGrievanceInput}    40 seconds
     Sleep    2 seconds
-    Input Text                          ${EngagementManagementGrievanceInput}    auto
+    Input Text                          ${EngagementManagementGrievanceInput}    Auto Test ${CurrentDate}
     Press Keys                          ${EngagementManagementGrievanceInput}    ENTER
-    Wait Until Element Is Visible       ${EngagementGrievanceAdd}    40 seconds
+    Wait Until Element Is Visible       ${EngagementGrievanceAddAll}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${EngagementGrievanceAdd}
+    Click Element                       ${EngagementGrievanceAddAll}
     Click Element                       ${EngagementManagementGrievanceDrp}
 
 

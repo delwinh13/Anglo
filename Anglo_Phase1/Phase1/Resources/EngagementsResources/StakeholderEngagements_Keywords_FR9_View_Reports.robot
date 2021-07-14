@@ -54,18 +54,18 @@ FR9 - View Reports
     Click Element                                   ${SIReportsBtn}
     #Wait Until Element Is Visible                   ${SEReportSITitle}                  40 seconds
     #View Reports
-    #Log to Console      View Reports
+    Log to Console      View Reports
     Click Element                                   ${SIViewReportsBtn}
     #Switch Window
-    #Log to Console      Switch Window
+    Log to Console      Switch Window
     #Switch Window
     Unselect Frame
     Wait Until Element Is Visible                   ${SIReportsPopUpConfirm}            20 seconds
     Click Element                                   ${SIReportsPopUpConfirm}
     Sleep       5
     #Select Window
-    #Log to Console      Select Window - NEW
-    #Select Window       NEW
+    Log to Console      Select Window - NEW
+    Switch Window       NEW
 
     Sleep       2
     #Report Right Arrow
@@ -76,50 +76,53 @@ FR9 - View Reports
     Sleep       1
     Wait Until Element Is Not Visible               ${SIViewReportsLoading}
     #Report Export Button
-    #Log to Console      Report Export Button
+    Log to Console      Report Export Button
     Click Element                                   ${SIViewReportExportArrow}
     Sleep       1
     Click Element                                   ${SIViewReportsWord}
     Sleep       30
     #Close Window
-    #Log to Console      Close Window - MAIN
+    Log to Console      Close Window - MAIN
     Close Window
     Sleep       2
-    Select Window       MAIN
+    Switch Window       MAIN
 
 
     #Full Reports
-    #Log to Console      Full Reports
+    Log to Console      Full Reports
     Select Frame                                    ${iFrame}
     Click Element                                   ${SIFullReportsBtn}
     #Switch Window
-    #Log to Console      Switch Window
+    Log to Console      Switch Window
     Switch Window
     Wait Until Element Is Visible                   ${SIReportsPopUpConfirm}            20 seconds
     Click Element                                   ${SIReportsPopUpConfirm}
     Sleep       5
     #Select Window
-    #Log to Console      Select Window - NEW
-    Select Window       NEW
-    Sleep       2
+    Log to Console      Select Window - NEW 2
+    Switch Window       NEW
+#    Wait Until Element Is Visible        ${iFrame}    40 seconds
+#    Select Frame        ${iFrame}
     #Report Right Arrow
-    #Log to Console      Report Right Arrow
+    Log to Console      Report Right Arrow
     Wait Until Element Is Visible                   ${SIViewReportRightArrow}           60 seconds
     #${file1} =    Capture Page Screenshot    ${OUTPUTDIR}/Results/Stakeholder Entity Full Reports Visible.png
     Click Element                                   ${SIViewReportRightArrow}
     Sleep       1
-    Wait Until Element Is Not Visible               ${SIViewReportsLoading}
+    Wait Until Element Is Not Visible               ${SIViewReportsLoading}    40 seconds
     #Report Export Button
-    #Log to Console      Report Export Button
+    Log to Console      Report Export Button
+    sleep    2 seconds
     Click Element                                   ${SIViewReportExportArrow}
     Sleep       1
+    Wait until element Is Visible                   ${SIViewReportsWord}    40 seconds
     Click Element                                   ${SIViewReportsWord}
     Sleep       30
     #Close Window
-    #Log to Console      Close Window - MAIN
+    Log to Console      Close Window - MAIN
     Close Window
     Sleep       2
-    Select Window       MAIN
+    Switch Window       MAIN
 
 
 

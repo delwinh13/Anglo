@@ -188,7 +188,7 @@ FR1 - Capture Engagements Optional Scenario 7
     Select Frame        ${iFrame}
 
     # Check on Process Flow
-    Sleep    4 seconds
+    Sleep    10 seconds
     Wait Until Element Is Visible       ${EngagementPermitProcessID}    40 seconds
     Click Element                       ${EngagementPermitProcessID}
 
@@ -259,7 +259,7 @@ FR1 - Capture Engagements Optional Scenario 7
     #Capture Title
     Wait Until Element Is Visible       ${EngagementPermitTitle}    40 seconds
     Click Element                       ${EngagementPermitTitle}
-    Input Text                          ${EngagementPermitTitle}    Auto Test
+    Input Text                          ${EngagementPermitTitle}    Auto Test ${CurrentDate}
 
     # Capture Description
     Wait Until Element Is Visible       ${EngagementPermitDescription}    40 seconds
@@ -401,11 +401,11 @@ FR1 - Capture Engagements Optional Scenario 7
     Click Element                       ${EngagementManagementPermitDrp}
     Wait Until Element Is Visible       ${EngagementManagementPermitInput}    40 seconds
     Sleep    2 seconds
-    Input Text                          ${EngagementManagementPermitInput}    auto
+    Input Text                          ${EngagementManagementPermitInput}    Auto Test ${CurrentDate}
     Press Keys                          ${EngagementManagementPermitInput}    ENTER
-    Wait Until Element Is Visible       ${EngagementManagementPermitCheck}    40 seconds
+    Wait Until Element Is Visible       ${EngagementPermitSelectAll}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${EngagementManagementPermitCheck}
+    Click Element                       ${EngagementPermitSelectAll}
     Click Element                       ${EngagementManagementPermitDrp}
     Sleep    2 seconds
 

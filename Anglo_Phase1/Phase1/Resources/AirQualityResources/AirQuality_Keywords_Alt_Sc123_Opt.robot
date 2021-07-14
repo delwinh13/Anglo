@@ -280,7 +280,113 @@ FR5-Edit Air Quality Monitoring
     #Select Record
     Wait Until Element Is Visible       ${AirQualitySelect}    40 seconds
     Click Element                       ${AirQualitySelect}
+
+
+    # Check on Process Flow
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${AirQualityFindindProcessID}    40 seconds
+    Click Element                       ${AirQualityFindindProcessID}
+
+    #capture Functional location
+    Wait Until Element Is Visible       ${AirQualityFindingFLDrp}    40 seconds
+    Click Element                       ${AirQualityFindingFLDrp}
     Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingFLSel}    40 seconds
+    Click Element                       ${AirQualityFindingFLSel}
+
+    #Capture Finding closure date
+	${CloseDate}=  Get Current Date  result_format=%d-%m-%Y  increment=+1 day
+	Set Global Variable    ${CloseDate}
+	Wait Until Element Is Visible       ${AirQualityFindingClosureDate}    40 seconds
+	Click Element                       ${AirQualityFindingClosureDate}
+	Input Text                          ${AirQualityFindingClosureDate}    ${CloseDate}
+
+    #capture Risk Source
+    Wait Until Element Is Visible       ${AirQualityFindingRiskSourceDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRiskSourceDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingRiskSourceSel}    40 seconds
+    Click Element                       ${AirQualityFindingRiskSourceSel}
+    Sleep   2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingRiskSourceDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRiskSourceDrp}
+
+    #capture Relate permit
+    Wait Until Element Is Visible       ${AirQualityFindingRelatPermitDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRelatPermitDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQaulityFindingRelatPermitSel}    40 seconds
+    Click Element                       ${AirQaulityFindingRelatPermitSel}
+    Sleep   2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingRelatPermitDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRelatPermitDrp}
+
+    #capture Is Finding Related to group
+    Wait Until Element Is Visible       ${AirQualityFindingRelateDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRelateDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingRelateSel}    40 seconds
+    Click Element                       ${AirQualityFindingRelateSel}
+    Wait Until Element Is Visible       ${AirQualityFindingRelateDrp}    40 seconds
+    Click Element                       ${AirQualityFindingRelateDrp}
+
+    #capture Relate permit
+    Wait Until Element Is Visible       ${AirQualityFindingIndvDrp}    40 seconds
+    Click Element                       ${AirQualityFindingIndvDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingIndvSel}    40 seconds
+    Click Element                       ${AirQualityFindingIndvSel}
+    Sleep   2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingIndvDrp}    40 seconds
+    Click Element                       ${AirQualityFindingIndvDrp}
+
+    #Individual factor description
+    Wait Until Element Is Visible       ${AirQualityFindingFactorDesc}    40 seconds
+    Click Element                       ${AirQualityFindingFactorDesc}
+    Input Text                          ${AirQualityFindingFactorDesc}    auto test
+
+    #capture Workplace factor
+    Wait Until Element Is Visible       ${AirQualityFindingWrkPlaceDrp}    40 seconds
+    Click Element                       ${AirQualityFindingWrkPlaceDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingWrkPlaceSel}    40 seconds
+    Click Element                       ${AirQualityFindingWrkPlaceSel}
+    Sleep   2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingWrkPlaceDrp}    40 seconds
+    Click Element                       ${AirQualityFindingWrkPlaceDrp}
+
+    #Capture workplace factor description
+    Wait Until Element Is Visible       ${AirQualityFindingWrkPlaceDesc}    40 seconds
+    Click Element                       ${AirQualityFindingWrkPlaceDesc}
+    Input Text                          ${AirQualityFindingWrkPlaceDesc}    auto test
+
+    #capture Organisational factor
+    Wait Until Element Is Visible       ${AirQualityFindingOrgFactorDrp}    40 seconds
+    Click Element                       ${AirQualityFindingOrgFactorDrp}
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingOrgFactorSel}    40 seconds
+    Click Element                       ${AirQualityFindingOrgFactorSel}
+    Sleep   2 seconds
+    Wait Until Element Is Visible       ${AirQualityFindingOrgFactorDrp}    40 seconds
+    Click Element                       ${AirQualityFindingOrgFactorDrp}
+    sleep    1 seconds
+    #Capture organisational factor description
+    Wait Until Element Is Visible       ${AirQualityFindingOrgFactorDesc}    40 seconds
+    Click Element                       ${AirQualityFindingOrgFactorDesc}
+    Input Text                          ${AirQualityFindingOrgFactorDesc}    auto test
+
+    # Save
+    Wait Until Element Is Visible       ${AirQualityFindingSave}    40 seconds
+    Click Element                       ${AirQualityFindingSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+
+
+
+
+
+
+
 
 
 

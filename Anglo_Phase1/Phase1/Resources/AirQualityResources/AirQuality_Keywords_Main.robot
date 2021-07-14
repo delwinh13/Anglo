@@ -63,12 +63,12 @@ FR1 - Capture Air Quality Monitoring
     Sleep    1 seconds
     #kumba
     Click Element                       ${AirQualityBUXpath3}
-    Wait Until Element Is Visible       ${AirQualityBUXpath4}    40 seconds
+    Wait Until Element Is Visible       ${AirQualityBUKolomelaXpath}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${AirQualityBUXpath4}
-    Wait Until Element Is Visible       ${AirQualityBUSelect}    40 seconds
+    Click Element                       ${AirQualityBUKolomelaXpath}
+    Wait Until Element Is Visible       ${AirQualityBUSelectMining}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${AirQualityBUSelect}
+    Click Element                       ${AirQualityBUSelectMining}
 
 
     #Capture Month And Year

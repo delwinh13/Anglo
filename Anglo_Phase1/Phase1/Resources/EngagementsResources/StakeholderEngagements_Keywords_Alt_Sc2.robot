@@ -4,8 +4,9 @@ Library    XML
 Library    String
 Library    Process
 Library    DateTime
-# Resource    ../Resources/vars.robot
+Resource    ../../Resources/vars.robot
 Resource    ../../Repository/Common.robot
+Resource    ../../Resources/Common_keywords.robot
 Resource    ../../Repository/Stakeholder_Engagement_vars.robot
 #Resource    Stakeholder_keywords.robot
 
@@ -15,6 +16,9 @@ Launch IsoMetrix Application
     set selenium implicit wait    10 seconds
     Maximize Browser Window
     Title Should Be  IsoMetrix
+    ${Date}=  Get DateTime
+    Set Global Variable  ${Path}  ${EXECDIR}${/}../../Screenshots\\EngagementManagement\\StakeholderEngagementMain_ALT_Sc2\\${Date}
+
 
 Login with Valid Credentials
     set selenium implicit wait    10 seconds
@@ -47,6 +51,7 @@ FR1 - Capture Engagements Altenate Scenerio 2
     Sleep    2 seconds
     Wait Until Element Is Visible       ${EngagementManagementProcessId}    40 seconds
     Click Element                       ${EngagementManagementProcessId}
+    Screenshot    Process
 
     #validate process is on AddPhase
     Wait Until Element Is Visible       ${EngagementManagementProcessAddPhase}    40 seconds
@@ -180,11 +185,14 @@ FR6 - Capture Engagements Executed Planned
     Click Element                       ${EngagementManagementEngStatus3}
     Wait Until Element Is Visible       ${EngagementStatusExecutedOnTime}    40 seconds
     Click Element                       ${EngagementStatusExecutedOnTime}
+    Screenshot    Status Executed on time
 
     # Click Save
     Wait Until Element Is Visible       ${EngagementManagmentSaveID}    40 seconds
     Click Element                       ${EngagementManagmentSaveID}
     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+    Screenshot    Engagement Process executed planned
 
     # validate the process is on Executed Confedential
     #Wait Until Element Is Visible       ${EngagementProcessExecutedPlanned}    40 seconds
@@ -202,6 +210,7 @@ FR7 - Capture Engagements Cancelled Planned
     Sleep    2 seconds
     Wait Until Element Is Visible       ${EngagementStatusCancelled}    40 seconds
     Click Element                       ${EngagementStatusCancelled}
+    Screenshot    Status cancelled
 
 
     # Click Save
@@ -209,6 +218,7 @@ FR7 - Capture Engagements Cancelled Planned
     Click Element                       ${EngagementManagmentSaveID}
     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
 
+    Screenshot    Process cancelled planned
 
     # validate the process is on Cancelled confidential
     #Wait Until Element Is Visible       ${EngagementProcessCancelledPlanned}    40 seconds

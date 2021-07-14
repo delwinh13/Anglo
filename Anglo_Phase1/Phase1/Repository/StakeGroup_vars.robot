@@ -415,7 +415,7 @@ ${StakeGroupOrdersChecklistSubmitBtnXpath}               xpath://div[@id='contro
 ${StakeGroupOrdersChecklistSubModRecordXpath}            xpath:(//div[@id='control_75AE308C-4204-44CC-8A14-A2167C9827C9']/div/div[2]/div[2]/div/div[3]/table/tbody/tr/td[4]/span)[1]
 ${StakeGroupOrdersChecklistSaveContinueBtnXpath}         xpath://div[@id='control_76766175-90DD-44DE-839F-D28FFEE16394']
 ${StakeGroupOrdersChecklistRecordNoXpath}                xpath:(//div[@id='form_0AE7D7E4-12B9-4159-83E3-5DF8D4F49CD4']//div[contains(text(),'- Record #')])[1]
-${StakeGroupOrdersChecklistStartBtnXpath}                xpath://div[@id='btnChecklist_form_0AE7D7E4-12B9-4159-83E3-5DF8D4F49CD4']//div[text()='START']
+${StakeGroupOrdersChecklistStartBtnXpath}                xpath://div[@id='btnChecklist_form_0AE7D7E4-12B9-4159-83E3-5DF8D4F49CD4']
 ${StakeGroupOrdersChecklistFindingsTabXpath}             xpath://li[@id='tab_FDC1580F-0B58-4FE3-9EAE-E6F7620B4961']
 ${StakeGroupOrdersChecklistSupportDocsTabXpath}          xpath://li[@id='tab_B3FA9131-ADFF-4EC6-8E41-82D15253E6B9']
 
@@ -553,7 +553,8 @@ ${StakeGroupEventsReportExternPartyOptXpath}            xpath:(//div[contains(@c
 ${StakeGroupEventsWhatReportedXpath}                    xpath://div[@id='control_E2E6184A-4B67-4EBD-9CCF-EDA5D0C872B9']//textarea[@language='A50A7F35-56F8-451E-82D9-946BD9ADEDB4']
 ${StakeGroupEvents2VerificationTabXpath}                xpath://li[@id='tab_90D1C7C9-45EE-402F-B76C-A61222A110E1']/div[text()='2.Verification & Additional Detail']
 ${StakeGroupEventsActivityDDXpath}                      xpath://div[@id='control_A545A6BF-2235-4998-86DD-4246FD93E79A']//li
-${StakeGroupEventsActivityOptXpath}                     xpath://a[text()='Activity in Confined Space']
+${StakeGroupEventsActivityOptXpath}                     xpath://a[text()='Cleaning of conveyors']
+${StakeGroupEventsActivityLblXpath}                     xpath://div[@id='control_137D9DF4-AE00-4D3E-9F93-F6B8663D5C97']
 ${StakeGroupEventsWhatHappenDDXpath}                    xpath://div[@id='control_5904652A-5180-4B08-8BD8-AA3704360351']//li
 ${StakeGroupEventsWhatHappenOptXpath}                   xpath://a[text()='Explosives Management']
 ${StakeGroupEventsHowHappenDDXpath}                     xpath://div[@id='control_58A81103-5F88-4AAF-8783-54D3BACD3403']//li
@@ -563,6 +564,13 @@ ${StakeGroupEventsComplaintDDXpath}                     xpath://div[@id='control
 ${StakeGroupEventsComplaintOptXpath}                    xpath://a[text()='Yes']
 ${StakeGroupGrievancesOpenVGXpath}                      xpath:(//div[@id='control_AE8EC219-4756-40BA-8773-68B10FE425BA']/div/div[2]/div[2]/div/div[3]/table/tbody/tr/td[7]/div[contains(text(), 'Grievances')])[1]
 ${StakeGroupGrievancesInLineEditTextXpath}              xpath://div[@id='control_AE8EC219-4756-40BA-8773-68B10FE425BA']//div[@id="grid"]/div[4]/div/div[1]
+${EngagementGrievenceFLExpand1Xpath}                    xpath:(//a[text()='MIS | Sishen']/../i)[1]
+${EngagementGrievenceFLExpand2Xpath}                    xpath:(//a[text()='MIS-M | Mining']/../i)[1]
+${EngagementGrievenceFLExpand3Xpath}                    xpath:(//a[text()='MIS-M01 | Common Mining Process']/../i)[1]
+${EngagementGrievenceFLExpand4Xpath}                    xpath:(//a[text()='MIS-M01-DR | Drilling']/../i)[1]
+${EngagementGrievenceFLExpand5Xpath}                    xpath:(//a[text()='MIS-M01-DR01 | Rotary Drills']/../i)[1]
+${EngagementGrievenceFLExpand6Xpath}                    xpath:(//a[text()='MIS-M01-DR01-F356 | Atlas Copco Pitvipers']/../i)[1]
+${EngagementGrievenceFLSelectNew}                       xpath:(//a[text()='MIS-M01-DR01-F356-0001 | Atlas Copco Remote'])[1]
 
 #*********************************************** FR19 - Capture StakeGroup Actions_MS **************************************************
 ${StakeGroupActionsNoResultsXpath}                      xpath://div[@id='control_6AECC604-74CD-4CA2-8014-252301E5A6E8']/div/div[2]/div[2]/div/div[3]/div[text()='No results returned']

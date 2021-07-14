@@ -26,7 +26,7 @@ Login with Valid Credentials
 
 #**********************  FR4-Capture Inspection Scheduler Recurrence************************
 FR4-Edit Inspection Scheduler Recurrence
-    Log To Console    Starting Capture Inspection Scheduler
+    Log To Console    Edit Inspection Scheduler Recurrence
 
     Wait Until Element Is Visible        ${iFrame}    40 seconds
     Select Frame                         ${iFrame}
@@ -129,6 +129,7 @@ FR4-Edit Inspection Scheduler Recurrence
      Click Element                     ${InspectionSchedulerrecurrenceAddBttn}
      Sleep    20 seconds
 
+     Wait Until page does not contain       ${Loadingvariablepermis}       30 seconds
 
      #Click On process flow
      Wait Until Element Is Visible    ${InspectionSchedulerRecurrenceProcessflow}    40 seconds

@@ -223,14 +223,14 @@ FR1-Capture Inspection Scheduler_AS
      Sleep    2 seconds
 
      #Input Purpose
-     Wait Until Element Is Visible     ${InspectionSchedulerPurpose}     20 seconds
-     Input Text                        ${InspectionSchedulerPurpose}     Automation purpose
+     Wait Until Element Is Visible      ${InspectionSchedulerPurpose}     20 seconds
+     Input Text                         ${InspectionSchedulerPurpose}     Automation purpose
      Sleep  2 seconds
 
      #Save & Continue
      Sleep 2    seconds
-     Wait Until Element Is visible    ${InspectionSchedulerSave&Continue}     20 seconds
-     Click Element                    ${InspectionSchedulerSave&Continue}
+     Wait Until Element Is visible      ${InspectionSchedulerSave&Continue}     20 seconds
+     Click Element                      ${InspectionSchedulerSave&Continue}
      Sleep 5    seconds
 
 

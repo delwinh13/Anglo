@@ -61,6 +61,7 @@ ${AgendaOrderXpath}                     xpath://input[@id='numberInput']
 ${AgendaItemXpath}                      xpath://*[@id="control_5A715E64-DAFC-4458-9963-F501705314C9"]/div[1]/div/textarea
 ${AgendaSaveButtonXpath}                xpath://*[@id="btnSave_form_42B5A13A-DE28-4A67-BA05-A1E487D9B59E"]/div[3]
 ${AgProcessflowEditPhaseXpath1}         xpath:(//div[@id='divProcess_42B5A13A-DE28-4A67-BA05-A1E487D9B59E'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+${AgendaTabCloseXpath}                  xpath://*[@id="form_42B5A13A-DE28-4A67-BA05-A1E487D9B59E"]/div[1]/i[2]
 #************************************************* Edit Meeting Template   ********************************************
 ${MeetingTemplateTabXpath}              xpath://*[@id="tab_5116E5E7-6911-4FFF-AE0E-AECE13828FBF"]/div[1]
 ${SearchButtonXpath}                    xpath://div[@title='Search'][normalize-space()='Search']
@@ -75,13 +76,14 @@ ${EditBusinessUnitDropdownXpath}         xpath://div[@id='control_977EE8A8-F997-
 ${EditBUAAGOptionXpath}                  xpath://*[@id="4cee9a75-7667-44e9-a0c1-77ad5092e86c"]/i
 ${EditBUBMOptionXpath}                   xpath:(//a[text()='Base Metals']/../i)[1]
 ${EditBUBMCOptionXpath}                  xpath:(//a[text()='Base Metals Chile']/../i)[1]
+${EditBULBSOptionXpath}                  xpath: //*[@id="5c212569-74b8-4f03-8521-f31e8f06686c_anchor"]/i[1]
 ${EditBULBSOptionXpath}                  xpath: //a[@id='3099305a-e3cc-4a57-9ece-8bdbe2cb686b_anchor']//i[1]
 ${EditRiskDeciplineXpath}                xpath://div[@id='control_3F6D34AB-B324-4E3C-ACFD-007F12A9ADF6']//b[1]
 ${EditRiskDeciplineSelectionXpath}       xpath://*[@id="e6203066-f12d-426c-8476-4d028b7a2b82_anchor"]/i[1]
 ${EditMeetingDescriptionXpath}           xpath://textarea[@type='text']
 ${EditMTSavebuttonXpath}                 xpath://*[@id="btnSave_form_E5C2E781-04CE-43C6-B811-9C598103A3FC"]/div[3]
 ${CloseButtonXpath}                      xpath://*[@id="form_E5C2E781-04CE-43C6-B811-9C598103A3FC"]/div[1]/i[2]
-${ViewFilterDropDownXpath}               xpath://*[@id="btnActFilter"]/div[1]/div
+${ViewFilterDropDownXpath}               xpath://*[@id="btnActFilter"]/div[1]/dive
 ${ViewFilterSelectionXpath}              xpath://*[@id="btnActViewFilter"]/div[2]
 ${ContainsTextBoxXpath}                  xpath://*[@id="searchOptions"]/div[3]/table/tbody/tr[2]/td[5]/input
 ${ItemsPerPageSelectionXpath}            xpath://*[@id="f5452f7b-e701-450d-8b9b-19e82229d051"]

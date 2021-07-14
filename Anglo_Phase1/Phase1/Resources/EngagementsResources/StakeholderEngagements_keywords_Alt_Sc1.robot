@@ -5,7 +5,9 @@ Library    String
 Library    Process
 Library    DateTime
 # Resource    ../Resources/vars.robot
+Resource    ../../Resources/vars.robot
 Resource    ../../Repository/Common.robot
+Resource    ../../Resources/Common_keywords.robot
 Resource    ../../Repository/Stakeholder_Engagement_vars.robot
 #Resource    Stakeholder_keywords.robot
 
@@ -15,6 +17,8 @@ Launch IsoMetrix Application
     set selenium implicit wait    10 seconds
     Maximize Browser Window
     Title Should Be  IsoMetrix
+    ${Date}=  Get DateTime
+    Set Global Variable  ${Path}  ${EXECDIR}${/}../../Screenshots\\EngagementManagement\\StakeholderEngagementMain_ALT_Sc1\\${Date}
 
 
 
@@ -49,7 +53,7 @@ FR1 - Capture Engagements Altenate Scenario 1
     Sleep    2 seconds
     Wait Until Element Is Visible       ${EngagementManagementProcessId}    40 seconds
     Click Element                       ${EngagementManagementProcessId}
-
+    Screenshot    ProcessFlow
     #validate process is on AddPhase
     Wait Until Element Is Visible       ${EngagementManagementProcessAddPhase}    40 seconds
     Element Should Be Visible           ${EngagementManagementProcessAddPhase}
@@ -123,7 +127,7 @@ FR1 - Capture Engagements Altenate Scenario 1
     # Select Confidential Checkbox
     Wait Until Element Is Visible       ${EngagementManagmentConfChkXpath}    40 seconds
     Click Element                       ${EngagementManagmentConfChkXpath}
-
+    Screenshot    Confidential checkbox
     # Capture Responsible Person
     Wait Until Element Is Visible       ${EngagementManagmentRespPersonDDID}    40 seconds
     Click Element                       ${EngagementManagmentRespPersonDDID}
@@ -161,7 +165,7 @@ FR1 - Capture Engagements Altenate Scenario 1
     # validate the process is on planned
     Wait Until Element Is Visible       ${EngagementManagementProcessPlanCo}    40 seconds
     Element Should be Visible           ${EngagementManagementProcessPlanCo}
-
+    Screenshot    Processflow on planned
 #************************************************* FR-6 Capture Engagement Status **************************************
 FR6 - Capture Engagements Executed Confidential
     Log To Console    Starting FR6 - Capture Engagements Executed Confidential
@@ -171,6 +175,7 @@ FR6 - Capture Engagements Executed Confidential
     Click Element                       ${EngagementManagementEngStatus}
     Wait Until Element Is Visible       ${EngagementStatusExecutedOnTime}    40 seconds
     Click Element                       ${EngagementStatusExecutedOnTime}
+    Screenshot    Status Executed on time
 
     # Click Save
     Wait Until Element Is Visible       ${EngagementManagmentSaveID}    40 seconds
@@ -180,6 +185,7 @@ FR6 - Capture Engagements Executed Confidential
     # validate the process is on Executed Confedential
     Wait Until Element Is Visible       ${EngagementProcessExecutedCon}    40 seconds
     Element Should be Visible           ${EngagementProcessExecutedCon}
+    Screenshot    Process Executed confidential
     #Sleep    3 seconds
 
 #************************************************* FR-6 Capture Engagement Cancel **************************************
@@ -193,7 +199,7 @@ FR7 - Capture Engagements Cancelled confidential
     Sleep    2 seconds
     Wait Until Element Is Visible       ${EngagementStatusCancelled}    40 seconds
     Click Element                       ${EngagementStatusCancelled}
-
+    Screenshot    Engagement Status Cancelled
 
     # Click Save
     Wait Until Element Is Visible       ${EngagementManagmentSaveID}    40 seconds
@@ -204,5 +210,6 @@ FR7 - Capture Engagements Cancelled confidential
     # validate the process is on Cancelled confidential
     Wait Until Element Is Visible       ${EngagementProcessCancelCon}    40 seconds
     Element Should be Visible           ${EngagementProcessCancelCon}
+    Screenshot    Process Cancelled Confidentil
     #Sleep    3 seconds
 

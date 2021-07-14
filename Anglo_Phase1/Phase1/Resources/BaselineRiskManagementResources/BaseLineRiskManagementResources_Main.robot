@@ -43,13 +43,13 @@ FR1-Capture Scope Detail
    # scroll element into view
     Click Element                       ${RiskManagementID}
 
-    # Click Air Quality Monitoring
+    # Click BaseLine Risk Monitoring
     Sleep    2 seconds
     Wait Until Element Is Visible       ${BaseLineRiskLayer1ID}    40 seconds
     Click Element                       ${BaseLineRiskLayer1ID}
 
 
-    # Add Stakeholder Air Quality Record
+    # Add Baseline Risk Record
     Wait Until Element Is Visible       ${BaseLineRiskAddNew}    40 seconds
     Click Element                       ${BaseLineRiskAddNew}
 
@@ -298,6 +298,469 @@ FR2-Capture Baseline Change Log
     Wait Until Element Is Visible       ${BaseLineChangeProcessEdit}    40 seconds
     Element Should Be Visible           ${BaseLineChangeProcessEdit}
     Screenshot    BaseLine Change-Log edit phase ${CurrentDate}
+
+#************************************************* FR3-Capture Risk Assessment Team*************************************
+FR3-Capture Risk Assessment Team
+    Log To Console    Starting FR3-Capture Risk Assessment Team
+
+    Wait Until element Is Visible       ${BaseLineRiskAsstAdd}    40 seconds
+    Click Element                       ${BaseLineRiskAsstAdd}
+    Screenshot    Baseline Change Log ${CurrentDate}
+
+    Sleep    5 seconds
+    #capture Full Name
+    Wait until element Is Visible       ${BaseLineRiskAsstNameDrp}    40 seconds
+    Click Element                       ${BaseLineRiskAsstNameDrp}
+    sleep    1 seconds
+    Wait until element Is Visible       ${BaseLineRiskAsstNameSrch}    40 seconds
+    Click Element                       ${BaseLineRiskAsstNameSrch}
+    Input Text                          ${BaseLineRiskAsstNameSrch}    a
+    Press Keys                          ${BaseLineRiskAsstNameSrch}    ENTER
+    Sleep    5 seconds
+    Wait Until Element Is Visible       ${BaselineRiskAsstNameSel}    40 seconds
+    Click Element                       ${BaselineRiskAsstNameSel}
+
+    #Capture Experiance/role
+    Wait Until Element Is Visible       ${BaseLineRiskAsstRoleDrp}    40 seconds
+    Click Element                       ${BaseLineRiskAsstRoleDrp}
+    Sleep    2 seconds
+    Wait Until element Is Visible       ${BaseLineRiskAsstRoleSel}    40 seconds
+    Click Element                       ${BaseLineRiskAsstRoleSel}
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineRiskAsstSave}    40 seconds
+    Click Element                       ${BaseLineRiskAsstSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+
+    Screenshot    Risk Assessment Team ${CurrentDate}
+
+#************************************************* FR3-Capture Risk Assessment Team*************************************
+FR4- Capture Hazard Inventory
+    Log To Console    Starting FR4- Capture Hazard Inventory
+
+    Wait Until Element Is Visible       ${BaseLineRiskAsstClose}    40 seconds
+    Click Element                       ${BaseLineRiskAsstClose}
+
+    Sleep    10 seconds
+    #select Hazard Inventory tab
+    Wait Until Element is Visible       ${BaseLineRiskHazardTab}    40 seconds
+    Click Element                       ${BaseLineRiskHazardTab}
+
+    Sleep    2 seconds
+
+    #Add record
+    Wait Until Element Is Visible        ${BaseLineRiskHazardAdd}    40 seconds
+    Click Element                       ${BaseLineRiskHazardAdd}
+    Sleep    4 seconds
+
+    #capture Hazard Classification
+    Wait Until element is Visible       ${BaseLineRiskHazardClassDrp}    40 seconds
+    Click Element                       ${BaseLineRiskHazardClassDrp}
+    Sleep    10 seconds
+    Wait Until element is Visible       ${BaseLineRiskHazardClassSel}    40 seconds
+    Click Element                       ${BaseLineRiskHazardClassSel}
+
+    #Capture Hazard description
+    Wait Until element Is Visible       ${BaseLineRiskHazardDesc}    40 seconds
+    Click Element                       ${BaseLineRiskHazardDesc}
+    Input Text                          ${BaseLineRiskHazardDesc}    auto test
+
+    #Capture Business area
+    Wait until Element Is Visible       ${BaseLineRiskHazardBA}    40 seconds
+    Click Element                       ${BaseLineRiskHazardBA}
+    Sleep    5 seconds
+    Wait Until Element Is Visible       ${BaseLinkRiskHazardBASel}    40 seconds
+    Click Element                       ${BaseLinkRiskHazardBASel}
+
+    #Capture Magnitude
+    Wait Until Element Is Visible       ${BaseLineRiskHazardMag}    40 seconds
+    Click Element                       ${BaseLineRiskHazardMag}
+    Input Text                          ${BaseLineRiskHazardMag}    auto test
+
+    #Capture Mechanism
+    Wait Until Element Is Visible       ${BaselineRiskHazardMec}    40 seconds
+    Click Element                       ${BaselineRiskHazardMec}
+    Input Text                          ${BaselineRiskHazardMec}    auto test
+
+    #Capture Assumption
+    Wait Until Element Is Visible       ${BaseLineRiskHazardAssump}    40 seconds
+    Click Element                       ${BaseLineRiskHazardAssump}
+    Input Text                          ${BaseLineRiskHazardAssump}    auto test
+
+    #Capture Issue
+    Wait until Element Is Visible       ${BaseLineRiskHazardIssueDrp}    40 seconds
+    Click Element                       ${BaseLineRiskHazardIssueDrp}
+    Sleep    3 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskHazardIssueSel}    40 seconds
+    Click Element                       ${BaseLineRiskHazardIssueSel}
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineRiskHazardSave}    40 seconds
+    Click Element                       ${BaseLineRiskHazardSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+    sleep    2 seconds
+    Screenshot    Hazard Inventory ${CurrentDate}
+
+
+#*************************************************FR5-Capture Baseline WRAC*********************************************
+FR5-Capture Baseline WRAC
+    Log To Console    Starting FR5-Capture Baseline WRAC
+
+    #Capture WRAC Tab
+    Wait Until Element Is Visible       ${BaseLineRiskWRACTab}    40 seconds
+    Click Element                       ${BaseLineRiskWRACTab}
+
+    #Add new record
+    Wait Until Element Is Visible       ${BaseLineRiskWRACAdd}    40 seconds
+    Click Element                       ${BaseLineRiskWRACAdd}
+    Sleep    10 seconds
+
+    #Caprure process flow
+    Wait Until Element Is Visible       ${BaseLineRiskWRACProcess}    40 seconds
+    Click Element                       ${BaseLineRiskWRACProcess}
+
+    #Capture Hazard Classification
+    Wait Until element Is Visible       ${BaseLineRiskWRACClassDrp}    40 seconds
+    Click Element                       ${BaseLineRiskWRACClassDrp}
+    Sleep    2 seconds
+    Wait Until element Is Visible       ${BaseLineRiskWRACClassSel}    40 seconds
+    Click Element                       ${BaseLineRiskWRACClassSel}
+    Sleep    1 seconds
+
+    #Capture Description
+    Wait Until Element Is Visible       ${BaseLineRiskWRACDescDrp}    40 seconds
+    Click Element                       ${BaseLineRiskWRACDescDrp}
+    Sleep    1 seconds
+    Wait Until Element is Visible       ${BaseLineRiskWRACDescSel}    40 seconds
+    Click Element                       ${BaseLineRiskWRACDescSel}
+
+    #Capture Business Area
+    Wait Until Element Is Visible       ${BaseLineRiskWRACBADrp}    40 seconds
+    Click Element                       ${BaseLineRiskWRACBADrp}
+    Sleep    1 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskWRACXpath}    40 seconds
+    Click Element                       ${BaseLineRiskWRACXpath}
+    Wait Until Element Is Visible       ${BaseLineRiskWRACBASel}    40 seconds
+    Click Element                       ${BaseLineRiskWRACBASel}
+
+    #capture description of unwanted event
+    Wait Until Element is Visible       ${BaseLineRiskWRACDescEvent}    40 seconds
+    Click Element                       ${BaseLineRiskWRACDescEvent}
+    Input Text                          ${BaseLineRiskWRACDescEvent}    auto test
+
+    # Capture functional ownership
+    Wait Until Element Is Visible       ${BaseLineRiskWRACFunOwnDrp}    40 seconds
+    Click Element                       ${BaseLineRiskWRACFunOwnDrp}
+    Sleep    1 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskWRACFunOwnSel}    40 seconds
+    Click Element                       ${BaseLineRiskWRACFunOwnSel}
+
+    # capture likehood
+    Wait Until Element is Visible       ${BaseLineRiskWRACLikeDrp}    40 seconds
+    Click Element                       ${BaseLineRiskWRACLikeDrp}
+    Sleep    1 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskWRACLikeSel}    40 seconds
+    Click Element                       ${BaseLineRiskWRACLikeSel}
+
+    # Consequences comment
+    Click Element                       ${ConseqSafetyCmnt}
+    Screenshot    consequence field ${CurrentDate}
+    Input Text                          ${ConseqSafetyCmnt}    auto test
+
+    Click Element                       ${ConseqHealthCmnt}
+    Input Text                          ${ConseqHealthCmnt}    auto test
+
+    Click Element                       ${ConseqEnvCmnt}
+    Input Text                          ${ConseqEnvCmnt}    auto test
+
+    Click Element                       ${ConseqCommCmnt}
+    Input Text                          ${ConseqCommCmnt}    auto test
+
+    Click Element                       ${ConseqLegalCmnt}
+    Input Text                          ${ConseqLegalCmnt}    auto test
+
+    Click Element                       ${ConseqMaterialCmnt}
+    Input Text                          ${ConseqMaterialCmnt}    auto test
+
+    Click Element                       ${ConseqRepCmnt}
+    Input Text                          ${ConseqRepCmnt}    auto test
+
+    #capture link to permit
+    Wait Until Element Is Visible      ${BaseLineRiskWRACPermitDrp}    40 seconds
+    Click Element                      ${BaseLineRiskWRACPermitDrp}
+    Sleep    20 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACPermitSel}    60 seconds
+    Click Element                      ${BaseLineRiskWRACPermitSel}
+    Sleep    1 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACPermitDrp}    40 seconds
+    Click Element                      ${BaseLineRiskWRACPermitDrp}
+    Sleep    1 seconds
+
+    #capture Stakeholder group
+    scroll element into view           ${BaseLineRiskWRACStakeGrpDrp}
+    Wait Until Element Is Visible      ${BaseLineRiskWRACStakeGrpDrp}    40 seconds
+    Click Element                      ${BaseLineRiskWRACStakeGrpDrp}
+    Sleep    1 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACStakeGrpSrch}
+    Click Element                      ${BaseLineRiskWRACStakeGrpSrch}
+    Input Text                         ${BaseLineRiskWRACStakeGrpSrch}    auto
+    Press Keys                         ${BaseLineRiskWRACStakeGrpSrch}    ENTER
+    Sleep    10 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACStakeGrpSel}    60 seconds
+    Click Element                      ${BaseLineRiskWRACStakeGrpSel}
+    Sleep    1 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACStakeGrpDrp}    40 seconds
+    Click Element                      ${BaseLineRiskWRACStakeGrpDrp}
+    Sleep    2 seconds
+
+    #capture Stakeholder individual
+    scroll element into view           ${BaselineRiskWRACStakeIndDrp}
+    Wait Until Element Is Visible      ${BaselineRiskWRACStakeIndDrp}    40 seconds
+    Click Element                      ${BaselineRiskWRACStakeIndDrp}
+    Wait Until Element Is visible      ${BaseLineRiskWRACStakeIndSrch}    40 seconds
+    Click Element                      ${BaseLineRiskWRACStakeIndSrch}
+    Input Text                         ${BaseLineRiskWRACStakeIndSrch}    auto test
+    Press Keys                         ${BaseLineRiskWRACStakeIndSrch}    ENTER
+    Sleep    10 seconds
+    Wait Until Element Is Visible      ${BaseLineRiskWRACStakeIndSel}    60 seconds
+    Click Element                      ${BaseLineRiskWRACStakeIndSel}
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineRiskWRACSave}    40 seconds
+    Click Element                       ${BaseLineRiskWRACSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+    sleep    2 seconds
+    Screenshot    WRAC ${CurrentDate}
+
+#Optional Scenario
+    Wait Until Element Is Visible       ${BaseLineRiskImprvDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvDrp}
+    Screenshot    WRAC Optional scenario ${CurrentDate}
+
+#*************************************************FR6-Capture Possible Improvements or Additional Controls**************
+FR6-Capture Possible Improvements or Additional Controls
+    Log To Console    Starting FR6-Capture Possible Improvements or Additional Controls
+
+    #Add New Record
+    Wait Until Element Is Visible       ${BaseLineRiskImprvAdd}    40 seconds
+    Click Element                       ${BaseLineRiskImprvAdd}
+    Sleep    10 seconds
+
+    #Capture process flow
+    Wait Until Element Is Visible       ${BaseLineRiskImprvProcess}    40 seconds
+    Click Element                       ${BaseLineRiskImprvProcess}
+
+    #Capture Task type
+    Wait Until Element Is Visible       ${BaseLineRiskImprvTaskDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvTaskDrp}
+    Sleep    3 seconds
+    Wait Until element is Visible       ${BaseLineRiskImprvTaskSel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvTaskSel}
+
+    #Capture Type Of Action
+    Wait Until Element Is Visible       ${BaseLineRiskImprvTypeDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvTypeDrp}
+    Sleep    1 seconds
+    Wait Until Element IS Visible       ${BaseLineRiskImprvTypeSel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvTypeSel}
+
+    #Capture Description
+    Wait Until Element Is Visible       ${BaseLineRiskImprvDesc}    40 seconds
+    Click Element                       ${BaseLineRiskImprvDesc}
+    Input Text                          ${BaseLineRiskImprvDesc}    auto test
+
+    #Capture Entity
+    Wait Until Element Is Visible       ${BaseLineRiskEntityDrp}    40 seconds
+    Click Element                       ${BaseLineRiskEntityDrp}
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskEntityAnglo}    40 seconds
+    Click Element                       ${BaseLineRiskEntityAnglo}
+    Wait Until Element Is Visible       ${BaseLineRiskEntityBulk}    40 seconds
+    Click Element                       ${BaseLineRiskEntityBulk}
+    Wait Until Element Is Visible       ${BaseLineRiskEntityKumba}    40 seconds
+    Click Element                       ${BaseLineRiskEntityKumba}
+    Wait Until Element Is Visible       ${BaseLineRiskEntitySishen}    40 seconds
+    Click Element                       ${BaseLineRiskEntitySishen}
+#    Wait Until Element Is Visible       ${BaseLineRiskEntityBenefic}    40 seconds
+#    Click Element                       ${BaseLineRiskEntityBenefic}
+
+    #Capture responsible person
+    Wait Until Element Is Visible       ${BaseLineRiskImprvRespDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvRespDrp}
+    Wait Until element Is Visible       ${BaseLineRiskImprvRespSrch}    40 seconds
+    Click Element                       ${BaseLineRiskImprvRespSrch}
+    Input Text                          ${BaseLineRiskImprvRespSrch}    a
+    Press Keys                          ${BaseLineRiskImprvRespSrch}    ENTER
+    Sleep    3 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskImprvRespSel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvRespSel}
+
+    #Capture agency
+    Wait Until element Is Visible       ${BaseLineRiskImprvAgencyDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvAgencyDrp}
+    Sleep    2 seconds
+    Wait Until element is Visible       ${BaseLineRiskImprvAgencySel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvAgencySel}
+
+    #capture Task Priority
+    Wait Until element Is Visible       ${BaseLineRiskImprvPrioDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvPrioDrp}
+    Sleep    2 seconds
+    Wait Until element is Visible       ${BaseLineRiskImprvPrioSel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvPrioSel}
+
+    #Capture Due date
+    ${DueDate}=  Get Current Date  result_format=%d-%m-%Y  increment=+1 day
+    Set Global Variable    ${DueDate}
+    Wait Until Element Is Visible       ${BaseLineRiskImprvDueDate}    40 seconds
+    Click Element                       ${BaseLineRiskImprvDueDate}
+    Input Text                          ${BaseLineRiskImprvDueDate}    ${DueDate}
+
+    #capture Recuring action
+    Wait Until element Is Visible       ${BaseLineRiskImprvRecurDrp}    40 seconds
+    Click Element                       ${BaseLineRiskImprvRecurDrp}
+    Sleep    2 seconds
+    Wait Until element is Visible       ${BaseLineRiskImprvRecurSel}    40 seconds
+    Click Element                       ${BaseLineRiskImprvRecurSel}
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineRiskImprvSave}    40 seconds
+    Click Element                       ${BaseLineRiskImprvSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+    sleep    2 seconds
+    Screenshot    Possible Improvements or Additional Controls ${CurrentDate}
+
+
+FR8-Edit Baseline Risk Management (Layer 1)
+    #Close
+    Sleep    5 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskImprvClose}    40 seconds
+    Click Element                       ${BaseLineRiskImprvClose}
+    # change to pop-up frame
+    Sleep    4 seconds
+    Unselect frame
+    Wait Until Element Is Visible       ${BaselineRiskWRACConfirm}    40 seconds
+    Click Element                       ${BaselineRiskWRACConfirm}
+    # Change to main frame
+    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Select Frame                         ${iFrame}
+    Sleep     3 seconds
+
+    #Close WRAC
+    Sleep    20 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskWRACClose}    60 seconds
+    Click Element                       ${BaseLineRiskWRACClose}
+    # change to pop-up frame
+    Sleep    4 seconds
+    Unselect frame
+    Wait Until Element Is Visible       ${BaselineRiskWRACConfirm}    40 seconds
+    Click Element                       ${BaselineRiskWRACConfirm}
+    # Change to main frame
+    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Select Frame                         ${iFrame}
+    Sleep     3 seconds
+
+    # Check on Process Flow
+    Sleep    4 seconds
+    Wait Until Element Is Visible       ${BaseLineRiskProcess}    40 seconds
+    Click Element                       ${BaseLineRiskProcess}
+    #Element Should Be Visible           ${baseLineRiskProcessLogging}
+    Sleep    2 seconds
+    Screenshot    ProcessFlow In progress ${CurrentDate}
+    Click Element                       ${BaseLineRiskProcess}
+
+    #Capture Change Intoduction
+    Wait Until Element Is Visible       ${BaseLineRiskRiskIntro}    40 seconds
+    Click Element                       ${BaseLineRiskRiskIntro}
+    Clear Element Text                  ${BaseLineRiskRiskIntro}
+    Input Text                          ${BaseLineRiskRiskIntro}    auto test edit
+    sleep    1 seconds
+    Screenshot    Edit Baseline Risk record ${CurrentDate}
+    Sleep    1 seconds
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineRiskSave}    40 seconds
+    Click Element                       ${BaseLineRiskSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+    Screenshot    Edit Baseline Risk record saved ${CurrentDate}
+
+
+
+FR7-Sign off Baseline Change Log
+
+    #Select BaseLine Change log report
+    Wait Until element Is Visible       ${BaseLineChangeLogSel}    40 seconds
+    Click Element                       ${BaseLineChangeLogSel}
+
+    Sleep    15 seconds
+    #Process flow
+    Wait Until Element Is Visible       ${BaseLineChangeProcess}    40 seconds
+    Click Element                       ${BaseLineChangeProcess}
+    Sleep    2 seconds
+
+    sleep    1 seconds
+    Wait Until Element Is Visible       ${BaseLineChangeReasonDrpClose}    40 seconds
+    Click Element                       ${BaseLineChangeReasonDrpClose}
+
+    Wait Until Element Is Visible       ${BaseLineChangeRespDrp}    40 seconds
+    Click Element                       ${BaseLineChangeRespDrp}
+    Sleep    1 seconds
+    Wait Until element Is Visible       ${BaseLineChangeRespSrch2}
+    Click Element                       ${BaseLineChangeRespSrch2}
+    Input Text                          ${BaseLineChangeRespSrch2}    auto
+    Press Keys                          ${BaseLineChangeRespSrch2}    ENTER
+    Sleep    2 seconds
+    Wait Until Element Is Visible       ${BaseLineChangeRespSel2}    40 seconds
+    Click Element                       ${BaseLineChangeRespSel2}
+
+
+    #Change Complete status
+
+    Wait Until Element Is Visible       ${BaseLineChangeDrp}    40 seconds
+    Click Element                       ${BaseLineChangeDrp}
+    Sleep    2 seconds
+    Wait Until element Is Visible       ${BaseLineChangeComSel}    40 seconds
+    Click Element                       ${BaseLineChangeComSel}
+    Screenshot    signed-off details ${CurrentDate}
+
+    # Save
+    Wait Until Element Is Visible       ${BaseLineChangeSave}    40 seconds
+    Click Element                       ${BaseLineChangeSave}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+    Screenshot    Record saved ${CurrentDate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

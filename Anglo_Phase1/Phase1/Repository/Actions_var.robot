@@ -66,27 +66,3 @@ ${ResPSelectionXpath}                   xpath://*[@id="b8ad5f90-d582-46c4-b186-d
 ${ActionDueDateXpath}                   xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/span/span
 ${ADDSelectionXpath}                    xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/input
 ${SaveButtonXpath}                      xpath://*[@id="btnSave_form_5C4FFFC4-66A2-4DAA-9B1F-168A37737EF2"]/div[3]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

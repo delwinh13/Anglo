@@ -492,8 +492,8 @@ FR4 Capture Task Information
     # Close Task Information
     Click Element                   ${TaskInfoCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          60 seconds
-    sleep   3
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          60 seconds
+    sleep   2
     Click Element                   ${JRASectionBJRAPTOTaskInfoTab}
     sleep   2
     Wait Until Element Is Visible   ${TaskInfoAddedRecord}                  60 seconds
@@ -688,28 +688,28 @@ FR7 Capture Controls
     # Save and Close
     Click Element                   ${ControlsSaveCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   1
     Wait Until Element Is Visible   ${ControlsSubModRecord}                 60 seconds
 
     # Close Unwanted Event
     Click Element                   ${UnwantedEventCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   1
     Wait Until Element Is Visible   ${UnwantedEventSubModRecord}            60 seconds
 
     # Close Hazard Record
     Click Element                   ${HazardCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   1
     Wait Until Element Is Visible   ${HazardSubModRecord}                   60 seconds
 
     # Close Task Information Record
     Click Element                   ${TaskInfoCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   2
     Wait Until Element Is Visible   ${JRASectionAGenPersonInfoTab}          60 seconds
     Screenshot      Section A - General and Personnel Information Tab
@@ -718,6 +718,8 @@ FR8 Update Work Execution Tasks
     Log to Console  FR8 Update Work Execution Tasks
 
     # Section C - Work Execution Specification Tab
+    Sleep   2
+    Wait Until Element Is Not Visible   ${JRARecordLoadingXpath}       60 seconds
     Click Element                   ${JRASectionCWorkExecSpecTab}
     sleep   2
     Wait Until Element Is Visible   ${TaskInfoWorkExecutionTasksRecord}     30 seconds
@@ -846,7 +848,7 @@ FR9 Capture Work Execution Specification
     sleep   1
     Click Element                   ${WorkExecSpecAddBtn}
     sleep   1
-    Wait Until Page Does Not Contain        ${TaskInfoRecordLoading}        30 seconds
+    Wait Until Element Is Not Visible        ${TaskInfoRecordLoading}        30 seconds
     Wait Until Element Is Visible   ${WorkExecSpecPF}                       60 seconds
     Wait Until Element Is Visible   ${WorkExecSpecSaveNewBtn}               60 seconds
     Page Should Contain Element     ${WorkExecSpecObservationObserverDD}
@@ -892,17 +894,18 @@ FR9 Capture Work Execution Specification
     # Close Button
     Click Element                   ${WorkExecSpecCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   2
     Wait Until Element Is Visible   ${WorkExecSpecSubModRecord}             60 seconds
 
     # Close Work Execution Tasks Record
     Click Element                   ${WorkExecTasksCloseBtn}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   2
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     Wait Until Element Is Visible   ${JRASectionAGenPersonInfoTab}          60 seconds
-
+    Sleep   2                      30 seconds
     Click Element                   ${ProcessFlow}
     Wait Until Element Is Visible   ${ProcessFlowEdit}                      10 seconds
     Screenshot      Process flow clicked - Edit Phase
@@ -926,7 +929,7 @@ FR10 Sign off the Change Log
     # Open Change Log Record
     Click Element                   ${ChangeSubModRecord}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   1
     Wait Until Element Is Visible   ${ChangePF}                             60 seconds
 
@@ -959,7 +962,7 @@ FR10 Sign off the Change Log
 
     # Close Change Log Record
     Click Element                   ${ChangeCloseBtn}
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     Wait Until Element Is Visible   ${JRAReadOnlyModeLabel}                 60 seconds
     sleep   1
     Scroll element into view        ${JRAReadOnlyModeLabel}
@@ -988,7 +991,7 @@ FR11 Capture Actions
     # Actions Add Button
     Click Element                   ${ActionsAddbtn}
     sleep   1
-    Wait Until Page Does Not Contain        ${JRARecordLoadingXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRARecordLoadingXpath}          30 seconds
     Wait Until Element Is Enabled   ${ActionsProcessFlowbtn}             30 seconds
 
     # Process Flow
@@ -1067,7 +1070,7 @@ FR11 Capture Actions
     Click Element                    ${ActionsCloseIconConfirmYes}
     sleep   2
     Select Frame                     ${iFrame}
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     sleep   2
     Screenshot    Navigated back to Section A - General and Personnel Information tab
 

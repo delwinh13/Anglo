@@ -76,4 +76,23 @@ ${AirQualityConfirmExit}            xpath://*[@id="btnConfirmYes"]/div
 ${AirQualitySelect}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[25]/div[9]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[4]
 ${AirQualityFindingClass2}          xpath:/html/body/div[1]/div[3]/div/div[2]/div[59]/ul[1]/ul/li[5]/a
 
+#************************************************* FR5 - Edit Air quality Monitoring Finding ***************************
+${AirQualityFindingFLDrp}           xpath://*[@id="control_DE18F9A3-BBB4-4600-B420-0167AE11B426"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingFLSel}           xpath://*[@id="bfca906a-1f2a-4508-9bec-bc0770cbea9f_anchor"]
+${AirQualityFindingClosureDate}     xpath://*[@id="control_1318D08E-2DA5-47DC-AFC8-0E99CC12C72A"]/div[1]/span/span/input
+${AirQualityFindingRiskSourceDrp}   xpath://*[@id="control_E2CBB706-26AB-4373-813A-05D4860FC38F"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingRiskSourceSel}   xpath://*[@id="6a203a44-0e56-4caa-91f5-70721d795b8a_anchor"]/i[1]
+${AirQualityFindingRelatPermitDrp}  xpath://*[@id="control_6FC51E0E-C6FD-4316-940D-2DC2029A0ECA"]/div[1]/a/span[1]/ul/li
+${AirQaulityFindingRelatPermitSel}  xpath://*[@id="control_6FC51E0E-C6FD-4316-940D-2DC2029A0ECA"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingRelateDrp}       xpath://*[@id="control_5DBAAA36-2C4B-41BF-9E19-9C13FF03A076"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingRelateSel}       xpath://*[@id="e4db7081-5761-4ae9-b28e-2f709771e997_anchor"]
 
+${AirQualityFindingIndvDrp}         xpath://*[@id="control_CDCCCDFB-B2ED-4F45-8B21-54358FAC0FB3"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingIndvSel}         xpath://*[@id="fa16e8a7-bfc0-4421-9c3b-10f48e77bdf9_anchor"]/i[1]
+${AirQualityFindingFactorDesc}      xpath://*[@id="control_B0C4CB46-6EF6-43B0-B739-6AD8110C1A1A"]/div[1]/div/textarea
+${AirQualityFindingWrkPlaceDrp}     xpath://*[@id="control_7CACA862-8EE8-424E-9BFB-FCD58D175434"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingWrkPlaceSel}     xpath:/html/body/div[1]/div[3]/div/div[2]/div[77]/ul[1]/ul/li[8]/a/i[1]
+${AirQualityFindingWrkPlaceDesc}    xpath://*[@id="control_7CADBA7E-8CC1-408D-ADD8-3B224565131C"]/div[1]/div/textarea
+${AirQualityFindingOrgFactorDrp}    xpath://*[@id="control_CD4EA32A-8E60-4164-AF57-6A2DB5335F70"]/div[1]/a/span[1]/ul/li
+${AirQualityFindingOrgFactorSel}    xpath://*[@id="d64c890b-88f6-4615-ae77-23a583b74c31_anchor"]/i[1]
+${AirQualityFindingOrgFactorDesc}   xpath://*[@id="control_C279E65E-2CA4-49CA-8455-F162FDD1D630"]/div[1]/div/textarea

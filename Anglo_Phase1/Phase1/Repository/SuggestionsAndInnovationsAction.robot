@@ -12,15 +12,15 @@ ${EntityDrpValueKumbaXpath}                                      xpath:((//li[@t
 ${EntityDrpValueSishenXpath}                                     xpath:(//li[@title='Sishen Mine'])[2]
 ${ResponsiblePersonXpath}                                       xpath://div[@name='ddl1']
 ${ResponsiblePersonTextXpath}                                       xpath:(//input[@placeholder='Type and enter to search'])[6]
-${ResponsiblePersonTextDataXpath}                              xpath:(//a[@class='jstree-anchor'])[84]
+${ResponsiblePersonTextDataXpath}                              xpath:(//li[@id='cbe087ad-bd0e-4e8b-8997-60a9b5b0ef37']//a)[2]
 ${RecurringActionXpath}                                       xpath://div[@name='ddl465']
 ${RecurringActionDropdownXpath}                                       xpath:(//a[@id='e4db7081-5761-4ae9-b28e-2f709771e997_anchor'])[2]
 ${ActionDueDateXpath}                                       xpath:(//input[@class='k-input'])[4]
 ${ActionSaveButtonXpath}                                       xpath:(//div[@i18n='save'])[4]
 ${CloseButtonXpath}                                       xpath:(//i[@class='close icon cross'])[7]
 ${YesButtonXpath}                                       xpath://div[@id='btnConfirmYes']
-${DueDateXpath}                                             30-06-2021
 ${ConfirmationMessageiFrame}                                xpath://*[@id='ifrPrimaryPopupCover']
+${Calender}                                                 xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/span/span
 
 
 

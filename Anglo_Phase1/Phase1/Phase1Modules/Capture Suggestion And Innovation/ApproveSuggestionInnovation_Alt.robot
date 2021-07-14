@@ -10,7 +10,7 @@ Force Tags      behavior-driven
 Suggestions and Innovations
     Launch IsoMetrix Application
     Login with Valid Credentials
-   FR3- Reject Suggestion or Innovation
-   FR3- Suggestion and Innovation Reject Email
+   FR2- Reject Suggestion or Innovation
+   FR2- Suggestion and Innovation Reject Email
 
 

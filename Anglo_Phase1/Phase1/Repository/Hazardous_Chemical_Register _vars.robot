@@ -51,6 +51,39 @@ ${HazardousChemicalDetailTab}               xpath://*[@id="tab_E9D61865-ADCE-4E0
 ${SaveButtonXpath}                          xpath://*[@id="btnSave_form_67D12C4F-9715-42CB-8583-738A005007A8"]/div[3]
 ${SaveButtonXpath1}                         xpath://*[@id="control_FB7FFCEE-4112-4F49-9FC5-9559099BF2CA"]/div[1]/div
 ${ProcessflowEditPhaseXpath1}               xpath:(//div[@id='divProcess_67D12C4F-9715-42CB-8583-738A005007A8'])[2]/div/div[2]/div[3]/div[1]//div[text()='Edit phase']
+
+#************************************************* Hazardous Chemical Register Actions page ************************************************
+${HCRADropdown}                             xpath://*[@id="control_99B489F5-1B15-403C-9F0C-086A911DA7F7"]/div[9]/div[1]
+${HCRAAddbutton}                            xpath://div[text()='Hazardous Chemical Register Actions']/../..//*[@id="btnAddNew"]/div
+${TaskTypeDropdown}                         xpath://*[@id="control_0EF43D36-B4D4-4A20-8C24-2EFA6E65EAA9"]/div[1]/a/span[2]/b[1]
+${AdHocSelction}                            xpath:(//div[contains(@class, 'transition visible')]//a[text()='Ad Hoc'])[1]
+${TypeOfActionDropdown}                     xpath://*[@id="control_F1D9D484-9182-4B8C-95F9-AFFB440EB3CE"]/div[1]/a/span[2]/b[1]
+${CorrectiveSelection}                      xpath:(//div[contains(@class, 'transition visible')]//a[text()='Corrective'])[1]
+${ActionDesc}                               xpath://*[@id="control_1255F613-A69C-476A-8B05-4B87E5CA009F"]/div[1]/div/textarea
+${EntityListBox}                            xpath://*[@id="control_34D02E21-7837-484C-844E-BCC8CC077837"]/div[1]/a/span[2]/b[1]
+${BUAAGOption}                              xpath:(//a[text()='Anglo American Group']/../i)[2]
+${BUBCOOption}                              xpath:(//a[text()='Bulk Commodities & Other Minerals']/../i)[3]
+${BUKOption}                                xpath:(//a[text()='Kumba']/../i)[2]
+${BUSMOption}                               xpath:(//a[text()='Sishen Mine']/../i)[2]
+${BUSMSelectOption}                         xpath://*[@id="54f00015-2059-48c0-9d06-c9dd52d482e9_anchor"]
+${ResposiblePersonDropdown}                 xpath://*[@id="control_7854D003-23E6-4A2E-AF2E-357C965FA684"]/div[1]/a/span[2]/b[1]
+${ResponsiblePersonSearchbox}               xpath:(//input[@placeholder='Type and enter to search'])[1]
+${ResPSelection}                            xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
+${ResPSelection}                            xpath://*[@id="b8ad5f90-d582-46c4-b186-d99649824acd_anchor"]
+${AgencyDropdown}                           xpath://*[@id="control_5B580F56-394D-4695-8AB2-C2CB9AAE9EB9"]/div[1]/a/span[2]/b[1]
+${AviationSelction}                         xpath://*[@id="662a762f-2a21-49ef-8f3d-4a3ac0acf0ed_anchor"]
+${TaskPriorityDropdown}                     xpath://*[@id="662a762f-2a21-49ef-8f3d-4a3ac0acf0ed_anchor"]
+${LowSelection}                             xpath://*[@id="662a762f-2a21-49ef-8f3d-4a3ac0acf0ed_anchor"]
+${ActionStartDate}                          xpath://*[@id="control_EC1F208E-0AA6-458D-AFC5-62C7BE806221"]/div[1]/span/span/input
+${ActionDueDateIcon}                        xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/span/span
+${ActionDueDateSelection}                   xpath://*[@id="control_A1A7A250-4916-472D-A6A5-CDA980F5DA52"]/div[1]/span/span/input
+${Isthisarecurringaction}                   xpath://*[@id="control_2EA9211B-54AC-4846-8A26-58606645D84A"]/div[1]/a/span[2]/b[1]
+${NoSelection}                              xpath://*[@id="e4db7081-5761-4ae9-b28e-2f709771e997_anchor"]
+${SaveButton}                               xpath://*[@id="btnSave_form_E9D98920-97F8-438C-9101-9522C7C3DE26"]/div[3]
+${ProcessflowButton1}                       xpath://*[@id="btnProcessFlow_form_E9D98920-97F8-438C-9101-9522C7C3DE26"]/span
+${ProcessflowEditPhase1}                    xpath://*[@id="btnProcessFlow_form_E9D98920-97F8-438C-9101-9522C7C3DE26"]/span
+
+
 #************************************************* Supporting Documents Tab ************************************************
 ${SupportingDocXpath}                     xpath://*[@id="tab_CC1019C5-2B76-43A0-A10B-C9936C3C32C3"]/div[1]
 ${SupportingDocLinkDoc}                   xpath://*[@id="control_C1EE88AC-E0A0-4122-AE4F-82289592D716"]/div[1]/div[1]/div[2]/b[2]

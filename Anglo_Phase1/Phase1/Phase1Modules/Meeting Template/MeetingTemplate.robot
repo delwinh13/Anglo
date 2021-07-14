@@ -2,7 +2,7 @@
 Documentation       Anglo Phase 1
 Library             SeleniumLibrary
 Resource            ../../Resources/MeetingTemplate/MeetingTemplate_keywords.robot
-Resource            ../../Resources/MeetingTemplate/MeetingTemplateEditRecord_keywords.robot
+#Resource            ../../Resources/MeetingTemplate/MeetingTemplateEditRecord_keywords.robot
 
 Force Tags      behavior-driven
 # Suite Teardown  Close Browser
