@@ -193,7 +193,7 @@ FR1 - Capture Stakeholder Group_OS1
     sleep       1
     Select Frame                            ${iFrame}
 
-    FOR  ${i}     IN RANGE  1  7
+    FOR  ${i}     IN RANGE  1  8
     Click Element                           ${StakeholderGroupTabLeftArrow}
     END
     Sleep       1

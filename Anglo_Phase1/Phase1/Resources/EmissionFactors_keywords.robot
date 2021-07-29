@@ -88,23 +88,23 @@ FR2 - Emission Factors Maintenance Values
      input text                ${EFN2OFieldXpath}         773
      Sleep     1 seconds
      Screenshot   FR2 info entered
-     Click Element             ${EFCO2eDDXpath}
-     Sleep     1 seconds
-     Click Element             ${EFCO2eDDSelectID}
-     Sleep     1 seconds
-     Click Element             ${EFCO2DDXpath}
-     Sleep     1 seconds
-     Click Element             ${EFCO2DDSelectXpath}
-     Sleep     1 seconds
-     Click Element             ${EFCH4DDXpath}
-     Sleep     1 seconds
-     Click Element             ${EFCH4DDSelectXpath}
-     Sleep     1 seconds
-     Click Element             ${EFN2ODDXpath}
-     Sleep     1 seconds
-     Click Element             ${EFN2ODDSelectXpath}
-     Sleep     1 seconds
-     Screenshot   FR2 Data entered
+     #Click Element             ${EFCO2eDDXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFCO2eDDSelectID}
+     #Sleep     1 seconds
+     #Click Element             ${EFCO2DDXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFCO2DDSelectXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFCH4DDXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFCH4DDSelectXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFN2ODDXpath}
+     #Sleep     1 seconds
+     #Click Element             ${EFN2ODDSelectXpath}
+     #Sleep     1 seconds
+     #Screenshot   FR2 Data entered
      click element             ${EFSaveBtnXpath}
      Screenshot   FR2 Save button clicked
      Sleep     10 seconds

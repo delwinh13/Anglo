@@ -120,7 +120,7 @@ Login with Valid Credentials
       input text        ${AddlineNoofItems}      1
       sleep   5 seconds
       click element    ${SaveButton}
-      sleep   10 seconds
+      sleep   15 seconds
       click element      ${InlineEditorXpath}
       sleep   3 seconds
       click element  ${ItemIssueAdd}
@@ -139,6 +139,8 @@ Login with Valid Credentials
       sleep   3  seconds
       click element     ${PPEDrpDown}
       sleep   3 seconds
+      WAIT UNTIL ELEMENT IS VISIBLE   ${PPEDrpDownValue}     40 seconds
+
       click element     ${PPEDrpDownValue}
       sleep   3 seconds
       click element  ${PPEDrpDownLinkValue}

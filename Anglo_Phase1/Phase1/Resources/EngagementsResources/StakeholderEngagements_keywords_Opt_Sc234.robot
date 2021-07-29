@@ -30,18 +30,19 @@ FR1 - Capture Engagements Optional Scenario 2 3 4
     Sleep     3 seconds
 
     # Click Social Sustainability
-    Sleep    2 seconds
+    Sleep    10 seconds
     Wait Until Page Contains Element    ${SocialSustainabilityXpath}    60 seconds
     Click Element                       ${SocialSustainabilityXpath}
 
     # Click Engagemet Management
-    Sleep    2 seconds
-    Wait Until Element Is Visible       ${EngagementManagementXpath}    40 seconds
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${EngagementManagementXpath}    120 seconds
     Click Element                       ${EngagementManagementXpath}
 
 
     # Add Stakeholder Engagement Record
-    Wait Until Element Is Visible       ${EngagementManagementAddBtnID}    40 seconds
+    sleep    10 seconds
+    Wait Until Element Is Visible       ${EngagementManagementAddBtnID}    120 seconds
     Click Element                       ${EngagementManagementAddBtnID}
 
 

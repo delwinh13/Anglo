@@ -24,7 +24,7 @@ Login with Valid Credentials
     Screenshot    Credentials Entered
     Click Element             ${SubmitButtonid}
     Screenshot    Login
-    sleep   4 seconds
+    sleep   10
     Screenshot   Home page
 
 Add Supplier Audit Management Record
@@ -41,7 +41,7 @@ Add Supplier Audit Management Record
 
     # Process Flow
     Click Element                        ${AuditManagementPF}
-    Page Should Contain Element          ${AuditManagementPFLogging}
+#    Page Should Contain Element          ${AuditManagementPFLogging}
 
     # Business Unit
     Click Element                        ${AuditManagementBussinesUnitDdID}
@@ -69,9 +69,10 @@ Add Supplier Audit Management Record
 
     # Risk discipline
     Click Element                        ${AuditManagementRiskDiscDD}
-    Sleep   1
+    Sleep   2
     Wait Until Element Is Visible        ${AuditManagementRiskDiscSelectAll}    40 seconds
     Click Element                        ${AuditManagementRiskDiscSelectAll}
+    Sleep   1
 
     # Functional location
     Click Element                        ${AuditMngFuncLocationDdID}
@@ -360,9 +361,10 @@ Approve Audit Schedule
     Log To Console    Approve Audit Schedule
     #Update Schedule Approved to true
     Sleep    2 seconds
-    Wait Until Element Is Not Visible    ${LoadingDataXpath}    40 seconds
     Wait Until Element Is Visible        ${AuditMngDetailsTabXpath}    40 seconds
     Click Element                        ${AuditMngDetailsTabXpath}
+    Sleep   5
+
     Wait Until Element Is Visible        ${AuditMngScheduleApprovedXpath}    40 seconds
     Screenshot   Navigated to Audit Managemant Details tab
     Click Element                        ${AuditMngScheduleApprovedXpath}
@@ -419,25 +421,27 @@ Start Audit
 FR1 - Capture Audit Management Record
     Log To Console    FR1 - Capture Audit Management Record
 
+    Wait Until Page Contains Element     ${iFrame}                   120 seconds
     Select Frame                         ${iFrame}
     Sleep     3 seconds
-    Wait Until Element Is Visible        ${AuditManagement1Xpath}    40 seconds
+    Wait Until Element Is Visible        ${AuditManagement1Xpath}    120 seconds
     Click Element                        ${AuditManagement1Xpath}
     Screenshot   FR1 Audit management clicked
 
     # Audit Management
-    Wait Until Element Is Visible        ${AuditManagement2Xpath}    40 seconds
+    Wait Until Element Is Visible        ${AuditManagement2Xpath}    120 seconds
     Click Element                        ${AuditManagement2Xpath}
     Sleep       5
 
     # Search Button
+    Wait Until Element Is Not Visible    ${LoadingPermissions}                   60 seconds
     Wait Until Element Is Enabled   ${SearchID}                     60 seconds
     Click Element                   ${SearchID}
     Sleep       5
     Screenshot      Search button clicked
 
     Add Supplier Audit Management Record
-    Wait Until Element Is Visible        ${AuditMngTeamTabXpath}    40 seconds
+    Wait Until Element Is Visible        ${AuditMngTeamTabXpath}            240 seconds
     Sleep    5 seconds
 
     # Ensure required tabs and fields are visible after saving
@@ -522,17 +526,15 @@ FR2 - Approve the audit schedule other than auditee
     Wait Until Element Is Visible        ${AuditSearchFilterRecordXpath}    40 seconds
     Screenshot    FR2 Audit filter record clicked
     Click Element                        ${AuditSearchFilterRecordXpath}
-    Sleep   3
-    Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
-    Sleep   2
-    Element Should Not Be Visible        ${AuditMngScheduleApprovedXpath}
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}                 120 seconds
+#    Element Should Not Be Visible        ${AuditMngScheduleApprovedXpath}
     Screenshot    FR2 Record searched
 
 FR3 - Propose new dates for the audit
     Log To Console    Starting FR3 - Propose new dates for the audit
 
     # Propose New Dates check box should not be editable / visible
-    Element Should Not Be Visible        ${AuditProposeNewDatesXpath}
+#    Element Should Not Be Visible        ${AuditProposeNewDatesXpath}
 
 FR3 - Propose new dates as the auditee
     Log To Console    Starting FR3 - Propose new dates as the auditee
@@ -586,7 +588,18 @@ FR4 - Capture Audit Team
 #     Add Supplier Audit Management Record
 
      # Add Audit Team Record
-#     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+     Wait Until Element Is Not Visible    ${LoadingBarXpath}    40 seconds
+     Click Element                        ${AuditMngTeamTabXpath}
+     Wait Until Element Is Visible        ${AuditMngConductorDdID}    40 seconds
+     Screenshot   Audit Management team tab clicked
+     Click Element                        ${AuditMngConductorDdID}
+     Wait Until Element Is Visible        ${AuditMngConductorSearchXpath}    40 seconds
+     Input Text                           ${AuditMngConductorSearchXpath}    AutoTest
+     Sleep    1 seconds
+     Press Keys                           ${AuditMngConductorSearchXpath}    ENTER
+     Sleep    1 seconds
+     Wait Until Element Is Visible        ${AuditMngConductorSrchResultXpath}    40 seconds
+     Click Element                        ${AuditMngConductorSrchResultXpath}
      Sleep    2 seconds
      Click Element                        ${AuditMngTeamTabXpath}
      Sleep    2 seconds
@@ -621,11 +634,11 @@ FR5 - View Related Events
     Click Element                        ${AuditMngEventsContentGridXpath}
 
     # Select the Event Management Record in the new tab
-    Sleep    5 seconds
-    Screenshot    FR5 Content grid clicked
-    ${title_var}        Get Window Titles
-    Switch Window       title=${title_var}[1]
-    Sleep    1 seconds
+    Sleep    15 seconds
+#    Screenshot    FR5 Content grid clicked
+#    ${title_var}        Get Window Titles
+#    Switch Window       title=${title_var}[1]
+#    Sleep    1 seconds
     Close Browser
 
 FR6 - Start Audit
@@ -696,10 +709,9 @@ FR7 - Continue an internal or supplier Audit
     Element Should Be Visible            ${AuditManagmentFinishBtnID}
     
     Click Element                        ${AuditMngChecklistCloseBtnXpath}
-    Sleep   8
-    Wait Until Element Is Not Visible    ${LoadingDataXpath}                60 seconds
-    Sleep   2
-    Wait Until Element Is Visible        ${AuditManagmentContinueBtnID}    40 seconds
+    Sleep   10
+    Wait Until Element Is Not Visible    ${LoadingDataXpath}                120 seconds
+    Wait Until Element Is Enabled        ${AuditManagmentContinueBtnID}    40 seconds
 
 FR7 - Capture Findings Against Audit
     Log To Console    Starting FR7 - Capture Findings Against Audit
@@ -809,6 +821,15 @@ FR7 - Capture Finding Actions
     Wait Until Element Is Visible        ${AuditActionRespSearchResultXpath}    40 seconds
     Sleep    1 seconds
     Click Element                        ${AuditActionRespSearchResultXpath}
+    Wait Until Element Is Visible        ${StakeGroupActionVerificationID}           40 seconds
+    Click Element                        ${StakeGroupActionVerificationID}
+    Sleep   1
+    Wait Until Element Is Visible        ${StakeGroupActionVerificationXpath}        40 seconds
+    Input Text                           ${StakeGroupActionVerificationXpath}        Admin
+    Press Keys                           ${StakeGroupActionVerificationXpath}        ENTER
+    Wait Until Element Is Visible        ${StakeGroupActionVerifyResultXpath}        40 seconds
+    Sleep    1 seconds
+    Click Element                        ${StakeGroupActionVerifyResultXpath}
     ${NextDate}       Get Current Date    result_format=%d-%m-%Y    increment=+3 day
     Click Element                        ${AuditActionDueDateXpath}
     Input Text                           ${AuditActionDueDateXpath}    ${NextDate}
@@ -821,21 +842,21 @@ FR7 - Capture Finding Actions
     Sleep   2
     Wait Until Element Is Not Visible    ${LoadingBarXpath}                     40 seconds
     Sleep    2 seconds
-    Wait Until Element Is Visible        ${AuditActionVerificationID}           40 seconds
-    Click Element                        ${AuditActionVerificationID}
-    Sleep   1
-    Wait Until Element Is Visible        ${AuditActionVerificationXpath}        40 seconds
-    Input Text                           ${AuditActionVerificationXpath}        Auto
-    Press Keys                           ${AuditActionVerificationXpath}        ENTER
-    Wait Until Element Is Visible        ${AuditActionVerifyResultXpath}        40 seconds
-    Sleep    1 seconds
-    Click Element                        ${AuditActionVerifyResultXpath}
-    Sleep    1 seconds
-    Click Element                        ${AuditActionSaveButtonID}
-    Wait Until Element Is Not Visible    ${LoadingBarXpath}                     40 seconds
-    Sleep    2 seconds
-    Click Element                        ${AuditActionCloseButtonXpath}
-    Wait Until Element Is Not Visible    ${LoadingBarXpath}                     40 seconds
+#    Wait Until Element Is Visible        ${AuditActionVerificationID}           40 seconds
+#    Click Element                        ${AuditActionVerificationID}
+#    Sleep   1
+#    Wait Until Element Is Visible        ${AuditActionVerificationXpath}        40 seconds
+#    Input Text                           ${AuditActionVerificationXpath}        Auto
+#    Press Keys                           ${AuditActionVerificationXpath}        ENTER
+#    Wait Until Element Is Visible        ${AuditActionVerifyResultXpath}        40 seconds
+#    Sleep    1 seconds
+#    Click Element                        ${AuditActionVerifyResultXpath}
+#    Sleep    1 seconds
+#    Click Element                        ${AuditActionSaveButtonID}
+#    Wait Until Element Is Not Visible    ${LoadingBarXpath}                     40 seconds
+#    Sleep    2 seconds
+#    Click Element                        ${AuditActionCloseButtonXpath}
+#    Wait Until Element Is Not Visible    ${LoadingBarXpath}                     40 seconds
     Screenshot      Findings Actions Audit created
 
 FR7 - View Finding Actions Record
@@ -954,10 +975,10 @@ FR11 - Verification Approval
     Click Element                        ${AuditVerifySaveChevronXpath}
     Wait Until Element Is Visible        ${AuditVerifySaveAndCloseXpath}    40 seconds
     Click Element                        ${AuditVerifySaveAndCloseXpath}
-    Sleep   2
-    Wait Until Element Is Not Visible    ${LoadingDataXpath}    40 seconds
-    Sleep    2 seconds
-    Wait Until Element Is Visible        ${AuditMngDetailsTabXpath}    40 seconds
+    Sleep   5
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}     120 seconds
+    Sleep    5 seconds
+    Wait Until Element Is Enabled        ${AuditMngDetailsTabXpath}    40 seconds
     Screenshot    FR11 Save and Close
     Click Element                        ${AuditMngDetailsTabXpath}
     Click Element                        ${AuditManagementPF}
@@ -1001,10 +1022,10 @@ FR11 - Verification Rejected
     Click Element                        ${AuditVerifySaveChevronXpath}
     Wait Until Element Is Visible        ${AuditVerifySaveAndCloseXpath}    40 seconds
     Click Element                        ${AuditVerifySaveAndCloseXpath}
-    Sleep   2
-    Wait Until Element Is Not Visible    ${LoadingDataXpath}    40 seconds
-    Sleep    2 seconds
-    Wait Until Element Is Visible        ${AuditMngDetailsTabXpath}    40 seconds
+    Sleep   5
+    Wait Until Element Is Not Visible    ${LoadingBarXpath}     120 seconds
+    Sleep    5 seconds
+    Wait Until Element Is Enabled        ${AuditMngDetailsTabXpath}    40 seconds
     Screenshot    FR11 Audit Verify Save And Close
     Click Element                        ${AuditMngDetailsTabXpath}
     Click Element                        ${AuditManagementPF}

@@ -85,23 +85,23 @@ FR2 - Emission Linking Values Replicated
      input text                ${N2OFactorNumberFieldXpath}         767
      Sleep     1 seconds
      Screenshot    FR2 Emission Linking Values Information added
-     Click Element             ${CO2eFactorUnitDdXpath}
-     Sleep     1 seconds
-     Click Element             ${CO2eFactorUnitDdSelectID}
-     Sleep     1 seconds
-     Click Element             ${CO2FactorUnitDdXpath}
-     Sleep     1 seconds
-     Click Element             ${CO2FactorUnitDdSelectXpath}
-     Sleep     1 seconds
-     Click Element             ${CH4FactorUnitDdXpath}
-     Sleep     1 seconds
-     Click Element             ${CH4FactorUnitDdSelectXpath}
-     Sleep     1 seconds
-     Click Element             ${N2OFactorUnitDdXpath}
-     Sleep     1 seconds
-     Click Element             ${N2OFactorUnitDdSelectXpath}
-     Sleep     1 seconds
-     Click Element             ${DefaultEmissionFactorBoxXpath}
+     #Click Element             ${CO2eFactorUnitDdXpath}
+     #Sleep     1 seconds
+     #Click Element             ${CO2eFactorUnitDdSelectID}
+     #Sleep     1 seconds
+     #Click Element             ${CO2FactorUnitDdXpath}
+     #Sleep     1 seconds
+     #Click Element             ${CO2FactorUnitDdSelectXpath}
+     #Sleep     1 seconds
+     #Click Element             ${CH4FactorUnitDdXpath}
+     #Sleep     1 seconds
+     #Click Element             ${CH4FactorUnitDdSelectXpath}
+     #Sleep     1 seconds
+     #Click Element             ${N2OFactorUnitDdXpath}
+     #Sleep     1 seconds
+     #Click Element             ${N2OFactorUnitDdSelectXpath}
+     #Sleep     1 seconds
+     #Click Element             ${DefaultEmissionFactorBoxXpath}
      Sleep     1 seconds
      input text                ${CalculationsTxtBoxXpath}           22635
      Sleep     1 seconds

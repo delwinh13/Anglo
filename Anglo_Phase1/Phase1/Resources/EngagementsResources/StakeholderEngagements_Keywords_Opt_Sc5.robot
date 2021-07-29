@@ -26,22 +26,23 @@ Login with Valid Credentials
 FR1 - Capture Engagements Optional Scenario 5
     Log To Console    Starting FR1 - Capture Engagements Optional Scenario 5
 
-    Wait Until Element Is Visible        ${iFrame}    40 seconds
+    Wait Until Element Is Visible        ${iFrame}    60 seconds
     Select Frame                         ${iFrame}
     Sleep     3 seconds
 
     # Click Social Sustainability
-    Sleep    2 seconds
-    Wait Until Page Contains Element    ${SocialSustainabilityXpath}    60 seconds
+    Sleep    10 seconds
+    Wait Until Page Contains Element    ${SocialSustainabilityXpath}    120 seconds
     Click Element                       ${SocialSustainabilityXpath}
 
     # Click Engagemet Management
-    Sleep    2 seconds
-    Wait Until Element Is Visible       ${EngagementManagementXpath}    40 seconds
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${EngagementManagementXpath}    120 seconds
     Click Element                       ${EngagementManagementXpath}
 
 
     # Add Stakeholder Engagement Record
+    sleep    10 seconds
     Wait Until Element Is Visible       ${EngagementManagementAddBtnID}    40 seconds
     Click Element                       ${EngagementManagementAddBtnID}
 
@@ -188,7 +189,7 @@ FR1 - Capture Engagements Optional Scenario 5
 
     # Check on Process Flow
     Sleep    10 seconds
-    Wait Until Element Is Visible       ${EngagementGrievanceProcessID}    40 seconds
+    Wait Until Element Is Visible       ${EngagementGrievanceProcessID}    120 seconds
     Click Element                       ${EngagementGrievanceProcessID}
 
     # Capture Grievance  on type of Event

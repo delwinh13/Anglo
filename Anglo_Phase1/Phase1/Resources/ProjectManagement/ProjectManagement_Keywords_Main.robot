@@ -58,6 +58,8 @@ FR1- Capture Project Management
     Click Element                       ${ProjectManagementEntityXpath2}
     Wait Until Element Is Visible       ${ProjectManagementEntitySelect}    40 seconds
     Click Element                       ${ProjectManagementEntitySelect}
+
+
     Wait Until element Is Visible       ${ProjectManagementEntityCloseDrp}    40 seconds
     Click Element                       ${ProjectManagementEntityCloseDrp}
 

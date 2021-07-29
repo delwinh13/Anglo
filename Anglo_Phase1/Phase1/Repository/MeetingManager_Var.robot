@@ -1,3 +1,4 @@
+
 *** Variables ***
 ${MeetingManagerInterface}           xpath://*[@id="section_d2b0d016-8986-40be-ac01-1f3f95d443f5"]/label
 ${MeetingAddBttn}                    xpath://*[@id="btnActAddNew"]/div
@@ -41,9 +42,9 @@ ${MeetingAttendeesTab}                                xpath://*[@id="tab_25C8A87
 ${MeetingManagerattendAttendenceDPD1}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[9]/div/div[1]/a/span[2]
 ${MeetingManagerattendAttendenceDPD2}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[2]/td[9]/div/div[1]/a/span[2]/b[1]
 ${MeetingManagerttendAttendenceDPD3}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[3]/td[9]/div/div[1]/a/span[2]/b[1]
-${MeetingManagerattendAttendenceDPD1present}          xpath:/html/body/div[38]/ul[1]/ul/li[1]/a
-${MeetingManagerattendAttendenceDPD2present}          xpath:/html/body/div[41]/ul[1]/ul/li[1]/a
-${MeetingManagerattendAttendenceDPD3present}          xpath:/html/body/div[44]/ul[1]/ul/li[3]/a
+${MeetingManagerattendAttendenceDPD1present}          xpath:(//a[text()='Present'])[1]
+${MeetingManagerattendAttendenceDPD2present}          xpath:(//a[text()='Present'])[2]
+${MeetingManagerattendAttendenceDPD3present}          xpath: (//a[text()='Apologies'])[3]
 ${MeetingComments}                                    xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[3]/td[10]/div/div[1]/div/textarea
 ${MeetingManagerAttendeeName}                         xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[4]/td[5]/div/div[1]/div/input
 ${MeetingManagerAttendeesEmailInput1}                  xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[3]/td[6]/div/div[1]/div/input
@@ -56,11 +57,11 @@ ${MeetingAgendaAddbttn}                         xpath://*[@id="btnAddNew"]/div
 ${MeetingAgendaProcessFlow}                      xpath://*[@id="btnProcessFlow_form_878B03FA-3A56-4B31-A883-725BE022C779"]/span
 ${MeetingAgendaAddphase}                        xpath:(//div[@id='divProcess_878B03FA-3A56-4B31-A883-725BE022C779'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Add phase']
 ${MeetingAgendaEditPhase}                        xpath:(//div[@id='divProcess_878B03FA-3A56-4B31-A883-725BE022C779'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Edit phase']
-${MeetingAgendaOrder}                          xpath:/html/body/div[1]/div[3]/div/div[2]/div[14]/div[4]/div[5]/div[1]/div/input
+${MeetingAgendaOrder}                          xpath:(//*[@id="numberInput"])[2]
 ${MeetingAgendaItem}                           xpath://*[@id="control_0B7E16D4-79A6-4BB0-BD37-BF927262FA25"]/div[1]/div/textarea
 ${MeetingAgendaSaveBttn}                       xpath://*[@id="btnSave_form_878B03FA-3A56-4B31-A883-725BE022C779"]/div[3]
-${MeetingAgendaselectrecord}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[5]/div[9]/div[2]/div[1]/div/div[27]/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]
-${MeetingManagerHeader}                      xpath:/html/body/div[1]/div[3]/div/div[2]/div[14]/div[1]/div[1]/div[1]
+${MeetingAgendaselectrecord}                 xpath:(//div[@id='grid']//table//tbody//tr)
+${MeetingManagerCross}                      xpath://*[@id="form_878B03FA-3A56-4B31-A883-725BE022C779"]/div[1]/i[2]
 
 
 ${MeetingMinutesAddbttn}                     xpath:(//*[@id="btnAddNew"]/div)[2]
@@ -106,12 +107,15 @@ ${ActionsSaveBttn}                             xpath://*[@id="btnSave_form_4D0B6
 ${NavBackmeetingManager}                    xpath:/html/body/div[1]/div[3]/div/div[2]/div[16]/div[1]/div[1]/div[1]
 ${previousMeetingMinutesTab}                xpath://*[@id="tab_49512EF1-A22C-48FC-AB8D-3F91A7E2A37A"]/div[1]
 ${ExpandPreviousMeeting}                    xpath://*[@id="control_4D505D7D-9DCB-444D-855A-F77EA95FEAC7"]/div[9]/div[1]/span
-${SelectPreviousRecord}                     xpath:(//div[@id='grid']//table//tbody//tr)[4]      #preprod xpath:(//div[@id='grid']//table//tbody//tr)[3]
+${SelectPreviousRecord}                     xpath:(//div[@id='grid']//table//tbody//tr)[2]     #preprod xpath:(//div[@id='grid']//table//tbody//tr)[3]
 ${MeetingMinutesEditphase}                  xpath:(//div[@id='divProcess_71696786-108E-4F57-80C5-CFE00F878D76'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Edit phase']
 ${meetingminutesprocessflowbttn}            xpath://*[@id="btnProcessFlow_form_71696786-108E-4F57-80C5-CFE00F878D76"]/span
 ${meetingminutecrossbutton}               xpath://*[@id="form_71696786-108E-4F57-80C5-CFE00F878D76"]/div[1]/i[2]
 ${meetingAgendacrossbutton}               xpath://*[@id="form_878B03FA-3A56-4B31-A883-725BE022C779"]/div[1]/i[2]
 ${MeetingMinuteActionsCross}              xpath://*[@id="form_4D0B6F36-4EDB-431C-A4A6-86361AF5F222"]/div[1]/i[2]
+${MeetingMinutesCrossPOPUP}               xpath://*[@id="divConfirm"]/div/div/div[1]
+${MeetingMinutesCrossPOPUPYesbttn}         xpath://*[@id="btnConfirmYes"]/div
+
 
 
 ${AddActionfeedback}                           xpath://*[@id="control_523DE899-F173-4121-9AFC-0E792D0F9F34"]/div[1]/div
@@ -122,14 +126,14 @@ ${ActionfeedbackSendDPD}                       xpath://*[@id="control_4854CDB6-7
 ${ActionFeedbackSendInputsearch}               xpath:(//input[@placeholder='Type and enter to search'])[12]
 ${Actionfeedbacksendto}                        xpath://a[text()='Aaron Barnard']/i[1]
 ${Actionfeedbacksave&close}                    xpath://*[@id="control_E78520D7-17AE-4AAB-946E-4558049D538A"]/div[1]/div
-${Actionpersonresforverification}             xpath://a[text()='Sabelo Madondo']     #preprod xpath://a[text()='Abel Pienaar']
-${ActionpersonresforverificationInput}         xpath:(//input[@placeholder='Type and enter to search'])[8]
+${Actionpersonresforverification}             xpath://a[text()='Abel Pienaar']     #QA2 xpath://a[text()='Abel Pienaar']    preprodxpath://a[text()='Sabelo Madondo']
+${ActionpersonresforverificationInput}         xpath:(//input[@placeholder='Type and enter to search'])[7]
 ${ActionpersonresforverificationDPD}           xpath://*[@id="control_9837FA24-F3EE-4463-8BD4-8F1D6038885F"]/div[1]/a/span[2]/b[1]
 
 #FR7**************************
 
 ${ExpandOpenActionsFromPreviousMeeting}      xpath://*[@id="control_A3EF4F39-8B9B-4C63-A498-59209FF4BDD3"]/div[9]/div[1]/span
-${SelectActionsRecord}                       xpath:(//div[@id='grid']//table//tbody//tr)[5]     #preprod xpath:(//div[@id='grid']//table//tbody//tr)[4]
+${SelectActionsRecord}                       xpath:(//div[@id='grid']//table//tbody//tr)[3]    #QA2 xpath:(//div[@id='grid']//table//tbody//tr)[4] /preprod xpath:(//div[@id='grid']//table//tbody//tr)[4]
 ${MeetingMinuteActionsProcessflow}           xpath://*[@id="btnProcessFlow_form_4D0B6F36-4EDB-431C-A4A6-86361AF5F222"]/span
 
 #****FR8***
@@ -176,3 +180,10 @@ ${SearchRecordEditPhase}                     xpath:(//div[@id='divProcess_69F3DA
 ${SearchRecordEditMeetingVenue}              xpath://*[@id="control_0FF8733B-F04F-40B8-A220-A7AE6BA994AA"]/div[1]/div/input
 ${SearchRecordSave}                          xpath://*[@id="btnSave_form_69F3DA1F-736E-429D-B71E-6CFA05928C5E"]/div[3]
 ${SearchMeetingManagercrossbttn}             xpath://*[@id="form_69F3DA1F-736E-429D-B71E-6CFA05928C5E"]/div[1]/i[2]
+
+
+##VerificationResponsiblepersonActions
+
+${ActionsVerificationRespPersonDPD}          xpath://*[@id="control_9837FA24-F3EE-4463-8BD4-8F1D6038885F"]/div[1]/a/span[2]/b[1]
+${ActionsVerifiResPersonSearchInput}         xpath:(//input[@placeholder='Type and enter to search'])[7]
+${ActionsverifiRespersonSelect}              xpath:(//a[text()='A Admin'])[2]

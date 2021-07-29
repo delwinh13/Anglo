@@ -12,4 +12,5 @@ PPE Register
     Login with Valid Credentials
     FR1- Capture PPE Register
     FR2-Capture Items Issued
+    [TEARDOWN]  CLOSE BROWSER
 

@@ -77,7 +77,10 @@ Login with Valid Credentials
     Press Keys              ${IssuedByDrpDwnXpath}    ENTER
     click element          ${IssuedByDrpDwnValueXpath}
     sleep   3 seconds
-    input text            ${DataIssuedXpath}           ${date}
+    #DateISSUED
+    ${CurrentDate}                  Get Current Date        result_format=%d-%m-%Y
+    Set Global Variable             ${CurrentDate}
+    Input Text                      ${DataIssuedXpath}        ${CurrentDate}
     sleep   4 seconds
     click element                ${PersonResponsbleForXpath}
     sleep   3 seconds

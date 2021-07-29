@@ -5,23 +5,23 @@ ${ProjectManagememntProcessID}          id:btnProcessFlow_form_D1FDADB7-365B-440
 ${ProjectManagementEntityDrp}           xpath://*[@id="control_1520F92C-A849-4812-8D9D-48C3B8A475C1"]/div[1]/a/span[1]/ul/li
 ${ProjectManagementEntityXpath}         xpath://*[@id="fb93eb86-7cff-4f7e-95ae-48817f24f052"]/i
 ${ProjectManagementEntityXpath2}        xpath://*[@id="826e8170-0375-48c4-9aaf-af59e8e8aeba"]/i
-${ProjectManagementEntitySelect}        xpath://*[@id="25742496-c98d-431e-96c8-18619861422e_anchor"]/i[1]
+${ProjectManagementEntitySelect}        xpath:(//a[text()='Sishen Mine']/i)
 ${ProjectManagementEntityCloseDrp}      xpath://*[@id="control_1520F92C-A849-4812-8D9D-48C3B8A475C1"]/div[1]/a/span[2]/b[1]
 ${ProjectManagementEntityProjectIn}     xpath://*[@id="control_25EB4FB1-8A46-4B5C-9419-D850BAC7D5C0"]/div[1]/div/input
 ${ProjectManagementEntityProjetDesc}    xpath://*[@id="control_A85BCF71-D318-48A6-8BFD-97C66773E72A"]/div[1]/div/textarea
 ${ProjectManagementThemeDrp}            xpath://*[@id="control_715A0D37-4AC8-4BE7-95B2-71553DB78C68"]/div[1]/a/span[1]/ul/li
-${ProjectManagementThemeSelectCarbon}   xpath://*[@id="cb513ccd-d16a-4aac-b580-13802fe139c9_anchor"]/i[1]
+${ProjectManagementThemeSelectCarbon}   xpath:(//a[text()='Energy and Carbon']/i)
 #Altenate Scenario
-${ProjectManagementThemeSelectMining}   xpath://*[@id="1eaccad7-4d33-466d-a842-4920e3650692_anchor"]/i[1]
+${ProjectManagementThemeSelectMining}   xpath:(//a[text()='Mining']/i)
 ${ProjectManagementFunctionDrp}         xpath://*[@id="control_41A605ED-98FD-4802-BC9D-2FCA94269092"]/div[1]/a/span[1]/ul/li
-${ProjectManagementFunctionSelect}      xpath://*[@id="0e89df7f-0882-4aa6-aeeb-3ea298d6fa7c_anchor"]
+${ProjectManagementFunctionSelect}      xpath:(//a[text()='Data Analytics'])
 ${ProjectManagementPlanStart}           xpath://*[@id="control_5074F575-966B-494C-B1ED-67E9183DA29B"]/div[1]/span/span/input
 ${ProjectManagementPlanStop}            xpath://*[@id="control_2696F1DC-0178-43DA-8B70-91507F331D0E"]/div[1]/span/span/input
 ${ProjectManagementObjDesc}             xpath://*[@id="control_6860687C-65AE-45F7-BDDA-8CDEA75D220F"]/div[1]/div/textarea
 ${ProjectManagementDueDeligence}        xpath://*[@id="control_3D5045CD-51F0-4805-93B1-9FAE68008EB5"]/div[1]/div/textarea
 ${ProjectManagementOriginatorDrp}       xpath://*[@id="control_9980D6DE-BCBF-457A-BCAC-A88401FC774F"]/div[1]/a/span[1]/ul/li
-${ProjectManagenmentOriginatorSearch}   xpath:/html/body/div[1]/div[3]/div/div[2]/div[17]/div[1]/input
-${ProjectManagementOriginatorSelect}    xpath://*[@id="cbe087ad-bd0e-4e8b-8997-60a9b5b0ef37_anchor"]
+${ProjectManagenmentOriginatorSearch}   xpath:(//input[@placeholder='Type and enter to search'])[1]
+${ProjectManagementOriginatorSelect}    xpath:(//a[text()='AutoTest User'])
 ${ProjectManagementSupportingDoc}       xpath://*[@id="tab_95B50A9A-A104-4856-B448-85D53198ED1E"]/div[1]
 ${ProjectManagementSupportDocLink}      xpath://*[@id="control_2697B8D7-645F-49AF-B662-7ABB96ECA796"]/div[1]/div[1]/div[2]/b[2]
 ${ProjectManagementSave}                xpath://*[@id="btnSave_form_D1FDADB7-365B-4404-86D2-CA8FC2DE7FE8"]/div[3]
@@ -41,12 +41,12 @@ ${ProjectManagementGroupApprov}         xpath://*[@id="control_1A10F073-629F-402
 ${ProjectManagementProcessIdea}         xpath:(//div[@id='divProcess_D1FDADB7-365B-4404-86D2-CA8FC2DE7FE8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Idea']
 #************************************************* FR3- Approve Project ************************************************
 ${ProjectMahagementEntityLevelDrp}      xpath://*[@id="control_2C9ACBE2-77AD-412D-B47B-BDD8CC3E879A"]/div[1]/a/span[1]/ul/li
-${ProjectManagementPark}                xpath://*[@id="505ad595-2784-48f1-9d1c-89e93fa17a3a_anchor"]
+${ProjectManagementPark}                xpath:(//a[text()='Park'])
 ${ProjectManagementProcessParked}       xpath:(//div[@id='divProcess_D1FDADB7-365B-4404-86D2-CA8FC2DE7FE8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Parked']
-${ProjectManagementApprove}             xpath://*[@id="cb4ec4b9-dbeb-4ae8-be26-d048066d3ee7_anchor"]
+${ProjectManagementApprove}             xpath:(//a[text()='Approve'])
 ${ProjectManagementProcessApprov}       xpath:(//div[@id='divProcess_D1FDADB7-365B-4404-86D2-CA8FC2DE7FE8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Approved']
 ${ProjectManagementPrjCompleteDrp}      xpath://*[@id="control_29349D39-CD39-4D5C-9540-5A484828AEB8"]/div[1]/a/span[1]/ul/li
-${ProjectManagementPrjCompleteSelect}   id:14f2fba0-4b57-42aa-9cba-f1d9c372d3e6_anchor
+${ProjectManagementPrjCompleteSelect}   xpath:(//a[text()='Yes'])
 ${ProjectManagementProcessComplete}     xpath:(//div[@id='divProcess_D1FDADB7-365B-4404-86D2-CA8FC2DE7FE8'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Completed']
 
 #************************************************* FR4- Capture Forecasted Budget **************************************
@@ -70,11 +70,11 @@ ${FinancialIncentives}                  xpath:/html/body/div[1]/div[3]/div/div[2
 ${ProjectManagementRunningCostDrp}      xpath://*[@id="control_6D541112-6690-40F3-9264-4455688DC8D9"]/div[9]/div[1]/i
 ${ProjectManagementForecastAdd}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[6]/div[9]/div[2]/div/div[1]/div[1]/div[2]/div[1]/div
 ${ForecastYearDrp}                      xpath://*[@id="control_150EC693-165C-4E73-BEBB-504FBD502D82"]/div[1]/a/span[2]/b[1]
-${ForecastYearSelect}                   xpath://*[@id="cf7e8ba0-4e56-4715-b99d-af406fdfd989_anchor"]
+${ForecastYearSelect}                   xpath:(//div[contains(@class, 'transition visible')]//a[text()='2018'])[1]
 ${ForecastMonthDrp}                      xpath://*[@id="control_08E434A9-DE22-411F-BBF3-2C3571D40DDD"]/div[1]/a/span[2]/b[1]
-${ForecastMonthSelect}                   xpath://*[@id="3434a90d-5720-4c70-9a5b-23b6a864b33d_anchor"]
+${ForecastMonthSelect}                   xpath:(//div[contains(@class, 'transition visible')]//a[text()='August'])[1]
 ${ForecastQuarterDrp}                   xpath://*[@id="control_E0BA8E50-4E2F-4EFB-A7B8-278823A61B83"]/div[1]/a/span[2]/b[1]
-${ForecastQuarterSelect}                xpath://*[@id="649349b0-a22d-4859-8505-b53c1135fc84_anchor"]
+${ForecastQuarterSelect}                xpath:(//div[contains(@class, 'transition visible')]//a[text()='Quarter 1'])[1]
 ${ForecastExpectedCostInput}            xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[6]/div[9]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[7]/div/div[1]/div/input
 ${ForecastActualCostInput}              xpath:/html/body/div[1]/div[3]/div/div[2]/div[2]/div[4]/div[4]/div[9]/div[2]/div[3]/div/div[6]/div[9]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[8]/div/div[1]/div/input
 ${ForecastThemeDrp}                     xpath://*[@id="control_D18498F9-9022-47BF-A73C-BF3E30A58FBA"]/div[1]/a/span[2]/b[1]
@@ -117,7 +117,7 @@ ${ProjectEnergyEmsAdd}                  xpath:/html/body/div[1]/div[3]/div/div[2
 ${ProjectEnergyEmsSourceDrp}            xpath://*[@id="control_FE707531-9D1D-4591-86A9-6E667856415B"]/div[1]/a/span[1]/ul/li
 ${ProjectEnergyEmsSourceDirect}         xpath://*[@id="641be36e-62f9-4a4f-8516-bcaa95b0e996"]/i
 ${ProjectEnergyEmsSourceScope}          xpath://*[@id="04057da3-9fbc-4b5b-b5d1-e8035175a22d"]/i
-${ProjectEnergyEmsSourceSelect}         xpath://*[@id="a27eefed-8cc7-45ba-8ba2-005edd1dd805_anchor"]
+${ProjectEnergyEmsSourceSelect}         xpath:(//a[text()='Charcoal used'])
 ${ProjectEnergyEmsMeasureInput}         xpath:/html/body/div[1]/div[3]/div/div[2]/div[44]/div[4]/div[24]/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[5]/div/div[1]/div/input
 ${ProjectEnergyEmsTargetInput}          xpath:/html/body/div[1]/div[3]/div/div[2]/div[44]/div[4]/div[24]/div[1]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr/td[7]/div/div[1]/div/input
 ${ProjectEnergyEmsSave}                 xpath:/html/body/div[1]/div[3]/div/div[2]/div[44]/div[4]/div[24]/div[1]/div[1]/div[2]/div[2]/div
@@ -125,7 +125,7 @@ ${ProjectEnergyEmsSave}                 xpath:/html/body/div[1]/div[3]/div/div[2
 #************************************************* FR-7 Approve Record as an ECO2Man indicator  ************************
 ${ProjectEcoRefresh}                    xpath://*[@id="control_D489241E-BE02-46E2-B98E-9DBCD1603716"]/div[1]/div
 ${ProjectEcoApprove}                    xpath://li[text()='No']
-${ProjectEcoApproveYes}                 xpath://*[@id="14f2fba0-4b57-42aa-9cba-f1d9c372d3e6_anchor"]
+${ProjectEcoApproveYes}                 xpath:(//a[text()='Yes'])
 ${ProjectEcoComment}                    xpath://*[@id="control_57B502E1-6C11-4074-8ADA-9241754F6C6F"]/div[1]/div/textarea
 ${ProjectEcoRecordSave}                 xpath://*[@id="btnSave_form_2EF3D326-2BF6-4A97-87DF-3A7EC95ADDD6"]/div[3]
 
@@ -135,12 +135,17 @@ ${ProjectActionAdd}                     xpath://*[@id="btnAddNew"]/div
 ${ProjectActionProcess}                 xpath://*[@id="btnProcessFlow_form_F54AE783-1378-4974-A7E8-4B5D1C4A79F3"]/span
 ${ProjectActionSave}                    id:btnSave_form_F54AE783-1378-4974-A7E8-4B5D1C4A79F3
 ${ProjectActionsEntityXpath}            xpath:(//a[text()='Anglo American Group']/../i)[1]
-${ProjectActionsEntityXpath2}           xpath:/html/body/div[1]/div[3]/div/div[2]/div[50]/ul[1]/ul/li/ul/li[3]/i
-${ProjectActionsEntityXpath3}           xpath:/html/body/div[1]/div[3]/div/div[2]/div[50]/ul[1]/ul/li/ul/li[3]/ul/li[6]/i
-${ProjectActionsEntitySelect}           xpath:(//div[contains(@class, 'transition visible')]//a[text()='Sishen Mine'])[1]
+${ProjectActionsEntityXpath2}           xpath:(//a[text()='Bulk Commodities & Other Minerals']/../i)[3]
+${ProjectActionsEntityXpath3}           xpath:(//a[text()='Kumba']/../i)[2]
+${ProjectActionsEntitySelect}           xpath:(//a[text()='Sishen Mine'])[2]
 ${ProjectActionsRespSearch}             xpath:(//input[@placeholder='Type and enter to search'])[9]
-${ProjectActionsRespSelect}             xpath:/html/body/div[1]/div[3]/div/div[2]/div[51]/ul[1]/ul/li[5]/a
-${ProjectActionRecuringSelect}          xpath:/html/body/div[1]/div[3]/div/div[2]/div[55]/ul[1]/ul/li[2]/a
+${ProjectActionsRespSelect}             xpath:(//a[text()='A Admin'])[2]
+${ProjectActionRecuringSelect}          xpath:(//a[text()='Yes'])[2]
+
+${ProjectActionRecuringVrfyDrp}         xpath://*[@id="control_9837FA24-F3EE-4463-8BD4-8F1D6038885F"]/div[1]/a/span[1]/ul/li
+${ProjectActionRecuringVrfySrch}        xpath:(//input[@placeholder='Type and enter to search'])[11]
+${PersonActionRecuringVrfySel}          xpath:(//a[text()='AutoTest User'])[5]
+
 
 #************************************************* FR11-View Linked Engagements     ************************************
 ${ProjectActionClose}                   xpath://*[@id="form_F54AE783-1378-4974-A7E8-4B5D1C4A79F3"]/div[1]/i[2]

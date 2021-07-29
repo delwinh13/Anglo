@@ -82,9 +82,9 @@ FR15 - Add_View Engements_MS_AS
     Sleep    1
     Input Text                                      ${EngagementManagmentProjSrchXpath}     a
     Press Keys                                      ${EngagementManagmentProjSrchXpath}     ENTER
-    Wait Until Element Is Visible                   ${EngagementManagmentProjOptXpath}      40 seconds
+    Wait Until Element Is Visible                   ${EngagementManagmentProjOptXpath1}      40 seconds
     Sleep    1
-    Click Element                                   ${EngagementManagmentProjOptXpath}
+    Click Element                                   ${EngagementManagmentProjOptXpath1}
     Click Element                                   ${EngagementManagmentProjectDDID}
 
     # Capture Function of Engagement
@@ -743,9 +743,9 @@ FR18 - Add Grievances_MS
     Sleep    1 seconds
     Input Text                                      ${EngagementGrievanceRespSupSearch}    a
     Press Keys                                      ${EngagementGrievanceRespSupSearch}    ENTER
-    Wait Until Element Is Visible                   ${EngagementGrievanceRespSupSelectID}    40 seconds
+    Wait Until Element Is Visible                   ${EngagementGrievanceRespSupSelectID1}    40 seconds
     Sleep    1 seconds
-    Click Element                                   ${EngagementGrievanceRespSupSelectID}
+    Click Element                                   ${EngagementGrievanceRespSupSelectID1}
 
     # Save Grievance
     Wait Until Element Is Visible                   ${EngagementGrievanceSaveBtnID}     40 seconds
@@ -916,6 +916,17 @@ FR19 - Capture StakeGroup Actions_MS
     Wait Until Element Is Visible                   ${StakeGroupActionsResponsibleOptXpath}       40 seconds
     Sleep    1 seconds
     Click Element                                   ${StakeGroupActionsResponsibleOptXpath}
+
+    # Person responsible for verification
+    Wait Until Element Is Visible                   ${StakeGroupActionVerificationID}           40 seconds
+    Click Element                                   ${StakeGroupActionVerificationID}
+    Sleep   1
+    Wait Until Element Is Visible                   ${StakeGroupActionVerificationXpath}        40 seconds
+    Input Text                                      ${StakeGroupActionVerificationXpath}        Admin
+    Press Keys                                      ${StakeGroupActionVerificationXpath}        ENTER
+    Wait Until Element Is Visible                   ${StakeGroupActionVerifyResultXpath}        40 seconds
+    Sleep    1 seconds
+    Click Element                                   ${StakeGroupActionVerifyResultXpath}
 
     # Action due date
     ${DueDate}          Get Current Date            result_format=%d-%m-%Y              increment=+3 day

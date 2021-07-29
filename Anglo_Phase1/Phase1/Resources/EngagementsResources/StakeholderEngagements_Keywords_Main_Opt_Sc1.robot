@@ -45,13 +45,13 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     Sleep     3 seconds
 
     # Click Social Sustainability
-    Sleep    2 seconds
+    Sleep    10 seconds
     Wait Until Page Contains Element    ${SocialSustainabilityXpath}    60 seconds
     Click Element                       ${SocialSustainabilityXpath}
 
     # Click Engagemet Management
-    Sleep    2 seconds
-    Wait Until Element Is Visible       ${EngagementManagementXpath}    40 seconds
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${EngagementManagementXpath}    60 seconds
     Click Element                       ${EngagementManagementXpath}
 
 
@@ -61,15 +61,15 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
 
 
     # Check on Process Flow
-    Sleep    4 seconds
-    Wait Until Element Is Visible       ${EngagementManagementProcessId}    40 seconds
+    Sleep    10 seconds
+    Wait Until Element Is Visible       ${EngagementManagementProcessId}    60 seconds
     Click Element                       ${EngagementManagementProcessId}
 
 
     #validate process is on AddPhase
     Wait Until Element Is Visible       ${EngagementManagementProcessAddPhase}    40 seconds
     Element Should Be Visible           ${EngagementManagementProcessAddPhase}
-    Screenshot    ${CurrentTime} Details and Supporting Documents
+    Screenshot    ${count} Add hoc Details and Supporting Documents
 
 
 
@@ -110,7 +110,10 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     # Select Link to Project Check Box
     Wait Until Element Is Visible       ${EngagementManagmentLinkProjXpath}    40 seconds
     Click Element                       ${EngagementManagmentLinkProjXpath}
-    Screenshot    ${CurrentTime} BProject Field
+    sleep    1 seconds
+    ${count}  set variable  ${count+1}
+    Screenshot    ${count} Project Field
+    sleep    1 seconds
 
     # Capture Functional Location
     Wait Until Element Is Visible       ${EngagementManagmentFLDDID}    40 seconds
@@ -146,8 +149,6 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     Sleep    1 seconds
     Click Element                       ${EngagementManagmentMethodOptID}
 
-    # Alternate scenario 2
-
     # Select Confidential Checkbox
     Wait Until Element Is Visible       ${EngagementManagmentConfChkXpath}    40 seconds
     Click Element                       ${EngagementManagmentConfChkXpath}
@@ -168,6 +169,8 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     Wait Until Element Is Visible       ${EngagementManagmentCntInqOptXpath}    40 seconds
     Sleep    1 seconds
     Click Element                       ${EngagementManagmentCntInqOptXpath}
+    Click Element                       ${EngagementManagmentCntInqDDID}
+    sleep    1 seconds
 
     # Capture Description
     Wait Until Element Is Visible       ${EngagementManagmentDescXpath}    40 seconds
@@ -181,7 +184,7 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     Sleep    1 seconds
     Click Element                       ${EngagementManagmentLocOptID}
 
-
+#************************************************* Stakeholder Engagements Optional scenario 1 *************************
 
     # Click Supporting Documents
     Wait Until Element Is Visible       ${SupportingDocXpath}    10 seconds
@@ -225,7 +228,9 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
 
     Wait Until Element Is Visible       ${SupportingDocValidate}    40 seconds
     Element Should Be Visible           ${SupportingDocValidate}
-    Screenshot    ${CurrentTime} ASupporting Documents
+    ${count}  set variable  ${count+1}
+    Screenshot    ${count} Supporting Documents
+    sleep    1 seconds
 
     # Go Back to details tab
     Wait Until Element Is Visible        ${EngagementManagementDetailsID}    40 seconds
@@ -241,11 +246,13 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     # validate the process is on planned
     Wait Until Element Is Visible       ${EngagementManagementProcessPlanCo}    40 seconds
     Element Should be Visible           ${EngagementManagementProcessPlanCo}
+    ${count}  set variable  ${count+1}
+    Screenshot    ${count} Process flow Planned(confidential)
 
     # validate Engagement Status
     Wait Until Element Is Visible       ${EngagementManagementEngStatValidate}    40 seconds
     Element Should Be Visible           ${EngagementManagementEngStatValidate}
-    Screenshot    ${CurrentDate} Engagement Status Attendee Tab And Action Tab
+    Screenshot    ${count} Engagement Status Attendee Tab And Action Tab
 
     # Validate Attende tab
     Element Should Be Visible           ${EngagementManagementAttendeesTab}
@@ -258,11 +265,14 @@ FR1 - Capture Engagements Main Scenario And Optional Scenario 1
     click element                       ${EngagementManagementMap}
     Sleep    3 seconds
     scroll element into view            ${EngagementManagementEngMap}
-    Screenshot    Map
+    ${count}  set variable  ${count+1}
+    Screenshot    ${count} Map
 
 #************************************************* FR1 - Capture Engagements Capture Notification **********************
 FR1-Capture Engagements Email
     Log To Console    Starting FR1 - Capture Engagements Email
+    ${Date}=  Get DateTime
+    Set Global Variable  ${Path}  ${EXECDIR}${/}../../Screenshots\\EngagementManagement\\StakeholderEngagementMain\\Notiffications\\${Date}
 
     Open Browser                            ${Officeurl}  ${BROWSER}
     Maximize Browser Window
@@ -276,11 +286,13 @@ FR1-Capture Engagements Email
     Input Text                              ${EmailPasswordField}       ${outlookpassword}
     Wait Until Element Is Visible           ${EmailSignInBtn}           20 seconds
     Click Element                           ${EmailSignInBtn}
-    Screenshot      Office Emails
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} Office Emails
     #Outlook Folder
     Wait Until Element Is Visible           ${Outlook}                  20 seconds
     Click Element                           ${Outlook}
-    Screenshot      Outlook Folder
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} Outlook Folder
     sleep       15
     #Switch to Tab
     Switch Window    Mail - Kavi Mahadeo - Outlook
@@ -288,19 +300,22 @@ FR1-Capture Engagements Email
     Wait Until Element Is Visible           ${SystemMailFolder}         20 seconds
     sleep       5
     Click Element                           ${SystemMailFolder}
-    Screenshot      Outlook Isometrix NonProduction Folder
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} Outlook Isometrix NonProduction Folder
     #Engagement - Logged Notification
     sleep       3
     Wait Until Element Is Visible           ${EngagementManagementAddedSubject}          60 seconds
     Click Element                           ${EngagementManagementAddedSubject}
-    Screenshot      Stakeholder Engagement Added Email Selection
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} Stakeholder Engagement Added Email Selection
     #Link Back to Record
     Click Element                           ${EmailLinkBacktoRecord}
     sleep       5
     #Switch window
     Switch Window    IsoMetrix
     #Login to Isometrix Site
-    Screenshot      IsoMetrix Tab Opened
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} IsoMetrix Tab Opened
     Wait Until Element Is Enabled           ${IsoMetrixSignInXpath}           60 seconds
     Click Element                           ${IsoMetrixSignInXpath}
     Wait Until Element Is Visible           ${Usernameid}
@@ -313,7 +328,8 @@ FR1-Capture Engagements Email
     Wait Until Element Is Enabled           ${EngagementManagementProcessId}           60 seconds
     Click Element                           ${EngagementManagementProcessId}
     Wait Until Page Contains Element        ${EngagementManagementProcessPlanCo}
-    Screenshot      Stakeholder Engagements Record Opened
+    ${count}  set variable  ${count+1}
+    Screenshot      ${count} Stakeholder Engagements Record Opened
 
 
 

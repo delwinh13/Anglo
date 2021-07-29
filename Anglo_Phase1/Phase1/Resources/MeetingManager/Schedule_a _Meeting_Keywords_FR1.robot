@@ -4,7 +4,7 @@ Library    XML
 Library    String
 Library    Process
 Library    DateTime
-# Resource    ../Resources/vars.robot
+#Resource    ../Resources/vars.robot
 Resource    ../../Repository/Common.robot
 Resource    ../../Repository/MeetingManager_Var.robot
 Resource  ../../Resources/Common_keywords.robot
@@ -188,17 +188,3 @@ Schedule_a_meeting_FR1
     Click Element                           ${MeetingManagerTab}
     Sleep    2 seconds
     Screenshot    Meeting Agenda
-
-
-
-
-
-
-
-
-
-
-
-
-
-

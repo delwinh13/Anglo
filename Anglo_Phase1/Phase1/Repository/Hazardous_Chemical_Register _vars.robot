@@ -68,7 +68,6 @@ ${BUSMOption}                               xpath:(//a[text()='Sishen Mine']/../
 ${BUSMSelectOption}                         xpath://*[@id="54f00015-2059-48c0-9d06-c9dd52d482e9_anchor"]
 ${ResposiblePersonDropdown}                 xpath://*[@id="control_7854D003-23E6-4A2E-AF2E-357C965FA684"]/div[1]/a/span[2]/b[1]
 ${ResponsiblePersonSearchbox}               xpath:(//input[@placeholder='Type and enter to search'])[1]
-${ResPSelection}                            xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
 ${ResPSelection}                            xpath://*[@id="b8ad5f90-d582-46c4-b186-d99649824acd_anchor"]
 ${AgencyDropdown}                           xpath://*[@id="control_5B580F56-394D-4695-8AB2-C2CB9AAE9EB9"]/div[1]/a/span[2]/b[1]
 ${AviationSelction}                         xpath://*[@id="662a762f-2a21-49ef-8f3d-4a3ac0acf0ed_anchor"]

@@ -36,6 +36,8 @@ FR1- Capture Suggestion or Innovation
     Log To Console    Starting FR1 - Capture Suggestion or Innovation
     # Click AngloMaintenanceButton
     Mouse over                          ${AngloMainMenuXpath}
+    Sleep     3 seconds
+    scroll element into view               ${AngloTrainingAndSuggestionsInterfaceXpath}
     Wait Until Page Contains Element       ${AngloTrainingAndSuggestionsInterfaceXpath}    20 seconds
     Click Element                          ${AngloTrainingAndSuggestionsInterfaceXpath}
 
@@ -159,15 +161,21 @@ FR1- Suggestion and Innovation Email
     Wait Until Element Is Visible           ${EmailSignInBtn}           20 seconds
     Click Element                           ${EmailSignInBtn}
     Screenshot      Office Emails
+    sleep       5
     #Outlook Folder
     Wait Until Element Is Visible           ${Outlook}                  20 seconds
     Click Element                           ${Outlook}
     Screenshot      Outlook Folder
-    sleep       15
+    sleep       35
     #Switch to Tab
-    Switch Window    Mail - Sushmitha Ravella - Outlook
+    Switch Window    Mail - Delwin Horsthemke - Outlook
     Screenshot      Outlook Mail Folder
     sleep       20
+    #System Mail folder
+    Wait Until Element Is Visible           ${SystemMailFolder}         20 seconds
+    sleep       5
+    Click Element                           ${SystemMailFolder}
+    Screenshot      Outlook SystemMail Folder
     Wait Until Element Is Visible           ${SuggestionAndInnovationsAddedSubject}          60 seconds
     Click Element                           ${SuggestionAndInnovationsAddedSubject}
     Screenshot      Suggestion
@@ -185,7 +193,7 @@ FR1- Suggestion and Innovation Email
     Input Text                              ${Passwordid}    ${Password Value}
     Click Element                           ${SubmitButtonid}
     # Check on Process Flow
-    Sleep     30 seconds
+    Sleep     40 seconds
     Select Frame                            ${iFrame}
     Wait Until Element Is Visible        ${ProcessFlowXpath}   40 seconds
     click element                        ${ProcessFlowXpath}

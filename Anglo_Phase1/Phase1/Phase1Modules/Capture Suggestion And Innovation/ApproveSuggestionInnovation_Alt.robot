@@ -12,5 +12,6 @@ Suggestions and Innovations
     Login with Valid Credentials
    FR2- Reject Suggestion or Innovation
    FR2- Suggestion and Innovation Reject Email
+   [Teardown]   CLOSE BROWSER
 
 

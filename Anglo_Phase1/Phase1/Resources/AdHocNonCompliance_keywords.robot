@@ -57,18 +57,36 @@ FR1 - Capture Ad-Hoc Non-Compliance Intervention
     Wait Until Element Is Visible        ${AdNonCompBussUnitExpand3Xpath}    40 seconds
     Sleep    1 seconds
     Click Element                        ${AdNonCompBussUnitExpand3Xpath}
+    Wait Until Element Is Visible        ${AdNonCompBussUnitExpand4Xpath}    40 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdNonCompBussUnitExpand4Xpath}
     Wait Until Element Is Visible        ${AdNonCompBussinesUnitOptionID}    40 seconds
     Sleep    1 seconds
     Click Element                        ${AdNonCompBussinesUnitOptionID}
     Wait Until Element Is Visible        ${AdHocNonCompFuncLocationDdID}    40 seconds
     Sleep    1 seconds
     Click Element                        ${AdHocNonCompFuncLocationDdID}
-    Wait Until Element Is Visible        ${AdNonCompFuncLocationSearchXpath}    40 seconds
-    Input Text                           ${AdNonCompFuncLocationSearchXpath}    si
-    Press Keys                           ${AdNonCompFuncLocationSearchXpath}    ENTER
-    Wait Until Element Is Visible        ${AdNonCompFuncLocationOptionID}    40 seconds
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand1Xpath}                   60 seconds
     Sleep    1 seconds
-    Click Element                        ${AdNonCompFuncLocationOptionID}
+    Click Element                        ${AdHocNonCompFLExpand1Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand2Xpath}                   60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLExpand2Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand3Xpath}                   60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLExpand3Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand4Xpath}                   60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLExpand4Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand5Xpath}                   60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLExpand5Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLExpand6Xpath}                   60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLExpand6Xpath}
+    Wait Until Element Is Visible        ${AdHocNonCompFLSelectNew}                      60 seconds
+    Sleep    1 seconds
+    Click Element                        ${AdHocNonCompFLSelectNew}
     Screenshot    Information selected and added
     Wait Until Element Is Visible        ${AdNonCompFuncLocationSaveID}    40 seconds
     Click Element                        ${AdNonCompFuncLocationSaveID}

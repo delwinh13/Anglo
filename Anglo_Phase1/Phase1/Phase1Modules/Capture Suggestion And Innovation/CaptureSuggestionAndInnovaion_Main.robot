@@ -10,6 +10,6 @@ Force Tags      behavior-driven
 Suggestions and Innovations
     Launch IsoMetrix Application
     Login with Valid Credentials
-   FR1- Capture Suggestion or Innovation
-      [Teardown]        Close Browser
+    FR1- Capture Suggestion or Innovation
     FR1- Suggestion and Innovation Email
+    [Teardown]  CLOSE BROWSER

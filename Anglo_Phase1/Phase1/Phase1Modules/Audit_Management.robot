@@ -16,7 +16,7 @@ Audit Management
     FR2 - Approve the audit schedule Alternate Scenario
     FR2 - Approve the audit schedule other than auditee
     FR3 - Propose new dates for the audit
-    FR3 - Propose new dates as the auditee
+#    FR3 - Propose new dates as the auditee
     FR4 - Capture Audit Team
     FR5 - View Related Events
     FR6 - Start Audit

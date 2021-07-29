@@ -11,5 +11,6 @@ Suggestions and Innovations
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR3- Capture Suggestions and Innovations Actions
+    #[TEARDOWN]  CLOSE BROWSER
 
 

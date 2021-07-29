@@ -220,6 +220,7 @@ FR3- Approve Project Altenate Scenario
     Wait Until Element is visible       ${ProjectManagementPark}    40 seconds
     Click Element                       ${ProjectManagementPark}
 
+
     # Save
     Wait Until Element Is Visible       ${ProjectManagementSave}    40 seconds
     Click Element                       ${ProjectManagementSave}
@@ -337,6 +338,19 @@ FR8-Capture Project Actions
     Sleep    1 seconds
     #Click Element                       ${EngagementActionRespDrp}
 
+    #capture person responsible for verification
+    Wait Until Element Is Visible       ${ProjectActionRecuringVrfyDrp}    	40 seconds
+    Click Element                       ${ProjectActionRecuringVrfyDrp}
+    Wait Until Element Is Visible       ${ProjectActionRecuringVrfySrch}    40 seconds
+    Sleep    1 seconds
+    Input Text                          ${ProjectActionRecuringVrfySrch}    auto
+    Press Keys                          ${ProjectActionRecuringVrfySrch}    ENTER
+    Sleep    1 seconds
+    Wait Until Element Is Visible       ${PersonActionRecuringVrfySel}    40 seconds
+    #Sleep    1 seconds
+    Click Element                       ${PersonActionRecuringVrfySel}
+    Sleep    1 seconds
+
 
 
      # Capture Action due date
@@ -403,7 +417,7 @@ FR11-View Linked Engagements 2
     Wait Until Element is Visible       ${ProjectLinkSelectRec}    40 seconds
     Click Element                       ${ProjectLinkSelectRec}
 
-    Sleep     3 seconds
+    Sleep     10 seconds
     #capture Process Flow
 
     Wait Until Element Is Visible       ${ProjectEngagementProcess}    40 seconds

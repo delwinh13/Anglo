@@ -1,3 +1,5 @@
+
+
 *** Variables ***
 #************************************************* InspectionSchedulers ****************************************
 ${InspectionandobservationXpath}        xpath://*[@id="section_f77f755a-0d8f-4354-beea-01318fe81871"]/label
@@ -38,10 +40,10 @@ ${ISRecurrenceResponsiblepersonDPDSearch}        xpath:(//input[@placeholder='Ty
 ${ISRecurrenceResponsiblepersonSelect}           xpath://a[text()='1 Administrator']
 ${ISRecurrenceownerDPD}                          xpath://*[@id="control_23E99F78-777B-430C-91F5-F30AA1DA3F27"]/div[1]/a/span[2]/b[1]
 ${ISrecurrenceOwnerSearch}                       xpath:(//input[@placeholder='Type and enter to search'])[2]
-${ISRecurrenceOwnerSelect}                       xpath:/html/body/div[1]/div[3]/div/div[2]/div[17]/ul[1]/ul/li[1]/a
+${ISRecurrenceOwnerSelect}                       xpath:(//a[text()='1 Administrator'])[2]
 ${ISRecurrenceTeam}                              xpath://*[@id="control_8F14A7C7-310A-4836-8190-B9DCD966C7F2"]/div[1]/a/span[2]/b[1]
 ${ISRecurrenceInputSearch}                       xpath:(//input[@placeholder='Type and enter to search'])[3]
-${ISRecurrenceTeamSelect}                        xpath:/html/body/div[1]/div[3]/div/div[2]/div[18]/ul[1]/ul/li[1]/a/i[1]
+${ISRecurrenceTeamSelect}                        xpath:/html/body/div[1]/div[3]/div/div[2]/div[20]/ul[1]/ul/li[4]/a/i[1]
 ${ISRecurreceStartDatefield}                    xpath://*[@id="control_0F04A24A-49B8-4229-84E1-3816AF826DD7"]/div[1]/span/span/input
 ${ISRecurrenceStartDateInputselect}             xpath://div[@id='control_0F04A24A-49B8-4229-84E1-3816AF826DD7']//input
 ${ISRecurreceEndDatefield}                      xpath://*[@id="control_DCC55A98-9EAA-452B-9823-783816390399"]/div[1]/span/span/span/span
@@ -78,17 +80,6 @@ ${ISRecurrenceSchedulerReason}                     xpath://*[@id="control_B45F69
 
 
 ${Loadingvariablepermis}                              xpath:://div[@id='divWait']/div[text()='Loading permissions']
-
-
-
-
-
-
-
-
-
-
-
 
 
 

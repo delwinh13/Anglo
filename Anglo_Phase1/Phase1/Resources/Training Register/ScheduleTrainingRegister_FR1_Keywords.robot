@@ -24,7 +24,7 @@ Login with Valid Credentials
     Input Text                ${Passwordid}  ${Password Value}
     Click Element             ${SubmitButtonid}
 
-#***********FR1-Schedule Training Register**************
+#***********FR1-Schedule TrainingRegister**************
 FR1-Schedule Training Register
     Log To Console    Training and Suggestions
 
@@ -37,7 +37,7 @@ FR1-Schedule Training Register
     Click Element                      ${TrainingAndSuggestionslabelbutton}
     Sleep    2 seconds
 
-    #Click Training Register
+    #Click TrainingRegister
     Wait Until Element Is Visible      ${TrainingRegisterlabelbutton}  20 seconds
     Click Element                      ${TrainingRegisterlabelbutton}
     Sleep    2 seconds
@@ -176,16 +176,4 @@ FR1-Schedule Training Register
     Element Should Be Visible               ${TrainingRegisterEditPhase}
     Sleep    2 seconds
     Screenshot    Training Attendees
-
-
-
-
-
-
-
-
-
-
-
-
 

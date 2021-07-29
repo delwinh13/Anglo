@@ -20,6 +20,7 @@ Job Risk Assessment
     FR7 Capture Controls
     FR8 Update Work Execution Tasks
     FR9 Capture Work Execution Specification
+    FR10 Capture Work Execution Questions
     FR11 Capture Actions
     FR12 Edit Job Risk Assessment
     FR10 Sign off the Change Log

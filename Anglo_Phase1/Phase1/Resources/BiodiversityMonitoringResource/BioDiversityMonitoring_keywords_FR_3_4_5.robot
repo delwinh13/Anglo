@@ -46,7 +46,7 @@ FR3-Capture Biodiversity Measurement - Fauna
 
 
     # Check on Process Flow
-    Sleep    4 seconds
+    Sleep    5 seconds
     Wait Until Element Is Visible       ${BioMonProcessID}    40 seconds
     Click Element                       ${BioMonProcessID}
 
@@ -86,6 +86,8 @@ FR3-Capture Biodiversity Measurement - Fauna
     Sleep    1 seconds
     Click Element                       ${BioMonTypeFauna}
 
+
+
     #Wait Until Element Is Visible       ${BioMonTypeDrp2}    40 seconds
     #Click Element                       ${BioMonTypeDrp2}
     sleep    1 seconds
@@ -116,15 +118,16 @@ FR3-Capture Biodiversity Measurement - Fauna
     Wait Until Element Is Visible       ${BioMonProcessEdit}    40 seconds
     Element Should Be Visible           ${BioMonProcessEdit}
 
+    sleep    5 seconds
     #Capture Biodiversity measurement
     Wait Until element Is Visible       ${BioFaunaMeasureDrp}    40 seconds
     Click Element                       ${BioFaunaMeasureDrp}
 
-    Sleep     5
+    Sleep     5 seconds
     #add record
     Wait Until Element Is Visible       ${BioMonFaunaAdd}    40 seconds
     Click Element                       ${BioMonFaunaAdd}
-
+    sleep    5 seconds
     #Add Parameter
     Wait Until Element Is Visible       ${BioMonFaunaParamDrp}    40 seconds
     Click Element                       ${BioMonFaunaParamDrp}
@@ -136,6 +139,8 @@ FR3-Capture Biodiversity Measurement - Fauna
     Click Element                       ${BioMOnFaunaParamRum}
     Wait Until Element Is Visible       ${BioMonFaunaParamSel}    40 seconds
     Click Element                       ${BioMonFaunaParamSel}
+
+
 
     Log to Console    FR-3 Altenate Scenario
     #Capture monitering point
@@ -212,6 +217,8 @@ FR4-Capture Findings
     Sleep    2 seconds
     Wait Until Element Is Visible       ${BioMonFindingFLSel}    40 seconds
     Click Element                       ${BioMonFindingFLSel}
+
+
 
     #capture finding owner
     Log To Console    finding owner

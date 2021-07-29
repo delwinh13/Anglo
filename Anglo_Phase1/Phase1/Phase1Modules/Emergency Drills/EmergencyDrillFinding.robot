@@ -12,6 +12,7 @@ Emergency Drill Findings
     Login with Valid Credentials
     FR4- Capture Emergency Drill Findings
     FR5- Capture Emergency Drill Finding Actions
+    [Teardown]  CLOSE BROWSER
 
 
 

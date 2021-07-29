@@ -205,7 +205,7 @@ FR6 - Capture Contractor Questionnaire_MS
     # Provide your COID
     Input Text                                      ${StakeGroupQuestionProvideCOIDXpath}                    123654789987456321
     # Tab Right Arrow
-    FOR  ${i}     IN RANGE  1  4
+    FOR  ${i}     IN RANGE  1  3
     Click Element                                   ${StakeGroupQuestionTabRightArrowXpath}
     END
     Sleep       1

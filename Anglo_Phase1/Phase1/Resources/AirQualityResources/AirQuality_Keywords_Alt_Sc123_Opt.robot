@@ -64,12 +64,12 @@ FR1 - Capture Air Quality Monitoring Altenate Scenario 1
     Sleep    1 seconds
     #kumba
     Click Element                       ${AirQualityBUXpath3}
-    Wait Until Element Is Visible       ${AirQualityBUKolomelaXpath}    40 seconds
+    Wait Until Element Is Visible       ${AirQualityBUSishen}    40 seconds
     Sleep    1 seconds
-    Click Element                       ${AirQualityBUKolomelaXpath}
-    Wait Until Element Is Visible       ${AirQualityBUSelectMining}    40 seconds
-    Sleep    1 seconds
-    Click Element                       ${AirQualityBUSelectMining}
+    Click Element                       ${AirQualityBUSishen}
+#    Wait Until Element Is Visible       ${AirQualityBUSelectMining}    40 seconds
+#    Sleep    1 seconds
+#    Click Element                       ${AirQualityBUSelectMining}
 
 
     Log To Console    Starting FR3 - Capture Dust Measurement

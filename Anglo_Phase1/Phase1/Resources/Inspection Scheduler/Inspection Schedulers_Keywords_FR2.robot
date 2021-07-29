@@ -1,3 +1,4 @@
+
 *** Settings ***
 Library    SeleniumLibrary
 Library    XML
@@ -249,26 +250,3 @@ FR2-Capture Inspection Scheduler Recurrence
      Element Should Be Visible        ${InspectionSchedulerRecurrenceFinalphaseenabled}
      Sleep   2  seconds
      Screenshot  Edit Phase
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

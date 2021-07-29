@@ -47,7 +47,7 @@ FR1- Capture Biodiversity Monitoring
 
 
     # Check on Process Flow
-    Sleep    4 seconds
+    Sleep    5 seconds
     Wait Until Element Is Visible       ${BioMonProcessID}    40 seconds
     Click Element                       ${BioMonProcessID}
 
@@ -145,6 +145,7 @@ FR1- Capture Biodiversity Monitoring
 
 #************************************************* FR1- Capture Biodiversity Monitoring Altenate Scenario 1 ************
 
+
     #Capture Link to environment permit check
     Wait Until element Is Visible       ${BioMonEnvPermitChk}    40 seconds
     Click Element                       ${BioMonEnvPermitChk}
@@ -162,6 +163,13 @@ FR1- Capture Biodiversity Monitoring
 
 
 #************************************************* FR1- Capture Biodiversity Monitoring Altenate Scenario 2 ************
+
+    #Capture Business Unit
+    Wait Until Element Is Visible       ${BioMonBUDrpXpath}    40 seconds
+    Click Element                       ${BioMonBUDrpXpath}
+
+    scroll element into view            ${BioMonBuSishen}
+    Click Element                       ${BioMonBuSishen}
 
 
     Wait Until element Is Visible       ${BioMonLinkProjectChk}    40 seconds
@@ -205,7 +213,7 @@ FR2-Capture Biodiversity Measurement - Flora
 
     Wait Until Element Is Visible       ${BioMonFloraAdd}    40 seconds
     Click Element                       ${BioMonFloraAdd}
-    Sleep    5 seconds
+    Sleep    8 seconds
 
     #Add Parameter
     Wait Until Element Is Visible       ${BioMonFloraParamDrp}    40 seconds
@@ -220,6 +228,8 @@ FR2-Capture Biodiversity Measurement - Flora
     Click Element                       ${BioMonFloraParamXpath}
     Wait until Element Is Visible       ${BioMonFloraSelect}    40 seconds
     Click Element                       ${BioMonFloraSelect}
+
+
 
     #Add Monitoring on
     Wait Until Element Is Visible       ${BioMonFloraMonDrp}    40 seconds

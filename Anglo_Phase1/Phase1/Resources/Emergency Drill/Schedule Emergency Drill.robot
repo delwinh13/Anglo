@@ -120,11 +120,16 @@ FR1- Schedule Emergency Drill
      Wait Until Element Is Visible           ${Outlook}                  20 seconds
      Click Element                           ${Outlook}
      Screenshot      Outlook Folder
-     sleep       15
+     sleep       30
      #Switch to Tab
-     Switch Window    Mail - Sushmitha Ravella - Outlook
+     Switch Window    Mail - Delwin Horsthemke - Outlook
      Screenshot      Outlook Mail Folder
      sleep       30
+    #System Mail folder
+    Wait Until Element Is Visible           ${SystemMailFolder}         20 seconds
+    sleep       5
+    Click Element                           ${SystemMailFolder}
+    Screenshot      Outlook SystemMail Folder
      Wait Until Element Is Visible           ${EmergencyDrillSubject}          60 seconds
      Click Element                           ${EmergencyDrillSubject}
      Screenshot      Suggestion

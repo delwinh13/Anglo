@@ -15,3 +15,4 @@ ${IsoMetrixSignInXpath}                     xpath://div[@id='divMixedMode']/div/
 ${StakeGroupAddedSubject}                   xpath:(//span[contains(text(),'Non production - IsoMetrix Stakeholder Group #')][contains(text(),'has been added')])[1]
 ${ProjectManagementAddedSubject}            xpath:(//span[contains(text(),'Non production - IsoMetrix Project Management #')][contains(text(),'has been added')])[1]
 ${EngagementManagementAddedSubject}         xpath:(//span[contains(text(),'Non production - IsoMetrix Engagements #')][contains(text(),'has been added')])[1]
+#${EngagementPermitManagementSubject}        xpath:(//span[contains(text(),'Non production - IsoMetrix Permits Permit title: auto test has been logged.')])[1]

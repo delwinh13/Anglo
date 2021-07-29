@@ -587,6 +587,9 @@ ${StakeGroupActionsEntityOptXpath}                      xpath:(//a[text()='Bulk 
 ${StakeGroupActionsResponsibleDDXpath}                  xpath:(//div[@id='control_7854D003-23E6-4A2E-AF2E-357C965FA684']//li)[1]
 ${StakeGroupActionsResponsibleSrchXpath}                xpath:(//input[@placeholder='Type and enter to search'])[4]
 ${StakeGroupActionsResponsibleOptXpath}                 xpath://div[contains(@class, 'transition visible')]//a[text()='AutoTest User'][1]
+${StakeGroupActionVerificationID}                       xpath://div[@id='control_9837FA24-F3EE-4463-8BD4-8F1D6038885F']//span[2]/b[1]
+${StakeGroupActionVerificationXpath}                    xpath:(//input[@placeholder='Type and enter to search'])[6]
+${StakeGroupActionVerifyResultXpath}                    xpath:(//div[contains(@class, 'transition visible')]//a[text()='1 Administrator'])[1]
 ${StakeGroupActionsDueDateXpath}                        xpath://div[@id='control_A1A7A250-4916-472D-A6A5-CDA980F5DA52']//input
 ${StakeGroupActionsRecurringDDXpath}                    xpath://div[@id='control_2EA9211B-54AC-4846-8A26-58606645D84A']//li
 ${StakeGroupActionsRecurringOptXpath}                   xpath://a[text()='No']
@@ -595,8 +598,8 @@ ${StakeGroupActionsCloseBtnXpath}                       xpath://*[@id="form_F72A
 ${StakeGroupActionsPopupYesBtnXpath}                    xpath://div[@id='btnConfirmYes']
 ${StakeGroupActionsSubModRecordXpath}                   xpath://div[@id='control_6AECC604-74CD-4CA2-8014-252301E5A6E8']/div/div[2]/div[2]/div/div[3]/table/tbody/tr/td[7]/div[contains(text(), 'FR19 - Capture StakeGroup Actions_MS')]
 
-
-
+${EngagementManagmentProjOptXpath1}                      xpath://a[text()='Baseline 18/03/2021 - do not use']/i[1]
+${EngagementGrievanceRespSupSelectID1}                   xpath:(//a[text()='A Admin'])
 
 
 

@@ -34,6 +34,8 @@ Login with Valid Credentials
     Log To Console    Starting FR1 - Capture Suggestion or Innovation
     # Click AngloMaintenanceButton
     Mouse over                          ${AngloMainMenuXpath}
+    Sleep     3 seconds
+    scroll element into view               ${AngloTrainingAndSuggestionsInterfaceXpath}
     Wait Until Page Contains Element       ${AngloTrainingAndSuggestionsInterfaceXpath}    20 seconds
     Click Element                          ${AngloTrainingAndSuggestionsInterfaceXpath}
 
@@ -129,11 +131,12 @@ Login with Valid Credentials
      Screenshot       Suggestions and Innovations is in Rejected phase
 FR3- Capture Suggestions and Innovations Actions
      click element       ${ActionsTabXpath}
-     Sleep      3 seconds
+     Sleep      5 seconds
      click element       ${AddActionButtonXpath}
      Sleep     10 seconds
-     CLICK ELEMENT        ${ActionTypeXpath}
-     Sleep     30 seconds
+     WAIT UNTIL ELEMENT IS VISIBLE   ${ActionTypeXpath}  40 seconds
+     CLICK ELEMENT                  ${ActionTypeXpath}
+     Sleep     10 seconds
      CLICK ELEMENT         ${ActionTypeDropDownXpath}
      SLEEP  3 seconds
      input text            ${ActionDescriptionXpath}    Auto
@@ -172,6 +175,14 @@ FR3- Capture Suggestions and Innovations Actions
      Sleep     3 seconds
      CLICK ELEMENT                      ${RecurringActionDropdownXpath}
      Sleep     3 seconds
+     #PERSON RESPONSIBLE FOR VERIFICATION
+     CLICK ELEMENT                          ${ActionVerificationID}
+     WAIT UNTIL ELEMENT IS VISIBLE          ${ActionVerificationXpath}   40 seconds
+     INPUT TEXT                             ${ActionVerificationXpath}    a
+     PRESS KEYS                             ${ActionVerificationXpath}    ENTER
+     SLEEP  3 seconds
+     CLICK ELEMENT                           ${ActionVerifyResultXpath}
+     #SAVE
      CLICK ELEMENT                      ${ActionSaveButtonXpath}
       #Close
       Sleep     20 seconds

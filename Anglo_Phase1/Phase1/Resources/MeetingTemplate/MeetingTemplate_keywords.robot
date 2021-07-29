@@ -212,7 +212,6 @@ FR2 - Capture Meeting Attendee Template
     Screenshot    Record is saved and automatically moves to the Edit Phase
 
     # Click on Close button
-    Sleep    5 seconds
     Wait Until Element Is Visible        ${AtCloseButtonXpath}    10 seconds
     Click Element                        ${AtCloseButtonXpath}
     Sleep    5 seconds
@@ -245,6 +244,7 @@ FR3 - Capture Meeting Agenda Template
     Sleep    5 seconds
     Screenshot    A new row is displayed in the Add phase
 
+
     #Enter text in agendatextbox
     Click Element                        ${AgendaOrderXpath}
     Input text                           ${AgendaOrderXpath}    12
@@ -260,16 +260,10 @@ FR3 - Capture Meeting Agenda Template
     Click Element                        ${AgendaSaveButtonXpath}
 
     #validate process is on EditPhase
-    Sleep    5 seconds
     Wait Until Element Is Visible       ${AgProcessflowEditPhaseXpath1}    20 seconds
     Element Should Be Visible           ${AgProcessflowEditPhaseXpath1}
     Sleep    5 seconds
     Screenshot    Record is saved and automatically moves to the Edit Phase
-
-    #Click on AgendaTabCloseXpath
-    Wait Until Element Is Visible       ${AgendaTabCloseXpath}    20 seconds
-    Click Element                       ${AgendaTabCloseXpath}
-    Sleep    5 seconds
 
 FR5 - Edit Meeting Template
     Log To Console    Starting FR5 - Edit Meeting Template

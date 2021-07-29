@@ -1,8 +1,12 @@
 *** Variables ***
 #************************************************* Common Variables ****************************************************
 ${BROWSER}             Chrome
-#${URL}                 https://isom-dev.angloamerican.com/login.aspx?mixedmode=1
+#QA
 ${URL}                 https://isom-testprod.ssd.angloamerican.com/login.aspx?mixedmode=1
+#PreProd
+#{URL}                  https://isom-dev.angloamerican.com/login.aspx?mixedmode=1
+#Phase2
+#${URL}                  https://anglo-phase2.isometrix.net//default.aspx
 ${Error Message Text}  Validation: Please enter value
 ${Password Value}      Admin123
 ${Username Value}      AutoTest

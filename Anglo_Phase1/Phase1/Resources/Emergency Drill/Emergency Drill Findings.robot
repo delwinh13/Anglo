@@ -109,10 +109,10 @@ FR4- Capture Emergency Drill Findings
     scroll element into view                 ${FindingsAddButton}
     sleep         3   seconds
     click element                       ${FindingsAddButton}
-    sleep         5   sleep
+    sleep         10   sleep
     # Check on Process Flow
     Wait Until Element Is Visible       ${FindingsProcessFlow}  40 seconds
-    click element       ${FindingsProcessFlow}
+    click element                        ${FindingsProcessFlow}
     sleep    3  seconds
     #validate process is on AddPhase
     Wait Until Element Is Visible         ${FindingsAddFlow}    40 seconds
@@ -130,7 +130,7 @@ FR4- Capture Emergency Drill Findings
     click element         ${FndingClassificationDrpDwn}
     sleep  3  seconds
     click element          ${FindingsSaveButton}
-    sleep   5   seconds
+    sleep   10   seconds
     #validate process is on EditPhase
     Wait Until Element Is Visible         ${FindingsEditFlow}    40 seconds
     Element Should Be Visible             ${FindingsEditFlow}
@@ -159,7 +159,7 @@ FR5- Capture Emergency Drill Finding Actions
      sleep      3 seconds
      input text                  ${OrganizationsDescription}       test
      click element       ${FindingsSaveButton}
-     sleep      5 seconds
+     sleep      10 seconds
      scroll element into view             ${EmergencyDrillFindActAddXpath}
      CLICK ELEMENT                        ${EmergencyDrillFindActAddXpath}
      sleep      5   seconds
@@ -206,9 +206,18 @@ FR5- Capture Emergency Drill Finding Actions
        CLICK ELEMENT                           ${RecuringAction}
        SLEEP  3 seconds
        CLICK ELEMENT            ${RecuringNo}
+       #PERSON RESPONSIBLE FOR VERIFICATION
+       CLICK ELEMENT                          ${ActionVerificationID}
+       WAIT UNTIL ELEMENT IS VISIBLE          ${ActionVerificationXpath}   40 seconds
+       INPUT TEXT                             ${ActionVerificationXpath}    a
+       PRESS KEYS                             ${ActionVerificationXpath}    ENTER
+       SLEEP  3 seconds
+       CLICK ELEMENT                           ${ActionVerifyResultXpath}
+        #SAVE
        CLICK ELEMENT            ${DrillActionSaveBtn}
+       SLEEP  5 seconds
        #validate process is on Initiated Phase
        Wait Until Element Is Visible         ${InitiatedAction}    40 seconds
        Element Should Be Visible             ${InitiatedAction}
-       screenshot         Emergency Drills Findings in initiatedphase
+       screenshot         Emergency Drills Findings in initiated phase
 

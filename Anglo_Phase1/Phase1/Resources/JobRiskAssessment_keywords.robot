@@ -199,7 +199,7 @@ FR1 Capture Job Risk Assessment
     Wait Until Element Is Visible   ${RecordSaved}                      60 seconds
     Page Should Contain Element     ${ProcessFlowReadOnly}
     Page Should Contain Element     ${JRASectionBJRAPTOTaskInfoTab}
-    Page Should Contain Element     ${JRASectionCWorkExecSpecTab}
+#    Page Should Contain Element     ${JRASectionCWorkExecSpecTab}
     FOR  ${i}     IN RANGE  1  4
     Click Element                   ${JRATabRightArrow}
     END
@@ -225,8 +225,11 @@ FR2 Capture Change Log
     Page Should Contain Element     ${JRAChangeLogSubMod}
     # Add Button
     Click Element                   ${ChangeAddBtn}
-    Wait Until Element Is Not Visible   ${JRARecordLoadingXpath}       60 seconds
-    Wait Until Element Is Visible   ${ChangePF}                     50 seconds
+    Sleep   5
+    Wait Until Element Is Not Visible   ${JRARecordLoadingXpath}        60 seconds
+    Wait Until Element Is Enabled   ${ChangePF}                         60 seconds
+    Sleep   2
+    Wait Until Element Is Visible   ${ChangeSaveAddRiskTeamBtn}         30 seconds
     Page Should Contain Element     ${ChangeSaveAddRiskTeamBtn}
     Screenshot      Change Log Add button clicked
 
@@ -360,11 +363,12 @@ FR3 Capture JRA Team
     Scroll element into view        ${ChangeSubModInLineEdit}
     sleep   1
     Click Element                   ${ChangeSubModRecord}
-    sleep   1
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
-    sleep   1
+    sleep   5
+    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          120 seconds
+    sleep   2
 
     # Process Flow
+    Wait Until Element Is Enabled   ${ChangePF}                      60 seconds
     Click Element                   ${ChangePF}
     Wait Until Element Is Visible   ${ChangePFEdit}                  10 seconds
     Screenshot      Change Log Process flow clicked - Edit Phase
@@ -511,7 +515,8 @@ FR4 Capture Task Information
     Wait Until Element Is Visible   ${TaskInfoAddedRecord}                  30 seconds
     Click Element                   ${TaskInfoAddedRecord}
     sleep   1
-    Wait Until Page Does Not Contain        ${TaskInfoRecordLoading}          30 seconds
+    Wait Until Page Does Not Contain        ${TaskInfoRecordLoading}          120 seconds
+    Sleep   2
     Wait Until Element Is Visible   ${TaskInfoHazardsAddBtn}                  30 seconds
 
 FR5 Capture Hazard
@@ -647,39 +652,45 @@ FR7 Capture Controls
     sleep   1
     Screenshot     Control (Layer 3) visible
 
-    # Procedure followed/Controls used as specified (PTO)
-    Click Element                   ${ControlsPTODD}
-    sleep   1
-    Wait Until Element Is Visible   ${ControlsPTONo}                60 seconds
-    Click Element                   ${ControlsPTONo}
-    sleep   1
-    Click Element                   ${ControlsPTODD}
-    sleep   1
-    Wait Until Element Is Visible   ${ControlsPTOYes}               60 seconds
-    Click Element                   ${ControlsPTOYes}
-    sleep   1
-
-    # Suggested remedies/Corrective Actions title
+    # What controls to use
     ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
     Set Global Variable             ${CurrentDate}
-    Input text                      ${ControlsSugRemActionTitle}     FR7 Capture Controls ${CurrentDate}
+    Input text                      ${ControlsWhatControlsUse}     FR7 Capture Controls ${CurrentDate}
     sleep   1
 
-    # Suggested remedies/Corrective Actions description
-    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
-    Set Global Variable             ${CurrentDate}
-    Input text                      ${ControlsSugRemActionDesc}      FR7 Capture Controls ${CurrentDate}
-    sleep   1
-
-    # PTO Comments/Remarks
-    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
-    Set Global Variable             ${CurrentDate}
-    Input text                      ${ControlsPTOComments}           FR7 Capture Controls ${CurrentDate}
-    sleep   1
+#    # Procedure followed/Controls used as specified (PTO)
+#    Click Element                   ${ControlsPTODD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${ControlsPTONo}                60 seconds
+#    Click Element                   ${ControlsPTONo}
+#    sleep   1
+#    Click Element                   ${ControlsPTODD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${ControlsPTOYes}               60 seconds
+#    Click Element                   ${ControlsPTOYes}
+#    sleep   1
+#
+#    # Suggested remedies/Corrective Actions title
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${ControlsSugRemActionTitle}     FR7 Capture Controls ${CurrentDate}
+#    sleep   1
+#
+#    # Suggested remedies/Corrective Actions description
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${ControlsSugRemActionDesc}      FR7 Capture Controls ${CurrentDate}
+#    sleep   1
+#
+#    # PTO Comments/Remarks
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${ControlsPTOComments}           FR7 Capture Controls ${CurrentDate}
+#    sleep   1
 
     # Save Button
     Click Element                   ${ControlsSaveBtn}
-    Wait Until Element Is Visible   ${RecordSaved2}                         60 seconds
+    Wait Until Element Is Visible   ${RecordSaved2}                         120 seconds
     Page Should Contain Element     ${ControlsPFEdit}
     Page Should Contain Element     ${ControlsSaveCloseBtn}
     sleep   2
@@ -688,30 +699,30 @@ FR7 Capture Controls
     # Save and Close
     Click Element                   ${ControlsSaveCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     sleep   1
-    Wait Until Element Is Visible   ${ControlsSubModRecord}                 60 seconds
+    Wait Until Element Is Visible   ${ControlsSubModRecord}                  240 seconds
 
     # Close Unwanted Event
     Click Element                   ${UnwantedEventCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}         240 seconds
     sleep   1
-    Wait Until Element Is Visible   ${UnwantedEventSubModRecord}            60 seconds
+    Wait Until Element Is Visible   ${UnwantedEventSubModRecord}            120 seconds
 
     # Close Hazard Record
     Click Element                   ${HazardCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          240 seconds
     sleep   1
-    Wait Until Element Is Visible   ${HazardSubModRecord}                   60 seconds
+    Wait Until Element Is Visible   ${HazardSubModRecord}                   120 seconds
 
     # Close Task Information Record
     Click Element                   ${TaskInfoCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          240 seconds
     sleep   2
-    Wait Until Element Is Visible   ${JRASectionAGenPersonInfoTab}          60 seconds
+    Wait Until Element Is Visible   ${JRASectionAGenPersonInfoTab}          120 seconds
     Screenshot      Section A - General and Personnel Information Tab
 
 FR8 Update Work Execution Tasks
@@ -719,19 +730,19 @@ FR8 Update Work Execution Tasks
 
     # Section C - Work Execution Specification Tab
     Sleep   2
-    Wait Until Element Is Not Visible   ${JRARecordLoadingXpath}       60 seconds
+    Wait Until Element Is Not Visible   ${JRARecordLoadingXpath}       120 seconds
     Click Element                   ${JRASectionCWorkExecSpecTab}
     sleep   2
-    Wait Until Element Is Visible   ${TaskInfoWorkExecutionTasksRecord}     30 seconds
+    Wait Until Element Is Visible   ${TaskInfoWorkExecutionTasksRecord}     120 seconds
     Screenshot      Work Execution Tasks Record visible
 
     # Open Work Execution Tasks Record
     Click Element                   ${TaskInfoWorkExecutionTasksRecord}
     sleep   2
-    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Page Does Not Contain        ${JRALoadingDataXpath}          120 seconds
     sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksRecordNo}                30 seconds
-    Wait Until Element Is Enabled   ${WorkExecTasksPF}                      30 seconds
+    Wait Until Element Is Visible   ${WorkExecTasksRecordNo}                60 seconds
+    Wait Until Element Is Enabled   ${WorkExecTasksPF}                      60 seconds
 
     # Process Flow
     Click Element                   ${WorkExecTasksPF}
@@ -739,103 +750,112 @@ FR8 Update Work Execution Tasks
     Screenshot      Work Execution Tasks Process flow clicked - Edit Phase
 
     # Task / activity step description
-    Page Should Contain Element     ${WorkExecTasksStepDesc}
+    Wait Until Page Does Not Contain        ${JRASearchLoadingXpath}          120 seconds
+    Wait Until Element Is Visible     ${WorkExecTasksStepDesc}              120 seconds
 
-    # Is the procedure being observed the same as the listed above in the JRA
-    # Alternate scenario 1: Select “Yes” for Is the procedure being observed the same as the listed above in the JRA field.
-    Click Element                   ${WorkExecTasksProcJRADD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksProcJRAYes}              20 seconds
-    Click Element                   ${WorkExecTasksProcJRAYes}
-    sleep   1
-    Element Should Not Be Visible     ${WorkExecTasksProcRefNo}
-    Element Should Not Be Visible     ${WorkExecTasksNameProc}
-    Element Should Not Be Visible     ${WorkExecTasksDateProc}
-    Element Should Not Be Visible     ${WorkExecTasksIssueNo}
-    Screenshot      Procedure additional Fields not triggered
-    # Main scenario: Select “No” for Is the procedure being observed the same as the listed above in the JRA field.
-    Click Element                   ${WorkExecTasksProcJRADD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksProcJRANo}               20 seconds
-    Click Element                   ${WorkExecTasksProcJRANo}
-    sleep   1
-    Element Should Be Visible       ${WorkExecTasksProcRefNo}
-    Element Should Be Visible       ${WorkExecTasksNameProc}
-    Element Should Be Visible       ${WorkExecTasksDateProc}
-    Element Should Be Visible       ${WorkExecTasksIssueNo}
-    Screenshot     Procedure additional Fields not triggered
+#    # Is the procedure being observed the same as the listed above in the JRA
+#    # Alternate scenario 1: Select “Yes” for Is the procedure being observed the same as the listed above in the JRA field.
+#    Click Element                   ${WorkExecTasksProcJRADD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksProcJRAYes}              20 seconds
+#    Click Element                   ${WorkExecTasksProcJRAYes}
+#    sleep   1
+#    Element Should Not Be Visible     ${WorkExecTasksProcRefNo}
+#    Element Should Not Be Visible     ${WorkExecTasksNameProc}
+#    Element Should Not Be Visible     ${WorkExecTasksDateProc}
+#    Element Should Not Be Visible     ${WorkExecTasksIssueNo}
+#    Screenshot      Procedure additional Fields not triggered
+#    # Main scenario: Select “No” for Is the procedure being observed the same as the listed above in the JRA field.
+#    Click Element                   ${WorkExecTasksProcJRADD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksProcJRANo}               20 seconds
+#    Click Element                   ${WorkExecTasksProcJRANo}
+#    sleep   1
+#    Element Should Be Visible       ${WorkExecTasksProcRefNo}
+#    Element Should Be Visible       ${WorkExecTasksNameProc}
+#    Element Should Be Visible       ${WorkExecTasksDateProc}
+#    Element Should Be Visible       ${WorkExecTasksIssueNo}
+#    Screenshot     Procedure additional Fields not triggered
+#
+#    # Procedure reference number (if available)
+#    Input Text                      ${WorkExecTasksProcRefNo}               12345
+#
+#    # Name of procedure
+#    Input Text                      ${WorkExecTasksNameProc}                AutoTest
+#
+#    # Date of procedure
+#    ${CurrentDate}          Get Current Date        result_format=%d-%m-%Y
+#    Set Global Variable             ${CurrentDate}
+#    Input Text                      ${WorkExecTasksDateProc}                ${CurrentDate}
+#    sleep   1
+#
+#    # Issue / version number
+#    Input Text                      ${WorkExecTasksIssueNo}                 54321
+#
+#    # Are the person/s physically fit to conduct the work?
+#    # Alternate scenario 2: Select “Yes” for Are the person/s physically fit to conduct the work? field.
+#    Click Element                   ${WorkExecTasksPersonFitWorkDD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksPersonFitWorkYes}        20 seconds
+#    Click Element                   ${WorkExecTasksPersonFitWorkYes}
+#    sleep   1
+#    Element Should Not Be Visible     ${WorkExecTasksWhyNotFitWork}
+#    Element Should Not Be Visible     ${WorkExecTasksDescribeContext}
+#    Screenshot      Person physically fit additional Fields not triggered
+#    # Main scenario: 3.	Select “No” for Are the person/s physically fit to conduct the work? field.
+#    Click Element                   ${WorkExecTasksPersonFitWorkDD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksPersonFitWorkNo}         20 seconds
+#    Click Element                   ${WorkExecTasksPersonFitWorkNo}
+#    sleep   1
+#    Element Should Be Visible       ${WorkExecTasksWhyNotFitWork}
+#    Element Should Be Visible       ${WorkExecTasksDescribeContext}
+#    Screenshot     Person physically fit additional Fields not triggered
+#
+#    # Why aren’t the person/s physically fit to conduct the work?
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${WorkExecTasksWhyNotFitWork}           FR8 Update Work Execution Tasks ${CurrentDate}
+#
+#    # Describe any contextual and/ or environmental conditions at time of assessment that may be relevant
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${WorkExecTasksDescribeContext}         FR8 Update Work Execution Tasks ${CurrentDate}
+#
+#    # Are the equipment/tools required for the task in place?
+#    # Alternate scenario 3: Select “Yes” for Are the equipment/tools required for the task in place? field.
+#    Click Element                   ${WorkExecTasksEquipTaskDD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksEquipTaskYes}            20 seconds
+#    Click Element                   ${WorkExecTasksEquipTaskYes}
+#    sleep   1
+#    Element Should Not Be Visible     ${WorkExecTasksWhyEquipNotWork}
+#    Screenshot      Equipment task in place additional Fields not triggered
+#    # Main scenario: 3.	Select “No” for Are the person/s physically fit to conduct the work? field.
+#    Click Element                   ${WorkExecTasksEquipTaskDD}
+#    sleep   1
+#    Wait Until Element Is Visible   ${WorkExecTasksEquipTaskNo}            20 seconds
+#    Click Element                   ${WorkExecTasksEquipTaskNo}
+#    sleep   1
+#    Element Should Be Visible       ${WorkExecTasksWhyEquipNotWork}
+#    Screenshot     Equipment task in place additional Fields not triggered
+#
+#    # Why isn’t the Equipment/tools required for the task in place?
+#    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
+#    Set Global Variable             ${CurrentDate}
+#    Input text                      ${WorkExecTasksWhyEquipNotWork}         FR8 Update Work Execution Tasks ${CurrentDate}
 
-    # Procedure reference number (if available)
-    Input Text                      ${WorkExecTasksProcRefNo}               12345
+    # Work centre
+    Click Element                   ${WorkExecTasksWorkCentreDD}
+    Sleep   3
+    Click Element                   ${WorkExecTasksWorkCentreDD}
 
-    # Name of procedure
-    Input Text                      ${WorkExecTasksNameProc}                AutoTest
-
-    # Date of procedure
-    ${CurrentDate}          Get Current Date        result_format=%d-%m-%Y
-    Set Global Variable             ${CurrentDate}
-    Input Text                      ${WorkExecTasksDateProc}                ${CurrentDate}
-    sleep   1
-
-    # Issue / version number
-    Input Text                      ${WorkExecTasksIssueNo}                 54321
-
-    # Are the person/s physically fit to conduct the work?
-    # Alternate scenario 2: Select “Yes” for Are the person/s physically fit to conduct the work? field.
-    Click Element                   ${WorkExecTasksPersonFitWorkDD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksPersonFitWorkYes}        20 seconds
-    Click Element                   ${WorkExecTasksPersonFitWorkYes}
-    sleep   1
-    Element Should Not Be Visible     ${WorkExecTasksWhyNotFitWork}
-    Element Should Not Be Visible     ${WorkExecTasksDescribeContext}
-    Screenshot      Person physically fit additional Fields not triggered
-    # Main scenario: 3.	Select “No” for Are the person/s physically fit to conduct the work? field.
-    Click Element                   ${WorkExecTasksPersonFitWorkDD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksPersonFitWorkNo}         20 seconds
-    Click Element                   ${WorkExecTasksPersonFitWorkNo}
-    sleep   1
-    Element Should Be Visible       ${WorkExecTasksWhyNotFitWork}
-    Element Should Be Visible       ${WorkExecTasksDescribeContext}
-    Screenshot     Person physically fit additional Fields not triggered
-
-    # Why aren’t the person/s physically fit to conduct the work?
-    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
-    Set Global Variable             ${CurrentDate}
-    Input text                      ${WorkExecTasksWhyNotFitWork}           FR8 Update Work Execution Tasks ${CurrentDate}
-
-    # Describe any contextual and/ or environmental conditions at time of assessment that may be relevant
-    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
-    Set Global Variable             ${CurrentDate}
-    Input text                      ${WorkExecTasksDescribeContext}         FR8 Update Work Execution Tasks ${CurrentDate}
-
-    # Are the equipment/tools required for the task in place?
-    # Alternate scenario 3: Select “Yes” for Are the equipment/tools required for the task in place? field.
-    Click Element                   ${WorkExecTasksEquipTaskDD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksEquipTaskYes}            20 seconds
-    Click Element                   ${WorkExecTasksEquipTaskYes}
-    sleep   1
-    Element Should Not Be Visible     ${WorkExecTasksWhyEquipNotWork}
-    Screenshot      Equipment task in place additional Fields not triggered
-    # Main scenario: 3.	Select “No” for Are the person/s physically fit to conduct the work? field.
-    Click Element                   ${WorkExecTasksEquipTaskDD}
-    sleep   1
-    Wait Until Element Is Visible   ${WorkExecTasksEquipTaskNo}            20 seconds
-    Click Element                   ${WorkExecTasksEquipTaskNo}
-    sleep   1
-    Element Should Be Visible       ${WorkExecTasksWhyEquipNotWork}
-    Screenshot     Equipment task in place additional Fields not triggered
-
-    # Why isn’t the Equipment/tools required for the task in place?
-    ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
-    Set Global Variable             ${CurrentDate}
-    Input text                      ${WorkExecTasksWhyEquipNotWork}         FR8 Update Work Execution Tasks ${CurrentDate}
+    # WED ID
+    Input Text                      ${WorkExecTasksWEDID}                   Auto Testing
 
     # Save Button
     Click Element                   ${WorkExecTasksSaveBtn}
-    Wait Until Element Is Visible   ${RecordSaved2}                         60 seconds
+    Wait Until Element Is Visible   ${RecordSaved2}                         120 seconds
     Wait Until Element Is Not Visible   ${RecordSaved2}                     60 seconds
     sleep   2
     Screenshot      Updated Work Execution Tasks Record
@@ -848,15 +868,42 @@ FR9 Capture Work Execution Specification
     sleep   1
     Click Element                   ${WorkExecSpecAddBtn}
     sleep   1
-    Wait Until Element Is Not Visible        ${TaskInfoRecordLoading}        30 seconds
+    Wait Until Element Is Not Visible        ${TaskInfoRecordLoading}        120 seconds
     Wait Until Element Is Visible   ${WorkExecSpecPF}                       60 seconds
     Wait Until Element Is Visible   ${WorkExecSpecSaveNewBtn}               60 seconds
-    Page Should Contain Element     ${WorkExecSpecObservationObserverDD}
+    Page Should Contain Element     ${WorkExecSpecTaskActivityStepDD}
 
     # Process Flow
     Click Element                   ${WorkExecSpecPF}
     Wait Until Element Is Visible   ${WorkExecSpecPFAdd}                    10 seconds
     Screenshot      Work Execution Specification Process flow clicked - Add Phase
+
+    # Task / activity step description
+    Click Element                   ${WorkExecSpecTaskActivityStepDD}
+    Sleep   5
+    Wait Until Element Is Visible   ${WorkExecSpecTaskActivityStepSelect}                         120 seconds
+    Click Element                   ${WorkExecSpecTaskActivityStepSelect}
+
+    # Save Button
+    Click Element                   ${WorkExecSpecSaveBtn}
+    Wait Until Element Is Visible   ${RecordSaved2}                         120 seconds
+    Wait Until Element Is Not Visible   ${RecordSaved2}                     60 seconds
+    sleep   1
+    Page Should Contain Element     ${WorkExecSpecRecordNo}
+    Screenshot      Captured Work Execution Specification Record
+
+FR10 Capture Work Execution Questions
+    Log to Console  FR10 Capture Work Execution Questions
+
+    # Add Button
+    Click Element                   ${WorkExecQuestionsAdd}
+    Sleep   3
+    Wait Until Element Is Enabled        ${WorkExecQuestionsPF}          120 seconds
+
+    # Process Flow
+    Click Element                   ${WorkExecQuestionsPF}
+    Wait Until Element Is Visible   ${WorkExecQuestionsPFAdd}                    10 seconds
+    Screenshot      Work Execution Questions Process flow clicked - Add Phase
 
     # Order
     Input text                      ${WorkExecSpecOrder}                    1
@@ -864,7 +911,7 @@ FR9 Capture Work Execution Specification
     # Question
     ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
     Set Global Variable             ${CurrentDate}
-    Input text                      ${WorkExecSpecQuestion}                 FR9 Capture Work Execution Specification ${CurrentDate}
+    Input text                      ${WorkExecSpecQuestion}                 FR10 Capture Work Execution Questions ${CurrentDate}
 
     # Go / No-go
     Click Element                   ${WorkExecSpecGoNoGo}
@@ -875,37 +922,49 @@ FR9 Capture Work Execution Specification
     # Training prompt
     ${CurrentDate}          Get Current Date        result_format=%Y-%m-%d %H-%M-%S
     Set Global Variable             ${CurrentDate}
-    Input text                      ${WorkExecSpecTrainPrompt}              FR9 Capture Work Execution Specification ${CurrentDate}
+    Input text                      ${WorkExecSpecTrainPrompt}              FR10 Capture Work Execution Questions ${CurrentDate}
 
     # Related controls
     Click Element                   ${WorkExecSpecRelateControlsDD}
-    sleep   8
+    sleep   10
     Click Element                   ${WorkExecSpecRelateControlsDD}
     sleep   1
 
     # Save Button
-    Click Element                   ${WorkExecSpecSaveBtn}
-    Wait Until Element Is Visible   ${RecordSaved2}                         60 seconds
+    Click Element                   ${WorkExecQuestionsSaveBtn}
+    Wait Until Element Is Visible   ${RecordSaved2}                         120 seconds
     Wait Until Element Is Not Visible   ${RecordSaved2}                     60 seconds
     sleep   1
-    Page Should Contain Element     ${WorkExecSpecRecordNo}
-    Screenshot      Captured Work Execution Specification Record
+    Page Should Contain Element     ${WorkExecQuestionsRecordNo}
+    Screenshot      Captured Work Execution Questions Record
 
-    # Close Button
+    # Work Execution Questions Close Button
+    Click Element                   ${WorkExecQuestionsCloseBtn}
+    sleep   2
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
+    sleep   2
+    Wait Until Element Is Visible   ${WorkExecQuestionsSubModRecord}             60 seconds
+
+    # Work Execution Tasks Close Button
     Click Element                   ${WorkExecSpecCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Switch Window
+    Wait Until Element Is Visible    ${ActionsCloseIconConfirmYes}       30 seconds
+    Click Element                    ${ActionsCloseIconConfirmYes}
+    sleep   2
+    Select Frame                     ${iFrame}
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     sleep   2
     Wait Until Element Is Visible   ${WorkExecSpecSubModRecord}             60 seconds
 
-    # Close Work Execution Tasks Record
+    # Close Work Execution Document Record
     Click Element                   ${WorkExecTasksCloseBtn}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     sleep   2
     Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     Wait Until Element Is Visible   ${JRASectionAGenPersonInfoTab}          60 seconds
-    Sleep   2                      30 seconds
+    Sleep   2
     Click Element                   ${ProcessFlow}
     Wait Until Element Is Visible   ${ProcessFlowEdit}                      10 seconds
     Screenshot      Process flow clicked - Edit Phase
@@ -913,7 +972,7 @@ FR9 Capture Work Execution Specification
     # Section C - Work Execution Specification Tab
     Click Element                   ${JRASectionCWorkExecSpecTab}
     sleep   2
-    Wait Until Element Is Visible   ${WorkExecTasksRecordNoSpec1}           30 seconds
+    Wait Until Element Is Visible   ${WorkExecTasksRecordNoSpec1}           120 seconds
     sleep   2
     Screenshot      Work Execution Tasks Record - Number of Specifications_1 visible
 
@@ -929,7 +988,7 @@ FR10 Sign off the Change Log
     # Open Change Log Record
     Click Element                   ${ChangeSubModRecord}
     sleep   2
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     sleep   1
     Wait Until Element Is Visible   ${ChangePF}                             60 seconds
 
@@ -954,7 +1013,7 @@ FR10 Sign off the Change Log
 
     # Save Button
     Click Element                   ${ChangeSignSaveBtn}
-    Wait Until Element Is Visible   ${RecordSaved2}                         60 seconds
+    Wait Until Element Is Visible   ${RecordSaved2}                         120 seconds
     Wait Until Element Is Not Visible   ${RecordSaved2}                     60 seconds
     sleep   1
     Page Should Contain Element     ${ChangePFComplete}
@@ -962,7 +1021,7 @@ FR10 Sign off the Change Log
 
     # Close Change Log Record
     Click Element                   ${ChangeCloseBtn}
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     Wait Until Element Is Visible   ${JRAReadOnlyModeLabel}                 60 seconds
     sleep   1
     Scroll element into view        ${JRAReadOnlyModeLabel}
@@ -991,7 +1050,7 @@ FR11 Capture Actions
     # Actions Add Button
     Click Element                   ${ActionsAddbtn}
     sleep   1
-    Wait Until Element Is Not Visible        ${JRARecordLoadingXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
     Wait Until Element Is Enabled   ${ActionsProcessFlowbtn}             30 seconds
 
     # Process Flow
@@ -1034,11 +1093,22 @@ FR11 Capture Actions
 
     # Responsible Person
     Click Element                   ${ResponsiblePerson}
-    Wait Until Element Is Visible    ${ResponsiblePersonSearch}          30 seconds
+    Wait Until Element Is Visible   ${ResponsiblePersonSearch}          30 seconds
     Input text                      ${ResponsiblePersonSearch}           auto
     Press Keys                      ${ResponsiblePersonSearch}           ENTER
     Wait Until Element Is Visible   ${ResponsiblePersonOption}           30 seconds
     Click Element                   ${ResponsiblePersonOption}
+
+    # Person responsible for verification
+    Wait Until Element Is Visible   ${ActionVerificationID}           40 seconds
+    Click Element                   ${ActionVerificationID}
+    Sleep   1
+    Wait Until Element Is Visible   ${ActionVerificationXpath}        40 seconds
+    Input Text                      ${ActionVerificationXpath}        Admin
+    Press Keys                      ${ActionVerificationXpath}        ENTER
+    Wait Until Element Is Visible   ${ActionVerifyResultXpath}        40 seconds
+    Sleep    1 seconds
+    Click Element                   ${ActionVerifyResultXpath}
 
     # Action Due Date
     ${CurrentDate}          Get Current Date        result_format=%d-%m-%Y          increment=+3 days
@@ -1055,7 +1125,7 @@ FR11 Capture Actions
     # Save Button
     Click Element                    ${ActionsSavebtn}
     Screenshot   Actions Saved clicked
-    Wait Until Element Is Visible    ${RecordSaved2}                     30 seconds
+    Wait Until Element Is Visible    ${RecordSaved2}                     60 seconds
     Wait Until Element Is Not Visible   ${RecordSaved2}                  60 seconds
     Page Should Contain Element      ${ActionsPFInitiated}
     Screenshot   Actions saved
@@ -1070,7 +1140,7 @@ FR11 Capture Actions
     Click Element                    ${ActionsCloseIconConfirmYes}
     sleep   2
     Select Frame                     ${iFrame}
-    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          30 seconds
+    Wait Until Element Is Not Visible        ${JRALoadingDataXpath}          120 seconds
     sleep   2
     Screenshot    Navigated back to Section A - General and Personnel Information tab
 
@@ -1085,6 +1155,9 @@ FR12 Edit Job Risk Assessment
     Click Element                   ${JRAActiveInactiveInactive}
     Page Should Contain Element     ${JRAActiveInactiveInactiveSelected}
 
+    # Reason for inactive
+    Input Text                      ${JRAReasonForInactive}                 Auto Testing
+
     # Status
     Page Should Contain Element     ${JRAStatusActive}
     Click Element                   ${JRAStatusDD}
@@ -1095,5 +1168,5 @@ FR12 Edit Job Risk Assessment
 
     # Save Button
     Click Element                   ${JRASaveBtn}
-    Wait Until Element Is Visible   ${RecordSaved}                      60 seconds
+    Wait Until Element Is Visible   ${RecordSaved}                      120 seconds
     Wait Until Element Is Not Visible   ${RecordSaved}                  60 seconds

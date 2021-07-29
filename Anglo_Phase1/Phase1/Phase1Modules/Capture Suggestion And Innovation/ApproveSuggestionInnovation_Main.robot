@@ -8,9 +8,9 @@ Force Tags      behavior-driven
 Suggestions and Innovations
     Launch IsoMetrix Application
     Login with Valid Credentials
-   FR2- Approve Suggestion or Innovation
-      [Teardown]        Close Browser
+    FR2- Approve Suggestion or Innovation
     FR2- Suggestion and Innovation Approve Email
+    [TEARDOWN]  CLOSE BROWSER
 
 
 

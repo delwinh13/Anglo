@@ -290,9 +290,9 @@ FR1 - Capture Engagements Optional Scenario 7
     Wait Until Element Is Visible       ${EngagementPermitOwnerDeptXpath5}    40 seconds
     Sleep    1 seconds
     Click Element                       ${EngagementPermitOwnerDeptXpath5}
-    Wait Until Element Is Visible       ${EngagementPermitOwnerDeptXpath6}    40 seconds
-    Sleep    1 seconds
-    Click Element                       ${EngagementPermitOwnerDeptXpath6}
+#    Wait Until Element Is Visible       ${EngagementPermitOwnerDeptXpath6}    40 seconds
+#    Sleep    1 seconds
+#    Click Element                       ${EngagementPermitOwnerDeptXpath6}
 
 
 
@@ -320,10 +320,10 @@ FR1 - Capture Engagements Optional Scenario 7
     Click Element                       ${EngagementPermitAcctPersonXpath}
     Wait Until Element Is Visible       ${EngagementPermitAcctPersonSearch}    40 seconds
     Sleep    1 seconds
-    Input Text                          ${EngagementPermitAcctPersonSearch}    a
+    Input Text                          ${EngagementPermitAcctPersonSearch}    auto
     Press Keys                          ${EngagementPermitAcctPersonSearch}    ENTER
     #Wait Until Element Is Visible       ${EngagementCommitSelectXpath}    40 seconds
-    Sleep    1 seconds
+    Sleep    3 seconds
     Wait Until Element Is Visible       ${EngagementPermitAcctPersonSelect}    40 seconds
     Click Element                       ${EngagementPermitAcctPersonSelect}
     Click Element                       ${EngagementPermitAcctPersonXpath}
@@ -400,8 +400,8 @@ FR1 - Capture Engagements Optional Scenario 7
     Wait Until Element Is Visible       ${EngagementManagementPermitDrp}    40 seconds
     Click Element                       ${EngagementManagementPermitDrp}
     Wait Until Element Is Visible       ${EngagementManagementPermitInput}    40 seconds
-    Sleep    2 seconds
-    Input Text                          ${EngagementManagementPermitInput}    Auto Test ${CurrentDate}
+    Sleep    3 seconds
+    Input Text                          ${EngagementManagementPermitInput}    auto test ${CurrentDate}
     Press Keys                          ${EngagementManagementPermitInput}    ENTER
     Wait Until Element Is Visible       ${EngagementPermitSelectAll}    40 seconds
     Sleep    1 seconds

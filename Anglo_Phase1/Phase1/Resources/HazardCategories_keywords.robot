@@ -153,6 +153,8 @@ FR5 - Capture Hazard Categories Level 5
     sleep     1 seconds
     input text                 ${HCLevel5PenaltiesFieldXpath}       Tested
     sleep     1 seconds
+    Scroll Element into View   ${HCLevel5LinkBusImpactBoxXpath}
+    sleep     1 seconds
     click element              ${HCLevel5LinkBusImpactBoxXpath}
     sleep     1 seconds
     Screenshot   FR5 Level 5 info added

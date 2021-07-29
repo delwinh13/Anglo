@@ -1,9 +1,10 @@
+
 *** Variables ***
 #************************Training and Suggestions Dashboard*******
 ${TrainingAndSuggestionslabelbutton}     xpath://*[@id="section_a483e664-bd1b-433f-ab2c-4505ba418202"]/label
 ${TrainingRegisterlabelbutton}           xpath://*[@id="section_c7b72cb5-599c-47ec-9769-16c030ebc66b"]/label
 
-#*******************FR1-Schedule Training Register************
+#*******************FR1-Schedule TrainingRegister************
 ${TrainingRegisternewADDbttn}               xpath://*[@id="btnActAddNew"]/div
 ${TrainingRegisterProcessFlow}              xpath://*[@id="btnProcessFlow_form_F5BC9D93-E877-47B0-A1A9-BBAD9BDAD3C9"]/span
 ${TrainingRegisterAddPhase}                 xpath:(//div[@id='divProcess_F5BC9D93-E877-47B0-A1A9-BBAD9BDAD3C9'])[2]/div/div[2]/div/div[@class='step active']//div[text()='Add phase']
@@ -14,7 +15,7 @@ ${TrainingRegisterBusinessUnitDPDBulk}      xpath://a[text()='Bulk Commodities &
 ${TrainingRegisterBusinessUnitDPDKumba}     xpath://a[text()='Kumba']/../i
 ${TrainingRegisterBusinessUnitDPDSishen}    xpath://a[text()='Sishen Mine']
 ${TrainingCourseDPD}                        xpath://*[@id="control_DB54978D-9BD7-42F5-8331-7F85081ED112"]/div[1]/a/span[2]/b[1]
-${TrainingCourseSelect1}                    xpath:(//a[text()='Business Partner SOP']/../i[1])[2]    #preprod xpath://a[text()='Business Partner SOP']/../i
+${TrainingCourseSelect1}                     xpath:(//a[text()='Business Partner SOP']/../i[1])[2]   #QA2 xpath: (//a[text()='Business Partner SOP']/../i[1])[2]    #pre prod xpath://a[text()='Business Partner SOP']/../i
 ${TrainingCourseSelect2}                    xpath://a[text()='Overhead Crane Operators Licence'][1]
 #QA2data
 ${TrainingCourseDescription}                xpath://*[@id="control_80D872D0-C9B0-4B49-8BDC-6BC3A8CD6D59"]/div[1]/input
@@ -31,7 +32,7 @@ ${TrainingInternalInstructorSelectDPD}       xpath://a[text()='AARON MARK KING (
 ${TrainingRegisterSaveBttn}                 xpath://*[@id="btnSave_form_F5BC9D93-E877-47B0-A1A9-BBAD9BDAD3C9"]/div[3]
 ${TrainingRegisterlinktoProject}            xpath://*[@id="control_C3871A37-A8FC-424F-805E-104209B0F8BB"]/div[1]/div
 ${TrainingRegisterProjectDPD}               xpath://*[@id="control_4F913E5A-C2B3-4D16-A932-85EB02E6ED6D"]/div[1]/a/span[2]/b[1]
-${TrainingRegisterProjectSelect}            xpath://a[text()='auto test']                      #preprod xpath://a[text()='test2']
+${TrainingRegisterProjectSelect}             xpath://a[text()='Kolomela Bursary Scheme']          #QA2xpath://a[text()='Kolomela Bursary Scheme']                      #preprod xpath://a[text()='test2']
 ${TrainingRegisterTrainingProviderDPD}      xpath://*[@id="control_A96918CB-6C32-49B7-801E-379441B962B8"]/div[1]/a/span[2]/b[1]
 ${TrainingRegisterTrainerSelect}            xpath://a[text()='4 Elements Siyaba'][1]
 ${TrainingRegisterExternalInstructor}       xpath://*[@id="control_17A01C5A-0564-4380-BA4F-9CF1729FF813"]/div[1]/div/input
@@ -112,6 +113,5 @@ ${ActionsRecurringSelect}                      xpath://a[text()='No']
 ${ActionsSaveBttn}                             xpath://*[@id="btnSave_form_54656040-84AF-4090-97F9-48A3F01FC90B"]/div[3]
 
 ${Loadingvariablepermis}                              xpath:://div[@id='divWait']/div[text()='Loading permissions']
-
 
 

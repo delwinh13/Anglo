@@ -10,5 +10,6 @@ PPE Register Sign Off
     Launch IsoMetrix Application
     Login with Valid Credentials
     FR3- Sign Off PPE Register
-    [teardown]   close browser
+    [TEARDOWN]  CLOSE BROWSER
+
 

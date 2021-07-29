@@ -37,7 +37,7 @@ FR2-Capture Training Attendees
     Click Element                      ${TrainingAndSuggestionslabelbutton}
     Sleep    2 seconds
 
-    #Click Training Register
+    #Click TrainingRegister
     Wait Until Element Is Visible      ${TrainingRegisterlabelbutton}  20 seconds
     Click Element                      ${TrainingRegisterlabelbutton}
     Sleep    2 seconds
@@ -415,24 +415,3 @@ FR2-Capture Training Attendees
     Wait Until Element Is Visible         ${certificateSaveSupportingdoc}     20 Seconds
     Click Element                         ${certificateSaveSupportingdoc}
     Sleep    2 seconds
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

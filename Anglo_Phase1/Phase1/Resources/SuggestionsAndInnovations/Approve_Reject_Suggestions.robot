@@ -31,7 +31,9 @@ Login with Valid Credentials
     sleep      7 seconds
     Log To Console    Starting  - Capture Suggestion or Innovation
     # Click AngloMaintenanceButton
-    Mouse over                          ${AngloMainMenuXpath}
+    Mouse over                              ${AngloMainMenuXpath}
+    Sleep     3 seconds
+    scroll element into view               ${AngloTrainingAndSuggestionsInterfaceXpath}
     Wait Until Page Contains Element       ${AngloTrainingAndSuggestionsInterfaceXpath}    20 seconds
     Click Element                          ${AngloTrainingAndSuggestionsInterfaceXpath}
 
@@ -149,9 +151,14 @@ FR2- Suggestion and Innovation Approve Email
     Screenshot      Outlook Folder
     sleep       15
     #Switch to Tab
-    Switch Window    Mail - Sushmitha Ravella - Outlook
+    Switch Window    Mail - Delwin Horsthemke - Outlook
     Screenshot      Outlook Mail Folder
     sleep       15
+    #System Mail folder
+    Wait Until Element Is Visible           ${SystemMailFolder}         20 seconds
+    sleep       5
+    Click Element                           ${SystemMailFolder}
+    Screenshot      Outlook SystemMail Folder
     Wait Until Element Is Visible           ${SuggestionAndInnovationsChangedSubject}          60 seconds
     Click Element                           ${SuggestionAndInnovationsChangedSubject}
     Screenshot      Suggestion

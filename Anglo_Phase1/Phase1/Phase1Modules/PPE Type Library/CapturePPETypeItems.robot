@@ -12,5 +12,5 @@ PPE Items Library
     Login with Valid Credentials
     FR1 - Capture PPE Type Library
     FR2 -Capture PPE Items
-    [Teardown]  CLOSE BROWSER
+    [TEARDOWN]  CLOSE BROWSER
 

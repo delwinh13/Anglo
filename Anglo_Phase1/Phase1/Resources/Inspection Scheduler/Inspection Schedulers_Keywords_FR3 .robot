@@ -1,3 +1,4 @@
+
 *** Settings ***
 Library    SeleniumLibrary
 Library    XML
@@ -164,18 +165,3 @@ FR3-Edit Inspection Scheduler
     Click Element                        ${InspectionSchedulerSavebttn}
     Sleep    2 seconds
     Screenshot    Recordsaved
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

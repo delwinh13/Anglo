@@ -116,7 +116,7 @@ FR2 - Capture Climate Change Energy Measurement
     Sleep     1 seconds
     Screenshot    FR2 Measuremnts info captured
     Click element             ${MeasurementsSaveBtnID}
-    Sleep     60 seconds
+    Sleep     30 seconds
     Screenshot    FR2 Measurements Save button clicked
     Click element             ${MeasurementsCloseBtnXpath}
     sleep     5 seconds
@@ -157,7 +157,7 @@ FR3 - Capture Findings
     Sleep     1 seconds
     Click Element             ${RiskSourcesSelectXpath}
     Sleep     2 seconds
-    Click Element             ${MonitoringFindingsDescrFieldXpath}
+    Click Element             ${MonitoringFindingsDescrLabelXpath}
     Sleep     2 seconds
     Click Element             ${RelatedPermitsDdXpath}
     Wait Until Element Is Visible    ${RelatedPermitsSelectXpath}    40 seconds

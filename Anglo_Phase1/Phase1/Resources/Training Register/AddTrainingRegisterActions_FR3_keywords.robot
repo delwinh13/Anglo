@@ -24,7 +24,7 @@ Login with Valid Credentials
     Input Text                ${Passwordid}  ${Password Value}
     Click Element             ${SubmitButtonid}
 
-#***********FR3-Add Training Register Actions**************
+#***********FR3-Add TrainingRegister Actions**************
 FR3-Add Training Register Actions
     Log To Console    Training and Suggestions
 
@@ -37,7 +37,7 @@ FR3-Add Training Register Actions
     Click Element                      ${TrainingAndSuggestionslabelbutton}
     Sleep    2 seconds
 
-    #Click Training Register
+    #Click TrainingRegister
     Wait Until Element Is Visible      ${TrainingRegisterlabelbutton}  20 seconds
     Click Element                      ${TrainingRegisterlabelbutton}
     Sleep    2 seconds
